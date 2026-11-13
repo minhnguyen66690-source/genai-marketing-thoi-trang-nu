@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "_workspace" / "03_results"
 FIGURES = ROOT / "figures"
 COLORS = {"M0": "#8D99AE", "M1": "#E9C46A", "M2": "#2A9D8F", "M3": "#1F4E79", "M4a": "#E76F51", "M4b": "#B5523B", "reference": "#264653"}
-NAMES = {"M0": "M0 Mẫu cố định", "M1": "M1 Zero-shot", "M2": "M2 Prompt eng.", "M3": "M3 Few-shot truy hồi",
+NAMES = {"M0": "M0 Mẫu cố định", "M1": "M1 Zero-shot", "M2": "M2 Thiết kế câu lệnh", "M3": "M3 Few-shot có truy hồi",
          "M4a": "M4a Qwen gốc", "M4b": "M4b Qwen + LoRA", "reference": "Người bán"}
 SOURCE = "Nguồn: tác giả thực nghiệm trên dữ liệu Tiki và Amazon Reviews 2023; thanh lỗi: KTC 95% bootstrap"
 
@@ -81,11 +81,11 @@ def fig_similarity():
 def fig_checklist():
     """Bản đồ nhiệt tỷ lệ đạt (%) từng tiêu chí theo cấu hình (Tiki)."""
     s = load("eval_summary_tiki.json")
-    methods = [m for m in ["M0", "M1", "M2", "M3", "M4a", "reference"] if m in s["metrics"]]
-    rules = [("seo_title_len_50_60", "Tiêu đề 50–60 ký tự (S19)"), ("seo_meta_len_120_156", "Meta 120–156 ký tự (S12)"),
-             ("seo_desc_words_ge_200", "Mô tả ≥ 200 từ (S13, S24)"), ("seo_keyphrase_in_title", "Từ khóa trong tiêu đề (S11)"),
-             ("seo_keyphrase_in_first_paragraph", "Từ khóa ở đoạn đầu (S10)"), ("seo_compliance_rate", "Tuân thủ gộp"),
-             ("email_mailchimp_le9w_le60c", "Email ≤ 9 từ, ≤ 60 ký tự (E01)"), ("email_omnisend_4_6w_or_21_40c", "Email 4–6 từ / 21–40 ký tự (E05)"),
+    methods = [m for m in ["M0", "M1", "M2", "M3", "M4a", "M4b", "reference"] if m in s["metrics"]]
+    rules = [("seo_title_len_50_60", "Tiêu đề 50–60 ký tự (Ahrefs)"), ("seo_meta_len_120_156", "Meta 120–156 ký tự (Yoast)"),
+             ("seo_desc_words_ge_200", "Mô tả ≥ 200 từ (Yoast, Tiki)"), ("seo_keyphrase_in_title", "Từ khóa trong tiêu đề (Yoast)"),
+             ("seo_keyphrase_in_first_paragraph", "Từ khóa ở đoạn đầu (Yoast)"), ("seo_compliance_rate", "Tuân thủ gộp, 7 tiêu chí"),
+             ("email_mailchimp_le9w_le60c", "Email ≤ 9 từ, ≤ 60 ký tự (Mailchimp)"), ("email_omnisend_4_6w_or_21_40c", "Email 4–6 từ / 21–40 ký tự (Omnisend)"),
              ("email_keyword_relevance", "Email chứa từ khóa")]
     matrix = np.full((len(rules), len(methods)), np.nan)
     for i, (key, _) in enumerate(rules):
@@ -118,7 +118,7 @@ def fig_judge():
     methods = ["M0", "M1", "M2", "M3"]
     criteria = [("judge_mo_ta_tu_nhien", "Mô tả: tự nhiên"), ("judge_mo_ta_thuyet_phuc", "Mô tả: thuyết phục"),
                 ("judge_mo_ta_lien_quan_tu_khoa", "Mô tả: liên quan từ khóa"), ("judge_email_gay_to_mo", "Email: gây tò mò"),
-                ("judge_kich_ban_cta_ro_rang", "Kịch bản: CTA rõ ràng"), ("judge_kich_ban_nhu_cau_loi_ich", "Kịch bản: nhu cầu – lợi ích"),
+                ("judge_kich_ban_cta_ro_rang", "Kịch bản: kêu gọi hành động rõ"), ("judge_kich_ban_nhu_cau_loi_ich", "Kịch bản: nhu cầu – lợi ích"),
                 ("judge_kich_ban_xu_ly_phan_doi", "Kịch bản: xử lý phản đối"), ("judge_kich_ban_dung_su_that", "Kịch bản: đúng sự thật")]
     fig, ax = plt.subplots(figsize=(11, 6.6))
     height = 0.2

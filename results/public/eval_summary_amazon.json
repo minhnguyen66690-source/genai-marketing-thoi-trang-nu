@@ -1,0 +1,3644 @@
+{
+  "dataset": "amazon",
+  "input_files": [
+    "C:\\Users\\Minh\\NgoaiKhoa_work\\_workspace\\03_results\\generations_M0_amazon.jsonl",
+    "C:\\Users\\Minh\\NgoaiKhoa_work\\_workspace\\03_results\\generations_M1_amazon.jsonl",
+    "C:\\Users\\Minh\\NgoaiKhoa_work\\_workspace\\03_results\\generations_M2_amazon.jsonl",
+    "C:\\Users\\Minh\\NgoaiKhoa_work\\_workspace\\03_results\\generations_M3_amazon.jsonl"
+  ],
+  "fast": false,
+  "judge_backend": "gemini",
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "corpus_bleu_13a": {
+    "M0": 0.055624344739353876,
+    "M1": 0.01444986810897937,
+    "M2": 0.3850725614192234,
+    "M3": 0.2173689451716084
+  },
+  "metrics": {
+    "M0": {
+      "seo_compliance_rate": {
+        "n": 50,
+        "mean": 0.53,
+        "ci95": [
+          0.5133333333333333,
+          0.5466666666666666
+        ]
+      },
+      "keyword_coverage": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "hallucination_rate": {
+        "n": 10,
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "latency_s": {
+        "n": 50,
+        "mean": 1.9357999899511924e-05,
+        "ci95": [
+          1.7375899888975255e-05,
+          2.1596349896299215e-05
+        ]
+      },
+      "seo_title_len_50_60": {
+        "n": 50,
+        "mean": 0.18,
+        "ci95": [
+          0.08,
+          0.28
+        ]
+      },
+      "seo_title_tiki_15_50": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_title_tiki_max_225": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_meta_len_120_156": {
+        "n": 50,
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "seo_keyphrase_in_title": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "seo_keyphrase_in_first_paragraph": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "seo_keyphrase_in_meta": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "seo_density_proxy_0_5_3": {
+        "n": 50,
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "seo_desc_words_ge_200": {
+        "n": 50,
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "script_objection_keyword_coverage": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "script_length_words": {
+        "n": 50,
+        "mean": 24.52,
+        "ci95": [
+          24.3595,
+          24.7
+        ]
+      },
+      "script_hallucination_rate": {
+        "n": 1,
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "judge_mo_ta_tu_nhien": {
+        "n": 50,
+        "mean": 2.02,
+        "ci95": [
+          1.9,
+          2.16
+        ]
+      },
+      "judge_mo_ta_lien_quan_tu_khoa": {
+        "n": 50,
+        "mean": 4.86,
+        "ci95": [
+          4.76,
+          4.96
+        ]
+      },
+      "judge_mo_ta_thuyet_phuc": {
+        "n": 50,
+        "mean": 1.94,
+        "ci95": [
+          1.86,
+          2.0
+        ]
+      },
+      "judge_mo_ta_nhat_quan_thong_tin": {
+        "n": 50,
+        "mean": 4.68,
+        "ci95": [
+          4.46,
+          4.86
+        ]
+      },
+      "judge_email_ro_rang": {
+        "n": 50,
+        "mean": 3.7,
+        "ci95": [
+          3.54,
+          3.86
+        ]
+      },
+      "judge_email_gay_to_mo": {
+        "n": 50,
+        "mean": 2.02,
+        "ci95": [
+          1.92,
+          2.12
+        ]
+      },
+      "judge_email_lien_quan": {
+        "n": 50,
+        "mean": 4.52,
+        "ci95": [
+          4.359500000000001,
+          4.68
+        ]
+      },
+      "judge_kich_ban_cta_ro_rang": {
+        "n": 50,
+        "mean": 4.8,
+        "ci95": [
+          4.68,
+          4.9
+        ]
+      },
+      "judge_kich_ban_nhu_cau_loi_ich": {
+        "n": 50,
+        "mean": 1.9,
+        "ci95": [
+          1.82,
+          1.98
+        ]
+      },
+      "judge_kich_ban_xu_ly_phan_doi": {
+        "n": 50,
+        "mean": 1.32,
+        "ci95": [
+          1.16,
+          1.5
+        ]
+      },
+      "judge_kich_ban_dung_su_that": {
+        "n": 50,
+        "mean": 2.84,
+        "ci95": [
+          2.6,
+          3.1
+        ]
+      },
+      "rouge1": {
+        "n": 50,
+        "mean": 0.0992539324126968,
+        "ci95": [
+          0.08451307914650888,
+          0.11467740867371377
+        ]
+      },
+      "rouge2": {
+        "n": 50,
+        "mean": 0.011842513140675097,
+        "ci95": [
+          0.007498579299531058,
+          0.016252047391195696
+        ]
+      },
+      "rougeL": {
+        "n": 50,
+        "mean": 0.06657227688074922,
+        "ci95": [
+          0.05590470524360096,
+          0.07713104871061043
+        ]
+      },
+      "sentence_bleu": {
+        "n": 50,
+        "mean": 0.5638816033434462,
+        "ci95": [
+          0.37036449558591855,
+          0.7863669627418467
+        ]
+      },
+      "chrf_plus_plus": {
+        "n": 50,
+        "mean": 11.477125750630881,
+        "ci95": [
+          10.108665687208875,
+          12.861071901035057
+        ]
+      },
+      "bertscore_f1": {
+        "n": 50,
+        "mean": 0.6223325645923614,
+        "ci95": [
+          0.6092944847643375,
+          0.6347466903924942
+        ]
+      },
+      "email_mailchimp_le9w_le60c": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_omnisend_4_6w_or_21_40c": {
+        "n": 50,
+        "mean": 0.42,
+        "ci95": [
+          0.35999999999999993,
+          0.4866666666666666
+        ]
+      },
+      "email_punct_le3": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_emoji_le1": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_no_fake_re_fwd": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_keyword_relevance": {
+        "n": 50,
+        "mean": 0.7199999999999999,
+        "ci95": [
+          0.6866666666666665,
+          0.7533333333333332
+        ]
+      },
+      "email_offer_supported": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "M1": {
+      "seo_compliance_rate": {
+        "n": 50,
+        "mean": 0.43666666666666665,
+        "ci95": [
+          0.3833333333333333,
+          0.49
+        ]
+      },
+      "keyword_coverage": {
+        "n": 50,
+        "mean": 0.7376666666666667,
+        "ci95": [
+          0.676,
+          0.7993333333333333
+        ]
+      },
+      "hallucination_rate": {
+        "n": 13,
+        "mean": 0.23076923076923078,
+        "ci95": [
+          0.0,
+          0.46153846153846156
+        ]
+      },
+      "latency_s": {
+        "n": 50,
+        "mean": 4.372346480000033,
+        "ci95": [
+          4.313236071190014,
+          4.430475665880074
+        ]
+      },
+      "seo_title_len_50_60": {
+        "n": 50,
+        "mean": 0.16,
+        "ci95": [
+          0.06,
+          0.26
+        ]
+      },
+      "seo_title_tiki_15_50": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_title_tiki_max_225": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_meta_len_120_156": {
+        "n": 50,
+        "mean": 0.14,
+        "ci95": [
+          0.059500000000000025,
+          0.24
+        ]
+      },
+      "seo_keyphrase_in_title": {
+        "n": 50,
+        "mean": 0.8,
+        "ci95": [
+          0.68,
+          0.9
+        ]
+      },
+      "seo_keyphrase_in_first_paragraph": {
+        "n": 50,
+        "mean": 0.7,
+        "ci95": [
+          0.56,
+          0.82
+        ]
+      },
+      "seo_keyphrase_in_meta": {
+        "n": 50,
+        "mean": 0.82,
+        "ci95": [
+          0.72,
+          0.92
+        ]
+      },
+      "seo_density_proxy_0_5_3": {
+        "n": 50,
+        "mean": 0.08,
+        "ci95": [
+          0.02,
+          0.16
+        ]
+      },
+      "seo_desc_words_ge_200": {
+        "n": 50,
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "script_objection_keyword_coverage": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "script_length_words": {
+        "n": 50,
+        "mean": 28.6,
+        "ci95": [
+          27.56,
+          29.6405
+        ]
+      },
+      "script_hallucination_rate": {
+        "n": 11,
+        "mean": 0.18181818181818182,
+        "ci95": [
+          0.0,
+          0.45454545454545453
+        ]
+      },
+      "judge_mo_ta_tu_nhien": {
+        "n": 50,
+        "mean": 4.84,
+        "ci95": [
+          4.72,
+          4.94
+        ]
+      },
+      "judge_mo_ta_lien_quan_tu_khoa": {
+        "n": 50,
+        "mean": 4.4,
+        "ci95": [
+          4.2,
+          4.58
+        ]
+      },
+      "judge_mo_ta_thuyet_phuc": {
+        "n": 50,
+        "mean": 3.88,
+        "ci95": [
+          3.72,
+          4.02
+        ]
+      },
+      "judge_mo_ta_nhat_quan_thong_tin": {
+        "n": 50,
+        "mean": 5.0,
+        "ci95": [
+          5.0,
+          5.0
+        ]
+      },
+      "judge_email_ro_rang": {
+        "n": 50,
+        "mean": 4.88,
+        "ci95": [
+          4.78,
+          4.96
+        ]
+      },
+      "judge_email_gay_to_mo": {
+        "n": 50,
+        "mean": 3.84,
+        "ci95": [
+          3.72,
+          3.96
+        ]
+      },
+      "judge_email_lien_quan": {
+        "n": 50,
+        "mean": 4.98,
+        "ci95": [
+          4.94,
+          5.0
+        ]
+      },
+      "judge_kich_ban_cta_ro_rang": {
+        "n": 50,
+        "mean": 4.2,
+        "ci95": [
+          4.02,
+          4.38
+        ]
+      },
+      "judge_kich_ban_nhu_cau_loi_ich": {
+        "n": 50,
+        "mean": 3.02,
+        "ci95": [
+          2.84,
+          3.2
+        ]
+      },
+      "judge_kich_ban_xu_ly_phan_doi": {
+        "n": 50,
+        "mean": 1.24,
+        "ci95": [
+          1.12,
+          1.4
+        ]
+      },
+      "judge_kich_ban_dung_su_that": {
+        "n": 50,
+        "mean": 5.0,
+        "ci95": [
+          5.0,
+          5.0
+        ]
+      },
+      "rouge1": {
+        "n": 50,
+        "mean": 0.13005791215624019,
+        "ci95": [
+          0.10973166215646317,
+          0.15226399292014844
+        ]
+      },
+      "rouge2": {
+        "n": 50,
+        "mean": 0.019062046206334532,
+        "ci95": [
+          0.01337255731528542,
+          0.02561449541605958
+        ]
+      },
+      "rougeL": {
+        "n": 50,
+        "mean": 0.0831169078273343,
+        "ci95": [
+          0.06936684574321883,
+          0.09733524058451548
+        ]
+      },
+      "sentence_bleu": {
+        "n": 50,
+        "mean": 0.5153137221835603,
+        "ci95": [
+          0.30177752903742217,
+          0.7543707922471974
+        ]
+      },
+      "chrf_plus_plus": {
+        "n": 50,
+        "mean": 10.55772565251085,
+        "ci95": [
+          8.88066804826118,
+          12.450068575993175
+        ]
+      },
+      "bertscore_f1": {
+        "n": 50,
+        "mean": 0.6049189168214798,
+        "ci95": [
+          0.5863957971781493,
+          0.6237432140409946
+        ]
+      },
+      "email_mailchimp_le9w_le60c": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_omnisend_4_6w_or_21_40c": {
+        "n": 50,
+        "mean": 0.9333333333333332,
+        "ci95": [
+          0.8933333333333333,
+          0.9666666666666666
+        ]
+      },
+      "email_punct_le3": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_emoji_le1": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_no_fake_re_fwd": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_keyword_relevance": {
+        "n": 50,
+        "mean": 0.7466666666666666,
+        "ci95": [
+          0.6733333333333333,
+          0.82
+        ]
+      },
+      "email_offer_supported": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "M2": {
+      "seo_compliance_rate": {
+        "n": 50,
+        "mean": 0.89,
+        "ci95": [
+          0.8633333333333334,
+          0.9166666666666667
+        ]
+      },
+      "keyword_coverage": {
+        "n": 50,
+        "mean": 0.4606666666666666,
+        "ci95": [
+          0.3989583333333333,
+          0.5330249999999999
+        ]
+      },
+      "hallucination_rate": {
+        "n": 9,
+        "mean": 0.5555555555555556,
+        "ci95": [
+          0.2222222222222222,
+          0.8888888888888888
+        ]
+      },
+      "latency_s": {
+        "n": 50,
+        "mean": 11.49941353400005,
+        "ci95": [
+          11.433375985810049,
+          11.55971836103004
+        ]
+      },
+      "seo_title_len_50_60": {
+        "n": 50,
+        "mean": 0.4,
+        "ci95": [
+          0.26,
+          0.56
+        ]
+      },
+      "seo_title_tiki_15_50": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_title_tiki_max_225": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_meta_len_120_156": {
+        "n": 50,
+        "mean": 0.94,
+        "ci95": [
+          0.86,
+          1.0
+        ]
+      },
+      "seo_keyphrase_in_title": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "seo_keyphrase_in_first_paragraph": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "seo_keyphrase_in_meta": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "seo_density_proxy_0_5_3": {
+        "n": 50,
+        "mean": 0.48,
+        "ci95": [
+          0.34,
+          0.62
+        ]
+      },
+      "seo_desc_words_ge_200": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "script_objection_keyword_coverage": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "script_length_words": {
+        "n": 50,
+        "mean": 150.86,
+        "ci95": [
+          148.2195,
+          153.2405
+        ]
+      },
+      "script_hallucination_rate": {
+        "n": 10,
+        "mean": 0.6,
+        "ci95": [
+          0.3,
+          0.9
+        ]
+      },
+      "judge_mo_ta_tu_nhien": {
+        "n": 50,
+        "mean": 4.88,
+        "ci95": [
+          4.78,
+          4.96
+        ]
+      },
+      "judge_mo_ta_lien_quan_tu_khoa": {
+        "n": 50,
+        "mean": 3.14,
+        "ci95": [
+          2.86,
+          3.4604999999999997
+        ]
+      },
+      "judge_mo_ta_thuyet_phuc": {
+        "n": 50,
+        "mean": 3.98,
+        "ci95": [
+          3.88,
+          4.08
+        ]
+      },
+      "judge_mo_ta_nhat_quan_thong_tin": {
+        "n": 50,
+        "mean": 4.86,
+        "ci95": [
+          4.7,
+          5.0
+        ]
+      },
+      "judge_email_ro_rang": {
+        "n": 50,
+        "mean": 4.96,
+        "ci95": [
+          4.9,
+          5.0
+        ]
+      },
+      "judge_email_gay_to_mo": {
+        "n": 50,
+        "mean": 3.3,
+        "ci95": [
+          3.16,
+          3.44
+        ]
+      },
+      "judge_email_lien_quan": {
+        "n": 50,
+        "mean": 4.82,
+        "ci95": [
+          4.66,
+          4.94
+        ]
+      },
+      "judge_kich_ban_cta_ro_rang": {
+        "n": 50,
+        "mean": 4.98,
+        "ci95": [
+          4.94,
+          5.0
+        ]
+      },
+      "judge_kich_ban_nhu_cau_loi_ich": {
+        "n": 50,
+        "mean": 4.06,
+        "ci95": [
+          3.98,
+          4.16
+        ]
+      },
+      "judge_kich_ban_xu_ly_phan_doi": {
+        "n": 50,
+        "mean": 3.38,
+        "ci95": [
+          3.12,
+          3.62
+        ]
+      },
+      "judge_kich_ban_dung_su_that": {
+        "n": 50,
+        "mean": 4.9,
+        "ci95": [
+          4.76,
+          5.0
+        ]
+      },
+      "rouge1": {
+        "n": 50,
+        "mean": 0.12982809978270388,
+        "ci95": [
+          0.11052282269712396,
+          0.14946549806837295
+        ]
+      },
+      "rouge2": {
+        "n": 50,
+        "mean": 0.011523981102819558,
+        "ci95": [
+          0.00878996312637316,
+          0.014679521012898033
+        ]
+      },
+      "rougeL": {
+        "n": 50,
+        "mean": 0.077857720321192,
+        "ci95": [
+          0.06742512547689995,
+          0.08808968105201223
+        ]
+      },
+      "sentence_bleu": {
+        "n": 50,
+        "mean": 0.6804244617806571,
+        "ci95": [
+          0.5522027094163541,
+          0.8131690403817058
+        ]
+      },
+      "chrf_plus_plus": {
+        "n": 50,
+        "mean": 19.5889562068711,
+        "ci95": [
+          17.82617619956303,
+          21.305878692862862
+        ]
+      },
+      "bertscore_f1": {
+        "n": 50,
+        "mean": 0.5925922262668609,
+        "ci95": [
+          0.5794222293645143,
+          0.6059542574733495
+        ]
+      },
+      "email_mailchimp_le9w_le60c": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_omnisend_4_6w_or_21_40c": {
+        "n": 50,
+        "mean": 0.9933333333333334,
+        "ci95": [
+          0.98,
+          1.0
+        ]
+      },
+      "email_punct_le3": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_emoji_le1": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_no_fake_re_fwd": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_keyword_relevance": {
+        "n": 50,
+        "mean": 0.9733333333333333,
+        "ci95": [
+          0.94,
+          1.0
+        ]
+      },
+      "email_offer_supported": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "M3": {
+      "seo_compliance_rate": {
+        "n": 50,
+        "mean": 0.9200000000000002,
+        "ci95": [
+          0.8966666666666668,
+          0.9433333333333332
+        ]
+      },
+      "keyword_coverage": {
+        "n": 50,
+        "mean": 0.524,
+        "ci95": [
+          0.45964999999999995,
+          0.5983666666666666
+        ]
+      },
+      "hallucination_rate": {
+        "n": 10,
+        "mean": 0.4,
+        "ci95": [
+          0.1,
+          0.7
+        ]
+      },
+      "latency_s": {
+        "n": 50,
+        "mean": 12.237753384000024,
+        "ci95": [
+          12.065352879080043,
+          12.406867047130053
+        ]
+      },
+      "seo_title_len_50_60": {
+        "n": 50,
+        "mean": 0.58,
+        "ci95": [
+          0.44,
+          0.7004999999999995
+        ]
+      },
+      "seo_title_tiki_15_50": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_title_tiki_max_225": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_meta_len_120_156": {
+        "n": 50,
+        "mean": 0.94,
+        "ci95": [
+          0.86,
+          1.0
+        ]
+      },
+      "seo_keyphrase_in_title": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "seo_keyphrase_in_first_paragraph": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "seo_keyphrase_in_meta": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "seo_density_proxy_0_5_3": {
+        "n": 50,
+        "mean": 0.96,
+        "ci95": [
+          0.9,
+          1.0
+        ]
+      },
+      "seo_desc_words_ge_200": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "script_objection_keyword_coverage": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "script_length_words": {
+        "n": 50,
+        "mean": 146.56,
+        "ci95": [
+          143.98,
+          149.0205
+        ]
+      },
+      "script_hallucination_rate": {
+        "n": 11,
+        "mean": 0.45454545454545453,
+        "ci95": [
+          0.18181818181818182,
+          0.7272727272727273
+        ]
+      },
+      "judge_mo_ta_tu_nhien": {
+        "n": 50,
+        "mean": 4.88,
+        "ci95": [
+          4.78,
+          4.96
+        ]
+      },
+      "judge_mo_ta_lien_quan_tu_khoa": {
+        "n": 50,
+        "mean": 3.38,
+        "ci95": [
+          3.0995,
+          3.7
+        ]
+      },
+      "judge_mo_ta_thuyet_phuc": {
+        "n": 50,
+        "mean": 3.88,
+        "ci95": [
+          3.76,
+          3.98
+        ]
+      },
+      "judge_mo_ta_nhat_quan_thong_tin": {
+        "n": 50,
+        "mean": 4.88,
+        "ci95": [
+          4.7,
+          5.0
+        ]
+      },
+      "judge_email_ro_rang": {
+        "n": 50,
+        "mean": 4.9,
+        "ci95": [
+          4.819500000000001,
+          4.98
+        ]
+      },
+      "judge_email_gay_to_mo": {
+        "n": 50,
+        "mean": 3.42,
+        "ci95": [
+          3.26,
+          3.58
+        ]
+      },
+      "judge_email_lien_quan": {
+        "n": 50,
+        "mean": 4.86,
+        "ci95": [
+          4.74,
+          4.98
+        ]
+      },
+      "judge_kich_ban_cta_ro_rang": {
+        "n": 50,
+        "mean": 4.96,
+        "ci95": [
+          4.9,
+          5.0
+        ]
+      },
+      "judge_kich_ban_nhu_cau_loi_ich": {
+        "n": 50,
+        "mean": 4.08,
+        "ci95": [
+          4.0,
+          4.18
+        ]
+      },
+      "judge_kich_ban_xu_ly_phan_doi": {
+        "n": 50,
+        "mean": 2.96,
+        "ci95": [
+          2.68,
+          3.22
+        ]
+      },
+      "judge_kich_ban_dung_su_that": {
+        "n": 50,
+        "mean": 4.88,
+        "ci95": [
+          4.7,
+          5.0
+        ]
+      },
+      "rouge1": {
+        "n": 50,
+        "mean": 0.13677959990631744,
+        "ci95": [
+          0.1159403599106741,
+          0.15744686065929747
+        ]
+      },
+      "rouge2": {
+        "n": 50,
+        "mean": 0.0131609867217936,
+        "ci95": [
+          0.010076648438601362,
+          0.016379436728789547
+        ]
+      },
+      "rougeL": {
+        "n": 50,
+        "mean": 0.08031436767891485,
+        "ci95": [
+          0.06964514001452239,
+          0.09012728769093535
+        ]
+      },
+      "sentence_bleu": {
+        "n": 50,
+        "mean": 0.592259633548999,
+        "ci95": [
+          0.4991884162642632,
+          0.6832545630648494
+        ]
+      },
+      "chrf_plus_plus": {
+        "n": 50,
+        "mean": 19.82822385255736,
+        "ci95": [
+          17.96992814914903,
+          21.598660729646028
+        ]
+      },
+      "bertscore_f1": {
+        "n": 50,
+        "mean": 0.5946868222951889,
+        "ci95": [
+          0.5813880575895309,
+          0.6075427681207657
+        ]
+      },
+      "email_mailchimp_le9w_le60c": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_omnisend_4_6w_or_21_40c": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_punct_le3": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_emoji_le1": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_no_fake_re_fwd": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "email_keyword_relevance": {
+        "n": 50,
+        "mean": 0.9866666666666666,
+        "ci95": [
+          0.9666666666666666,
+          1.0
+        ]
+      },
+      "email_offer_supported": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "reference": {
+      "seo_compliance_rate": {
+        "n": 50,
+        "mean": 0.385,
+        "ci95": [
+          0.34,
+          0.44
+        ]
+      },
+      "keyword_coverage": {
+        "n": 50,
+        "mean": 0.9933333333333333,
+        "ci95": [
+          0.98,
+          1.0
+        ]
+      },
+      "hallucination_rate": {
+        "n": 39,
+        "mean": 0.9074321813452246,
+        "ci95": [
+          0.8235381828316609,
+          0.9677034559643255
+        ]
+      },
+      "latency_s": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_title_len_50_60": {
+        "n": 50,
+        "mean": 0.04,
+        "ci95": [
+          0.0,
+          0.1
+        ]
+      },
+      "seo_title_tiki_15_50": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_title_tiki_max_225": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_meta_len_120_156": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_keyphrase_in_title": {
+        "n": 50,
+        "mean": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "seo_keyphrase_in_first_paragraph": {
+        "n": 50,
+        "mean": 0.4,
+        "ci95": [
+          0.28,
+          0.5204999999999995
+        ]
+      },
+      "seo_keyphrase_in_meta": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "seo_density_proxy_0_5_3": {
+        "n": 50,
+        "mean": 0.32,
+        "ci95": [
+          0.2,
+          0.44
+        ]
+      },
+      "seo_desc_words_ge_200": {
+        "n": 50,
+        "mean": 0.1,
+        "ci95": [
+          0.02,
+          0.2
+        ]
+      },
+      "script_objection_keyword_coverage": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "script_length_words": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "script_hallucination_rate": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "judge_mo_ta_tu_nhien": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "judge_mo_ta_lien_quan_tu_khoa": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "judge_mo_ta_thuyet_phuc": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "judge_mo_ta_nhat_quan_thong_tin": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "judge_email_ro_rang": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "judge_email_gay_to_mo": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "judge_email_lien_quan": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "judge_kich_ban_cta_ro_rang": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "judge_kich_ban_nhu_cau_loi_ich": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "judge_kich_ban_xu_ly_phan_doi": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "judge_kich_ban_dung_su_that": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "rouge1": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "rouge2": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "rougeL": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "sentence_bleu": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "chrf_plus_plus": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "bertscore_f1": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "email_mailchimp_le9w_le60c": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "email_omnisend_4_6w_or_21_40c": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "email_punct_le3": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "email_emoji_le1": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "email_no_fake_re_fwd": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "email_keyword_relevance": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "email_offer_supported": {
+        "n": 0,
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      }
+    }
+  },
+  "wilcoxon_holm": [
+    {
+      "metric": "seo_compliance_rate",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.0018351554646057068,
+      "p_holm": 0.26059207597401035
+    },
+    {
+      "metric": "seo_compliance_rate",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 4.752534333123872e-10,
+      "p_holm": 1.078825293619119e-07
+    },
+    {
+      "metric": "seo_compliance_rate",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 3.065433720474072e-10,
+      "p_holm": 7.050497557090366e-08
+    },
+    {
+      "metric": "seo_compliance_rate",
+      "method_a": "M0",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 6.886961052452978e-05,
+      "p_holm": 0.010881398462875705
+    },
+    {
+      "metric": "seo_compliance_rate",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 8.449358811600301e-10,
+      "p_holm": 1.799713426870864e-07
+    },
+    {
+      "metric": "seo_compliance_rate",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 4.830538806001442e-10,
+      "p_holm": 1.0917017701563259e-07
+    },
+    {
+      "metric": "seo_compliance_rate",
+      "method_a": "M1",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 0.08717323826639072,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_compliance_rate",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.10372100530785658,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_compliance_rate",
+      "method_a": "M2",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 6.761943135643806e-10,
+      "p_holm": 1.515923104259863e-07
+    },
+    {
+      "metric": "seo_compliance_rate",
+      "method_a": "M3",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 6.893139609994607e-10,
+      "p_holm": 1.5371701330287973e-07
+    },
+    {
+      "metric": "keyword_coverage",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 3.1330215838470974e-07,
+      "p_holm": 5.4201273400554784e-05
+    },
+    {
+      "metric": "keyword_coverage",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 2.96511722983048e-09,
+      "p_holm": 5.93023445966096e-07
+    },
+    {
+      "metric": "keyword_coverage",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 4.448513095601072e-09,
+      "p_holm": 8.719085667378101e-07
+    },
+    {
+      "metric": "keyword_coverage",
+      "method_a": "M0",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 0.31731050786291415,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "keyword_coverage",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 3.0394698895127353e-07,
+      "p_holm": 5.288677607752159e-05
+    },
+    {
+      "metric": "keyword_coverage",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.083528294076104e-05,
+      "p_holm": 0.0017878216852255716
+    },
+    {
+      "metric": "keyword_coverage",
+      "method_a": "M1",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 8.719261266434105e-07,
+      "p_holm": 0.00014997129378266661
+    },
+    {
+      "metric": "keyword_coverage",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.02016031205824073,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "keyword_coverage",
+      "method_a": "M2",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 3.0016536442949727e-09,
+      "p_holm": 5.973290752146996e-07
+    },
+    {
+      "metric": "keyword_coverage",
+      "method_a": "M3",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 4.494211855363289e-09,
+      "p_holm": 8.763713117958412e-07
+    },
+    {
+      "metric": "hallucination_rate",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 10,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "hallucination_rate",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 4,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "hallucination_rate",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 6,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "hallucination_rate",
+      "method_a": "M0",
+      "method_b": "reference",
+      "n_pairs": 10,
+      "p": 0.0078125,
+      "p_holm": 0.9921875
+    },
+    {
+      "metric": "hallucination_rate",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 4,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "hallucination_rate",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 6,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "hallucination_rate",
+      "method_a": "M1",
+      "method_b": "reference",
+      "n_pairs": 12,
+      "p": 0.0078125,
+      "p_holm": 0.9921875
+    },
+    {
+      "metric": "hallucination_rate",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 4,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "hallucination_rate",
+      "method_a": "M2",
+      "method_b": "reference",
+      "n_pairs": 9,
+      "p": 0.5,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "hallucination_rate",
+      "method_a": "M3",
+      "method_b": "reference",
+      "n_pairs": 10,
+      "p": 0.125,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "latency_s",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 7.555220876380673e-10,
+      "p_holm": 1.6352404622105012e-07
+    },
+    {
+      "metric": "latency_s",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 7.555220876380673e-10,
+      "p_holm": 1.6352404622105012e-07
+    },
+    {
+      "metric": "latency_s",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 7.555220876380673e-10,
+      "p_holm": 1.6352404622105012e-07
+    },
+    {
+      "metric": "latency_s",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 7.222037513283772e-10,
+      "p_holm": 1.6032923279489974e-07
+    },
+    {
+      "metric": "latency_s",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 7.222037513283772e-10,
+      "p_holm": 1.6032923279489974e-07
+    },
+    {
+      "metric": "latency_s",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.8063207623335018e-08,
+      "p_holm": 3.4320094484336532e-06
+    },
+    {
+      "metric": "seo_title_len_50_60",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.7962534147376392,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_title_len_50_60",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.02780689502699719,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_title_len_50_60",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.00015705228423075119,
+      "p_holm": 0.02402899948730493
+    },
+    {
+      "metric": "seo_title_len_50_60",
+      "method_a": "M0",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 0.034808478811867126,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_title_len_50_60",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.014305878435429648,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_title_len_50_60",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 2.669149803181262e-05,
+      "p_holm": 0.004324022681153644
+    },
+    {
+      "metric": "seo_title_len_50_60",
+      "method_a": "M1",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 0.057779571123597245,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_title_len_50_60",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.10599754842494571,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_title_len_50_60",
+      "method_a": "M2",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 5.699411623331837e-05,
+      "p_holm": 0.00911905859733094
+    },
+    {
+      "metric": "seo_title_len_50_60",
+      "method_a": "M3",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 1.2387096985696925e-06,
+      "p_holm": 0.00021058064875684773
+    },
+    {
+      "metric": "seo_meta_len_120_156",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.0081509715935027,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_meta_len_120_156",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 7.098670445201004e-12,
+      "p_holm": 1.746272929519447e-09
+    },
+    {
+      "metric": "seo_meta_len_120_156",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 7.098670445201004e-12,
+      "p_holm": 1.746272929519447e-09
+    },
+    {
+      "metric": "seo_meta_len_120_156",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 6.737436018932725e-10,
+      "p_holm": 1.515923104259863e-07
+    },
+    {
+      "metric": "seo_meta_len_120_156",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 2.5396285894708567e-10,
+      "p_holm": 5.8919383275723875e-08
+    },
+    {
+      "metric": "seo_meta_len_120_156",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_title",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.001565402258002548,
+      "p_holm": 0.23011413192637456
+    },
+    {
+      "metric": "seo_keyphrase_in_title",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_title",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_title",
+      "method_a": "M0",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_title",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.001565402258002548,
+      "p_holm": 0.23011413192637456
+    },
+    {
+      "metric": "seo_keyphrase_in_title",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.001565402258002548,
+      "p_holm": 0.23011413192637456
+    },
+    {
+      "metric": "seo_keyphrase_in_title",
+      "method_a": "M1",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 0.001565402258002548,
+      "p_holm": 0.23011413192637456
+    },
+    {
+      "metric": "seo_keyphrase_in_title",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_title",
+      "method_a": "M2",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_title",
+      "method_a": "M3",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_first_paragraph",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.00010751117672950055,
+      "p_holm": 0.016771743569802086
+    },
+    {
+      "metric": "seo_keyphrase_in_first_paragraph",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_first_paragraph",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_first_paragraph",
+      "method_a": "M0",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 4.320463057827488e-08,
+      "p_holm": 7.863242765246029e-06
+    },
+    {
+      "metric": "seo_keyphrase_in_first_paragraph",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.00010751117672950055,
+      "p_holm": 0.016771743569802086
+    },
+    {
+      "metric": "seo_keyphrase_in_first_paragraph",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.00010751117672950055,
+      "p_holm": 0.016771743569802086
+    },
+    {
+      "metric": "seo_keyphrase_in_first_paragraph",
+      "method_a": "M1",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 0.0010631149171586032,
+      "p_holm": 0.15840412265663187
+    },
+    {
+      "metric": "seo_keyphrase_in_first_paragraph",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_first_paragraph",
+      "method_a": "M2",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 4.320463057827488e-08,
+      "p_holm": 7.863242765246029e-06
+    },
+    {
+      "metric": "seo_keyphrase_in_first_paragraph",
+      "method_a": "M3",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 4.320463057827488e-08,
+      "p_holm": 7.863242765246029e-06
+    },
+    {
+      "metric": "seo_keyphrase_in_meta",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.0026997960632601866,
+      "p_holm": 0.37797144885642614
+    },
+    {
+      "metric": "seo_keyphrase_in_meta",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_meta",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_keyphrase_in_meta",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.0026997960632601866,
+      "p_holm": 0.37797144885642614
+    },
+    {
+      "metric": "seo_keyphrase_in_meta",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.0026997960632601866,
+      "p_holm": 0.37797144885642614
+    },
+    {
+      "metric": "seo_keyphrase_in_meta",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_density_proxy_0_5_3",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.04550026389635839,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_density_proxy_0_5_3",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 9.633570086430965e-07,
+      "p_holm": 0.0001647340484779695
+    },
+    {
+      "metric": "seo_density_proxy_0_5_3",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 4.262191597843629e-12,
+      "p_holm": 1.0527613246673764e-09
+    },
+    {
+      "metric": "seo_density_proxy_0_5_3",
+      "method_a": "M0",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 6.334248366623973e-05,
+      "p_holm": 0.010071454902932117
+    },
+    {
+      "metric": "seo_density_proxy_0_5_3",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 8.76994237559024e-05,
+      "p_holm": 0.013768809529676677
+    },
+    {
+      "metric": "seo_density_proxy_0_5_3",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 3.2837586498733825e-11,
+      "p_holm": 7.946695932693586e-09
+    },
+    {
+      "metric": "seo_density_proxy_0_5_3",
+      "method_a": "M1",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 0.0026997960632601866,
+      "p_holm": 0.37797144885642614
+    },
+    {
+      "metric": "seo_density_proxy_0_5_3",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 2.5165130527218896e-06,
+      "p_holm": 0.00042529070590999933
+    },
+    {
+      "metric": "seo_density_proxy_0_5_3",
+      "method_a": "M2",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 0.08808151166219029,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_density_proxy_0_5_3",
+      "method_a": "M3",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 4.066142456598801e-08,
+      "p_holm": 7.441040695575806e-06
+    },
+    {
+      "metric": "seo_desc_words_ge_200",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_desc_words_ge_200",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.5374597944280347e-12,
+      "p_holm": 3.859024084014367e-10
+    },
+    {
+      "metric": "seo_desc_words_ge_200",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.5374597944280347e-12,
+      "p_holm": 3.859024084014367e-10
+    },
+    {
+      "metric": "seo_desc_words_ge_200",
+      "method_a": "M0",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 0.025347318677468252,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_desc_words_ge_200",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.5374597944280347e-12,
+      "p_holm": 3.859024084014367e-10
+    },
+    {
+      "metric": "seo_desc_words_ge_200",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.5374597944280347e-12,
+      "p_holm": 3.859024084014367e-10
+    },
+    {
+      "metric": "seo_desc_words_ge_200",
+      "method_a": "M1",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 0.025347318677468252,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_desc_words_ge_200",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "seo_desc_words_ge_200",
+      "method_a": "M2",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 1.9703444711799168e-11,
+      "p_holm": 4.807640509678997e-09
+    },
+    {
+      "metric": "seo_desc_words_ge_200",
+      "method_a": "M3",
+      "method_b": "reference",
+      "n_pairs": 50,
+      "p": 1.9703444711799168e-11,
+      "p_holm": 4.807640509678997e-09
+    },
+    {
+      "metric": "script_length_words",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 1.38109341487187e-07,
+      "p_holm": 2.4445353443232097e-05
+    },
+    {
+      "metric": "script_length_words",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 7.470233007012134e-10,
+      "p_holm": 1.6352404622105012e-07
+    },
+    {
+      "metric": "script_length_words",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 7.424697518988015e-10,
+      "p_holm": 1.6334334541773634e-07
+    },
+    {
+      "metric": "script_length_words",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 7.466851425618727e-10,
+      "p_holm": 1.6352404622105012e-07
+    },
+    {
+      "metric": "script_length_words",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 7.490551399023103e-10,
+      "p_holm": 1.6352404622105012e-07
+    },
+    {
+      "metric": "script_length_words",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.03918842077615409,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "script_hallucination_rate",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 5,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "script_hallucination_rate",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 7,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "script_hallucination_rate",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 4,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_tu_nhien",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 5.97339368051222e-11,
+      "p_holm": 1.4183909791625682e-08
+    },
+    {
+      "metric": "judge_mo_ta_tu_nhien",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 6.145705136149773e-11,
+      "p_holm": 1.4503864121313463e-08
+    },
+    {
+      "metric": "judge_mo_ta_tu_nhien",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 6.145705136149773e-11,
+      "p_holm": 1.4503864121313463e-08
+    },
+    {
+      "metric": "judge_mo_ta_tu_nhien",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.5929800980174267,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_tu_nhien",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.5270892568655381,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_tu_nhien",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_lien_quan_tu_khoa",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.00035421428227678663,
+      "p_holm": 0.053132142341517995
+    },
+    {
+      "metric": "judge_mo_ta_lien_quan_tu_khoa",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 2.408501555078135e-08,
+      "p_holm": 4.527982923546893e-06
+    },
+    {
+      "metric": "judge_mo_ta_lien_quan_tu_khoa",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.159493619025184e-07,
+      "p_holm": 2.0754935780550794e-05
+    },
+    {
+      "metric": "judge_mo_ta_lien_quan_tu_khoa",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.539723261667398e-07,
+      "p_holm": 2.6945157079179464e-05
+    },
+    {
+      "metric": "judge_mo_ta_lien_quan_tu_khoa",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 4.438662589044667e-06,
+      "p_holm": 0.000745695314959504
+    },
+    {
+      "metric": "judge_mo_ta_lien_quan_tu_khoa",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.07782625057385058,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_thuyet_phuc",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 9.684494380240599e-11,
+      "p_holm": 2.2661716849763e-08
+    },
+    {
+      "metric": "judge_mo_ta_thuyet_phuc",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 4.777286159167157e-11,
+      "p_holm": 1.1465486782001177e-08
+    },
+    {
+      "metric": "judge_mo_ta_thuyet_phuc",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 5.959625962867934e-11,
+      "p_holm": 1.4183909791625682e-08
+    },
+    {
+      "metric": "judge_mo_ta_thuyet_phuc",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.22525290636065332,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_thuyet_phuc",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_thuyet_phuc",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.13166801602281422,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_nhat_quan_thong_tin",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.0021721536873098523,
+      "p_holm": 0.30627366991068916
+    },
+    {
+      "metric": "judge_mo_ta_nhat_quan_thong_tin",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.15661635291627132,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_nhat_quan_thong_tin",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.0578268786434286,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_nhat_quan_thong_tin",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.10247043485974937,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_nhat_quan_thong_tin",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.15729920705028502,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_mo_ta_nhat_quan_thong_tin",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.6547208460185769,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_email_ro_rang",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 1.2921215718774771e-09,
+      "p_holm": 2.661770438067603e-07
+    },
+    {
+      "metric": "judge_email_ro_rang",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 8.65352540239063e-10,
+      "p_holm": 1.8345473853068136e-07
+    },
+    {
+      "metric": "judge_email_ro_rang",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.1174477452374059e-09,
+      "p_holm": 2.3354657875461784e-07
+    },
+    {
+      "metric": "judge_email_ro_rang",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.15729920705028502,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_email_ro_rang",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.763024600552995,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_email_ro_rang",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.0832645166635504,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_email_gay_to_mo",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 1.400344280126725e-10,
+      "p_holm": 3.262802172695269e-08
+    },
+    {
+      "metric": "judge_email_gay_to_mo",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0794644161813482e-09,
+      "p_holm": 2.2668752739808312e-07
+    },
+    {
+      "metric": "judge_email_gay_to_mo",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.8074580996544748e-09,
+      "p_holm": 3.6872145232951287e-07
+    },
+    {
+      "metric": "judge_email_gay_to_mo",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 9.265035311077657e-06,
+      "p_holm": 0.001537995861638891
+    },
+    {
+      "metric": "judge_email_gay_to_mo",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.00026033475513940655,
+      "p_holm": 0.03931054802605039
+    },
+    {
+      "metric": "judge_email_gay_to_mo",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.2600945376270438,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_email_lien_quan",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 2.0356765080558653e-05,
+      "p_holm": 0.0033181527081310603
+    },
+    {
+      "metric": "judge_email_lien_quan",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.004165600427682075,
+      "p_holm": 0.554024856881716
+    },
+    {
+      "metric": "judge_email_lien_quan",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.0002075015940618338,
+      "p_holm": 0.031540242297398734
+    },
+    {
+      "metric": "judge_email_lien_quan",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.019630657257290667,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_email_lien_quan",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.08356564983357526,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_email_lien_quan",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.4142161782425253,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_kich_ban_cta_ro_rang",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 1.8353543823110755e-05,
+      "p_holm": 0.003009981186990164
+    },
+    {
+      "metric": "judge_kich_ban_cta_ro_rang",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.006655605482949377,
+      "p_holm": 0.8585731073004697
+    },
+    {
+      "metric": "judge_kich_ban_cta_ro_rang",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.020921335337794014,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_kich_ban_cta_ro_rang",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.5154032269861834e-07,
+      "p_holm": 2.6671096794956828e-05
+    },
+    {
+      "metric": "judge_kich_ban_cta_ro_rang",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.2192121631606477e-07,
+      "p_holm": 2.1701976504259528e-05
+    },
+    {
+      "metric": "judge_kich_ban_cta_ro_rang",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.5637028616507731,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_kich_ban_nhu_cau_loi_ich",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 2.9046471287364896e-09,
+      "p_holm": 5.838340728760345e-07
+    },
+    {
+      "metric": "judge_kich_ban_nhu_cau_loi_ich",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 4.67290590333022e-11,
+      "p_holm": 1.126170322702583e-08
+    },
+    {
+      "metric": "judge_kich_ban_nhu_cau_loi_ich",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 5.791622756617254e-11,
+      "p_holm": 1.3841978388315237e-08
+    },
+    {
+      "metric": "judge_kich_ban_nhu_cau_loi_ich",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.1219350361359694e-08,
+      "p_holm": 2.154115269381061e-06
+    },
+    {
+      "metric": "judge_kich_ban_nhu_cau_loi_ich",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 7.970948888416088e-09,
+      "p_holm": 1.5383931354643049e-06
+    },
+    {
+      "metric": "judge_kich_ban_nhu_cau_loi_ich",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.7054569861112734,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_kich_ban_xu_ly_phan_doi",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.5059313835207008,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_kich_ban_xu_ly_phan_doi",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 3.1043243487264918e-09,
+      "p_holm": 6.115518966991189e-07
+    },
+    {
+      "metric": "judge_kich_ban_xu_ly_phan_doi",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 3.129502666024549e-08,
+      "p_holm": 5.789579932145416e-06
+    },
+    {
+      "metric": "judge_kich_ban_xu_ly_phan_doi",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 2.564527882791326e-09,
+      "p_holm": 5.180346323238478e-07
+    },
+    {
+      "metric": "judge_kich_ban_xu_ly_phan_doi",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 6.8121949986266835e-09,
+      "p_holm": 1.3215658297335767e-06
+    },
+    {
+      "metric": "judge_kich_ban_xu_ly_phan_doi",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.028743117509121462,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_kich_ban_dung_su_that",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 9.089674863969397e-10,
+      "p_holm": 1.9179213962975428e-07
+    },
+    {
+      "metric": "judge_kich_ban_dung_su_that",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.3967768612479633e-09,
+      "p_holm": 2.863392565558325e-07
+    },
+    {
+      "metric": "judge_kich_ban_dung_su_that",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 2.085522052596465e-09,
+      "p_holm": 4.2336097667708234e-07
+    },
+    {
+      "metric": "judge_kich_ban_dung_su_that",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.10247043485974937,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_kich_ban_dung_su_that",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.15729920705028502,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "judge_kich_ban_dung_su_that",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.6547208460185769,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rouge1",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.004459422606641894,
+      "p_holm": 0.58864378407673
+    },
+    {
+      "metric": "rouge1",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.006325487527247375,
+      "p_holm": 0.8223133785421588
+    },
+    {
+      "metric": "rouge1",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.0027053239960554976,
+      "p_holm": 0.37797144885642614
+    },
+    {
+      "metric": "rouge1",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.81837027658068,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rouge1",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.4547879869752496,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rouge1",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.00594215911497642,
+      "p_holm": 0.778422844061911
+    },
+    {
+      "metric": "rouge2",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.058946396442612174,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rouge2",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.7777386006515914,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rouge2",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.36513626080030037,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rouge2",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.09332612155911285,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rouge2",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.220435762100606,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rouge2",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.3646630012809722,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rougeL",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.014479791748943427,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rougeL",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.028256978552906986,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rougeL",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.01958777690517799,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rougeL",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.9085978224870299,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rougeL",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.766732668436843,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "rougeL",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.4042577575813002,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "sentence_bleu",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.002996250182501825,
+      "p_holm": 0.40149752445524456
+    },
+    {
+      "metric": "sentence_bleu",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.13045894629165566,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "sentence_bleu",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.2866420365460076,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "sentence_bleu",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.08054833435456032,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "sentence_bleu",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.07719592312590784,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "sentence_bleu",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.08054833435456032,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "chrf_plus_plus",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.0027053239960554976,
+      "p_holm": 0.37797144885642614
+    },
+    {
+      "metric": "chrf_plus_plus",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 2.2451841275028528e-08,
+      "p_holm": 4.243398000980392e-06
+    },
+    {
+      "metric": "chrf_plus_plus",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.260182003193222e-08,
+      "p_holm": 2.406947626099054e-06
+    },
+    {
+      "metric": "chrf_plus_plus",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 3.348859145546612e-08,
+      "p_holm": 6.161900827805766e-06
+    },
+    {
+      "metric": "chrf_plus_plus",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 2.6378053519238165e-08,
+      "p_holm": 4.932696008097537e-06
+    },
+    {
+      "metric": "chrf_plus_plus",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.12799334338745183,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "bertscore_f1",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.001282241835095732,
+      "p_holm": 0.18977179159416835
+    },
+    {
+      "metric": "bertscore_f1",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.192391962945294e-09,
+      "p_holm": 2.4682513632967584e-07
+    },
+    {
+      "metric": "bertscore_f1",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 2.6378053519238165e-08,
+      "p_holm": 4.932696008097537e-06
+    },
+    {
+      "metric": "bertscore_f1",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.060701401498306495,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "bertscore_f1",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.14874176207376877,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "bertscore_f1",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.08054833435456032,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_mailchimp_le9w_le60c",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_mailchimp_le9w_le60c",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_mailchimp_le9w_le60c",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_mailchimp_le9w_le60c",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_mailchimp_le9w_le60c",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_mailchimp_le9w_le60c",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_omnisend_4_6w_or_21_40c",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 3.0707309797358246e-09,
+      "p_holm": 6.080047339876933e-07
+    },
+    {
+      "metric": "email_omnisend_4_6w_or_21_40c",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 4.34131681312965e-10,
+      "p_holm": 9.898202333935602e-08
+    },
+    {
+      "metric": "email_omnisend_4_6w_or_21_40c",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 4.0549404218123466e-10,
+      "p_holm": 9.285813565950273e-08
+    },
+    {
+      "metric": "email_omnisend_4_6w_or_21_40c",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 0.006655605482949377,
+      "p_holm": 0.8585731073004697
+    },
+    {
+      "metric": "email_omnisend_4_6w_or_21_40c",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.001565402258002548,
+      "p_holm": 0.23011413192637456
+    },
+    {
+      "metric": "email_omnisend_4_6w_or_21_40c",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.31731050786291415,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_punct_le3",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_punct_le3",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_punct_le3",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_punct_le3",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_punct_le3",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_punct_le3",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_emoji_le1",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_emoji_le1",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_emoji_le1",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_emoji_le1",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_emoji_le1",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_emoji_le1",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_no_fake_re_fwd",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_no_fake_re_fwd",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_no_fake_re_fwd",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_no_fake_re_fwd",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_no_fake_re_fwd",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_no_fake_re_fwd",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_keyword_relevance",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 0.01973729238398798,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_keyword_relevance",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.1756885110160852e-09,
+      "p_holm": 2.445432102913457e-07
+    },
+    {
+      "metric": "email_keyword_relevance",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 2.5396285894708567e-10,
+      "p_holm": 5.8919383275723875e-08
+    },
+    {
+      "metric": "email_keyword_relevance",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 5.223844630204153e-05,
+      "p_holm": 0.008410389854628686
+    },
+    {
+      "metric": "email_keyword_relevance",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 8.603298489579984e-06,
+      "p_holm": 0.0014367508477598574
+    },
+    {
+      "metric": "email_keyword_relevance",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 0.4496917979688909,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_offer_supported",
+      "method_a": "M0",
+      "method_b": "M1",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_offer_supported",
+      "method_a": "M0",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_offer_supported",
+      "method_a": "M0",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_offer_supported",
+      "method_a": "M1",
+      "method_b": "M2",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_offer_supported",
+      "method_a": "M1",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "metric": "email_offer_supported",
+      "method_a": "M2",
+      "method_b": "M3",
+      "n_pairs": 50,
+      "p": 1.0,
+      "p_holm": 1.0
+    }
+  ]
+}

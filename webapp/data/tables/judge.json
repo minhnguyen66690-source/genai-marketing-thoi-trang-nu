@@ -1,6 +1,6 @@
 {
  "caption": "Điểm giám khảo Gemini (thang 1–5) và các chỉ số kịch bản, Tiki n = 99 (RQ4)",
- "source": "Nguồn: tác giả tính; giám khảo Gemini 3.8 Flash chấm ẩn danh theo rubric G-Eval; tỷ lệ không căn cứ tính trên các mẫu có ít nhất một thuộc tính được nhắc",
+ "source": "Nguồn: tác giả tính; giám khảo Gemini 3.8 Flash chấm ẩn danh theo rubric G-Eval; chủ đề phản đối được đối chiếu bằng từ vựng của từng chủ đề; tỷ lệ không căn cứ là trung bình trên các mẫu có ít nhất một thuộc tính được nhắc",
  "columns": [
   "Chỉ số",
   "M0",
@@ -45,7 +45,7 @@
    "3,37"
   ],
   [
-   "Kịch bản: CTA rõ ràng",
+   "Kịch bản: lời kêu gọi hành động rõ",
    "4,39",
    "4,33",
    "5,00",
@@ -73,11 +73,11 @@
    "5,00"
   ],
   [
-   "Bao phủ phản đối theo luật (%)",
-   "27,3",
-   "83,5",
+   "Kịch bản nhắc đến chủ đề phản đối (%)",
+   "12,4",
+   "88,7",
    "100,0",
-   "97,9"
+   "100,0"
   ],
   [
    "Thuộc tính không có căn cứ trong mô tả (%)",

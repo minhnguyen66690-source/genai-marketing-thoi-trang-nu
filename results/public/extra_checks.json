@@ -1,0 +1,325 @@
+{
+  "rougeL_precision_recall": {
+    "tiki": {
+      "M0": {
+        "n": 99,
+        "precision": 0.224,
+        "recall": 0.107,
+        "median_length_ratio_gen_over_ref": 0.42
+      },
+      "M1": {
+        "n": 99,
+        "precision": 0.194,
+        "recall": 0.116,
+        "median_length_ratio_gen_over_ref": 0.51
+      },
+      "M2": {
+        "n": 99,
+        "precision": 0.091,
+        "recall": 0.165,
+        "median_length_ratio_gen_over_ref": 1.88
+      },
+      "M3": {
+        "n": 99,
+        "precision": 0.093,
+        "recall": 0.171,
+        "median_length_ratio_gen_over_ref": 1.93
+      },
+      "M4a": {
+        "n": 59,
+        "precision": 0.142,
+        "recall": 0.121,
+        "median_length_ratio_gen_over_ref": 0.88
+      },
+      "M4b": {
+        "n": 59,
+        "precision": 0.076,
+        "recall": 0.099,
+        "median_length_ratio_gen_over_ref": 1.48
+      }
+    },
+    "amazon": {
+      "M0": {
+        "n": 50,
+        "precision": 0.163,
+        "recall": 0.049,
+        "median_length_ratio_gen_over_ref": 0.3
+      },
+      "M1": {
+        "n": 50,
+        "precision": 0.185,
+        "recall": 0.062,
+        "median_length_ratio_gen_over_ref": 0.28
+      },
+      "M2": {
+        "n": 50,
+        "precision": 0.062,
+        "recall": 0.148,
+        "median_length_ratio_gen_over_ref": 2.59
+      },
+      "M3": {
+        "n": 50,
+        "precision": 0.063,
+        "recall": 0.155,
+        "median_length_ratio_gen_over_ref": 2.62
+      }
+    }
+  },
+  "script_unsupported_claims": {
+    "tiki": {
+      "M1": {
+        "items_with_claims": 85,
+        "unsupported": 6,
+        "claims": 211,
+        "top_unsupported": [
+          [
+            "hai dây",
+            2
+          ],
+          [
+            "dáng suông",
+            2
+          ],
+          [
+            "xanh lá",
+            1
+          ],
+          [
+            "dáng xòe",
+            1
+          ]
+        ]
+      },
+      "M2": {
+        "items_with_claims": 85,
+        "unsupported": 7,
+        "claims": 233,
+        "top_unsupported": [
+          [
+            "jean",
+            2
+          ],
+          [
+            "sát nách",
+            2
+          ],
+          [
+            "xanh lá",
+            1
+          ],
+          [
+            "dáng suông",
+            1
+          ],
+          [
+            "vải thun",
+            1
+          ]
+        ]
+      },
+      "M3": {
+        "items_with_claims": 86,
+        "unsupported": 8,
+        "claims": 233,
+        "top_unsupported": [
+          [
+            "jean",
+            2
+          ],
+          [
+            "dáng suông",
+            2
+          ],
+          [
+            "dáng ôm",
+            2
+          ],
+          [
+            "xanh lá",
+            1
+          ],
+          [
+            "vải thun",
+            1
+          ]
+        ]
+      }
+    },
+    "amazon": {
+      "M1": {
+        "items_with_claims": 11,
+        "unsupported": 2,
+        "claims": 11,
+        "top_unsupported": [
+          [
+            "v-neck",
+            2
+          ]
+        ]
+      },
+      "M2": {
+        "items_with_claims": 10,
+        "unsupported": 6,
+        "claims": 10,
+        "top_unsupported": [
+          [
+            "relaxed fit",
+            6
+          ]
+        ]
+      },
+      "M3": {
+        "items_with_claims": 11,
+        "unsupported": 5,
+        "claims": 11,
+        "top_unsupported": [
+          [
+            "relaxed fit",
+            5
+          ]
+        ]
+      }
+    }
+  },
+  "seo_common_5": {
+    "tiki": {
+      "M0": 61.8,
+      "M1": 59.2,
+      "M2": 85.1,
+      "M3": 86.3,
+      "M4a": 29.2,
+      "M4b": 59.7,
+      "reference": 64.6
+    },
+    "amazon": {
+      "M0": 54.5,
+      "M1": 41.5,
+      "M2": 85.0,
+      "M3": 89.5,
+      "reference": 38.5
+    }
+  },
+  "duplicate_robustness_tiki": {
+    "n_duplicates": 11,
+    "all": {
+      "M0": {
+        "n": 99,
+        "chrf": 13.4,
+        "rougeL": 0.126,
+        "seo_common": 61.8
+      },
+      "M1": {
+        "n": 99,
+        "chrf": 14.1,
+        "rougeL": 0.126,
+        "seo_common": 59.2
+      },
+      "M2": {
+        "n": 99,
+        "chrf": 19.2,
+        "rougeL": 0.104,
+        "seo_common": 85.1
+      },
+      "M3": {
+        "n": 99,
+        "chrf": 19.7,
+        "rougeL": 0.106,
+        "seo_common": 86.3
+      },
+      "M4a": {
+        "n": 59,
+        "chrf": 15.9,
+        "rougeL": 0.108,
+        "seo_common": 29.2
+      },
+      "M4b": {
+        "n": 59,
+        "chrf": 11.2,
+        "rougeL": 0.072,
+        "seo_common": 59.7
+      },
+      "reference": {
+        "n": 99,
+        "chrf": null,
+        "rougeL": null,
+        "seo_common": 64.6
+      }
+    },
+    "without_duplicates": {
+      "M0": {
+        "n": 88,
+        "chrf": 13.6,
+        "rougeL": 0.128,
+        "seo_common": 61.8
+      },
+      "M1": {
+        "n": 88,
+        "chrf": 14.4,
+        "rougeL": 0.126,
+        "seo_common": 60.0
+      },
+      "M2": {
+        "n": 88,
+        "chrf": 19.4,
+        "rougeL": 0.104,
+        "seo_common": 85.2
+      },
+      "M3": {
+        "n": 88,
+        "chrf": 19.8,
+        "rougeL": 0.107,
+        "seo_common": 86.4
+      },
+      "M4a": {
+        "n": 53,
+        "chrf": 16.1,
+        "rougeL": 0.109,
+        "seo_common": 28.3
+      },
+      "M4b": {
+        "n": 53,
+        "chrf": 11.2,
+        "rougeL": 0.073,
+        "seo_common": 59.2
+      },
+      "reference": {
+        "n": 88,
+        "chrf": null,
+        "rougeL": null,
+        "seo_common": 65.2
+      }
+    }
+  },
+  "keywords_per_product_tiki": {
+    "mean": 4.76,
+    "min": 1,
+    "max": 6,
+    "share_lt3": 5.6,
+    "distribution": {
+      "1": 16,
+      "2": 92,
+      "3": 356,
+      "4": 303,
+      "5": 279,
+      "6": 895
+    }
+  },
+  "judge_agreement_medians": {
+    "tiki": {
+      "n_criteria": 11,
+      "n_per_criterion": 39,
+      "median_spearman": 0.61,
+      "median_kappa": 0.57,
+      "min_spearman": 0.19,
+      "max_spearman": 0.85
+    },
+    "amazon": {
+      "n_criteria": 11,
+      "n_per_criterion": 35,
+      "median_spearman": 0.5,
+      "median_kappa": 0.44,
+      "min_spearman": 0.1,
+      "max_spearman": 0.92
+    }
+  }
+}

@@ -19,7 +19,7 @@
     "created_date": 0,
     "product_age_days": 0,
     "within_7y": 0,
-    "description_text": 0,
+    "description_text": 22,
     "short_description": 0,
     "meta_title": 2181,
     "meta_description": 2181,
@@ -35,9 +35,9 @@
   },
   "duplicate_name_brand_raw": 39,
   "within_7y": 2021,
-  "description_at_least_50": 2021,
-  "deduplicated": 1983,
+  "description_at_least_50": 1979,
+  "deduplicated": 1941,
   "ranking_groups": 14,
-  "positive_count": 519,
-  "positive_rate": 0.2617246596066566
+  "positive_count": 506,
+  "positive_rate": 0.2606903657908295
 }

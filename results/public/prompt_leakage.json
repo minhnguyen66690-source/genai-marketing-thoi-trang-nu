@@ -1,0 +1,64 @@
+{
+ "pattern": "\\bbrief\\b|chưa cung cấp|không được cung cấp|chưa nêu|chưa có thông tin|không có thông tin|not provided|isn.t specified|not specified|no information|not mentioned",
+ "results": {
+  "tiki": {
+   "M0": {
+    "n": 99,
+    "leaked": 0,
+    "rate": 0.0
+   },
+   "M1": {
+    "n": 99,
+    "leaked": 6,
+    "rate": 0.06060606060606061
+   },
+   "M2 (v2)": {
+    "n": 99,
+    "leaked": 0,
+    "rate": 0.0
+   },
+   "M3 (v2)": {
+    "n": 99,
+    "leaked": 0,
+    "rate": 0.0
+   },
+   "M2 (v1)": {
+    "n": 70,
+    "leaked": 63,
+    "rate": 0.9
+   }
+  },
+  "amazon": {
+   "M0": {
+    "n": 50,
+    "leaked": 0,
+    "rate": 0.0
+   },
+   "M1": {
+    "n": 50,
+    "leaked": 0,
+    "rate": 0.0
+   },
+   "M2 (v2)": {
+    "n": 50,
+    "leaked": 0,
+    "rate": 0.0
+   },
+   "M3 (v2)": {
+    "n": 50,
+    "leaked": 0,
+    "rate": 0.0
+   },
+   "M2 (v1)": {
+    "n": 50,
+    "leaked": 17,
+    "rate": 0.34
+   },
+   "M3 (v1)": {
+    "n": 50,
+    "leaked": 15,
+    "rate": 0.3
+   }
+  }
+ }
+}

@@ -73,12 +73,18 @@ def main():
             "p_value": float(model.pvalues[name]),
             "group": "content" if name in CONTENT_CONTINUOUS or name in CONTENT_BINARY else "control",
         })
+    # Hiệu chỉnh Holm cho họ kiểm định gồm các đặc trưng nội dung (biến kiểm soát không thuộc giả thuyết).
+    from statsmodels.stats.multitest import multipletests
+    content_idx = [i for i, r in enumerate(rows) if r["group"] == "content"]
+    adjusted = multipletests([rows[i]["p_value"] for i in content_idx], method="holm")[1]
+    for i, p_adj in zip(content_idx, adjusted):
+        rows[i]["p_holm"] = float(p_adj)
     result = {
         "n": int(len(d)),
         "n_positive": int(y.sum()),
         "pseudo_r2_mcfadden": float(model.prsquared),
         "llr_p_value": float(model.llr_pvalue),
-        "note": "Biến liên tục của nội dung chuẩn hóa z-score (một số biến lấy log1p trước); OR là liên hệ có kiểm soát, không phải nhân quả.",
+        "note": "Biến liên tục của nội dung chuẩn hóa z-score (một số biến lấy log1p trước), OR ứng với tăng 1 độ lệch chuẩn; p_holm hiệu chỉnh Holm trên các đặc trưng nội dung; OR là liên hệ có kiểm soát, không phải nhân quả.",
         "coefficients": rows,
     }
     save_json(RESULTS / "rq1_logit_odds_ratios.json", result)
@@ -88,7 +94,7 @@ def main():
     fig, ax = plt.subplots(figsize=(9, 5.2))
     ypos = np.arange(len(content))
     for i, r in enumerate(content):
-        color = "#E76F51" if r["p_value"] < 0.05 else "#8D99AE"
+        color = "#E76F51" if r["p_holm"] < 0.05 else ("#F4A261" if r["p_value"] < 0.05 else "#8D99AE")
         ax.plot([r["ci_low"], r["ci_high"]], [i, i], color=color, linewidth=2)
         ax.plot(r["odds_ratio"], i, "o", color=color, markersize=7)
     ax.axvline(1, color="#264653", linestyle="--", linewidth=1)
@@ -96,7 +102,7 @@ def main():
     ax.set_yticklabels([r["label"] for r in content])
     ax.set_xscale("log")
     ax.set_xlabel("Tỷ số chênh (OR) và khoảng tin cậy 95%, thang log")
-    ax.set_title("Liên hệ có kiểm soát giữa đặc trưng nội dung và nhãn bán chạy\n(màu cam: p < 0,05; kiểm soát giá, giảm giá, tuổi, ảnh, biến thể, danh mục)", fontsize=11)
+    ax.set_title("Liên hệ có kiểm soát giữa đặc trưng nội dung và nhãn bán chạy\n(cam đậm: p Holm < 0,05; cam nhạt: chỉ p chưa hiệu chỉnh < 0,05; kiểm soát giá, giảm giá, tuổi, ảnh, biến thể, danh mục)", fontsize=11)
     save_figure(fig, FIGURES / "predictive_05_odds_ratio.png", source_text(d))
     print(json.dumps({r["label"]: (round(r["odds_ratio"], 3), round(r["p_value"], 4)) for r in rows}, ensure_ascii=False))
     print("pseudo R2:", round(model.prsquared, 4))

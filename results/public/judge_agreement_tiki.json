@@ -1,0 +1,67 @@
+{
+ "dataset": "tiki",
+ "n_items": 40,
+ "per_method": 10,
+ "criteria": {
+  "mo_ta.tu_nhien": {
+   "n": 39,
+   "spearman": 0.627969032174101,
+   "quadratic_kappa": 0.6049723756906078
+  },
+  "mo_ta.lien_quan_tu_khoa": {
+   "n": 39,
+   "spearman": 0.49060918747549553,
+   "quadratic_kappa": 0.31331828442437926
+  },
+  "mo_ta.thuyet_phuc": {
+   "n": 39,
+   "spearman": 0.835701802617827,
+   "quadratic_kappa": 0.7890466531440162
+  },
+  "mo_ta.nhat_quan_thong_tin": {
+   "n": 39,
+   "spearman": null,
+   "quadratic_kappa": 0.0
+  },
+  "email.ro_rang": {
+   "n": 39,
+   "spearman": 0.4808305999638807,
+   "quadratic_kappa": 0.38095238095238093
+  },
+  "email.gay_to_mo": {
+   "n": 39,
+   "spearman": 0.43359278159074355,
+   "quadratic_kappa": 0.39097744360902253
+  },
+  "email.lien_quan": {
+   "n": 39,
+   "spearman": 0.18596443591417333,
+   "quadratic_kappa": 0.10550458715596323
+  },
+  "kich_ban.cta_ro_rang": {
+   "n": 39,
+   "spearman": 0.5853819819377155,
+   "quadratic_kappa": 0.5714285714285714
+  },
+  "kich_ban.nhu_cau_loi_ich": {
+   "n": 39,
+   "spearman": 0.7832530549946367,
+   "quadratic_kappa": 0.7655646200085874
+  },
+  "kich_ban.xu_ly_phan_doi": {
+   "n": 39,
+   "spearman": 0.8475359488697624,
+   "quadratic_kappa": 0.9195485984710593
+  },
+  "kich_ban.dung_su_that": {
+   "n": 39,
+   "spearman": 0.7923897685094913,
+   "quadratic_kappa": 0.7560321715817695
+  }
+ },
+ "pooled": {
+  "n": 429,
+  "spearman": 0.732589014186027,
+  "quadratic_kappa": 0.7752961401058315
+ }
+}

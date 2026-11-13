@@ -65,9 +65,9 @@ def d1():
     fig, ax = canvas('Kiến trúc hệ thống GenAI sinh nội dung marketing', 7.5)
     rows = [
         ('Nguồn dữ liệu', ['Tiki API – Thời trang nữ\n(tiếng Việt)', 'Amazon Reviews 2023 – Clothing\n(tiếng Anh)']),
-        ('Xử lý dữ liệu', ['Làm sạch HTML,\nchuẩn hóa Unicode', 'Tách từ tiếng Việt\n(underthesea)', 'Trích từ khóa đặc trưng\n(TF-IDF, YAKE)', 'Trích phản đối từ\nđánh giá 1–3 sao']),
+        ('Xử lý dữ liệu', ['Làm sạch HTML,\nchuẩn hóa Unicode', 'Tách từ tiếng Việt\n(underthesea)', 'Trích từ khóa đặc trưng\n(tần suất df, Thuật toán 1)', 'Trích phản đối từ\nđánh giá 1–3 sao']),
         ('Kho tri thức', ['Tập huấn luyện mô tả\nbán chạy', 'Chỉ mục TF-IDF\nđể truy hồi ví dụ']),
-        ('Lớp sinh nội dung', ['M0\nMẫu cố định', 'M1\nZero-shot\n(GPT)', 'M2\nPrompt engineering\n(GPT)', 'M3\nFew-shot có\ntruy hồi (GPT)', 'M4\nQwen2.5-0.5B\n+ LoRA']),
+        ('Lớp sinh nội dung', ['M0\nMẫu cố định', 'M1\nZero-shot\n(GPT)', 'M2\nThiết kế\ncâu lệnh (GPT)', 'M3\nFew-shot có\ntruy hồi (GPT)', 'M4\nQwen2.5-0.5B\n+ LoRA']),
         ('Lớp đánh giá', ['Tương đồng tham chiếu:\nROUGE, chrF++, BERTScore', 'Checklist tối ưu hóa\ntìm kiếm & email (có nguồn)', 'LLM-as-a-judge\n(Gemini)', 'Mô hình dự báo\nsản phẩm bán chạy']),
         ('Ứng dụng TMĐT', ['Web demo Streamlit', 'Người duyệt nội dung\n(human-in-the-loop)', 'Đăng sản phẩm /\ngửi email'])]
     for i, (title, items) in enumerate(rows):
@@ -88,7 +88,7 @@ def d2():
     fig, ax = canvas('Quy trình nghiên cứu theo CRISP-DM', 7)
     data = [
         ('Hiểu bài toán kinh doanh', 'Xác định nhu cầu viết nội dung\nSEO, kịch bản, email'),
-        ('Hiểu dữ liệu', 'Cào Tiki 3.000 SP, Amazon\n5.000 SP; EDA'),
+        ('Hiểu dữ liệu', 'Thu thập Tiki 2.181 SP,\nAmazon 5.000 bản ghi; EDA'),
         ('Chuẩn bị dữ liệu', 'Làm sạch, đặc trưng, từ khóa,\nchia train/val/test'),
         ('Mô hình hóa', 'Phân lớp bán chạy;\nsinh nội dung M0–M4'),
         ('Đánh giá', 'Checklist có nguồn, ROUGE/\nBERTScore, LLM-judge'),

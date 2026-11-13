@@ -289,7 +289,7 @@ def render_markdown(doc, path):
             path = ROOT / 'figures' / match[1]
             if path.is_file():
                 with Image.open(path) as image:
-                    width_cm = min(14.5, 8.5 * image.width / image.height)  # rộng tối đa 14,5 cm, cao tối đa 8,5 cm
+                    width_cm = min(13.2, 5.8 * image.width / image.height)  # rộng tối đa 13,2 cm, cao tối đa 5,8 cm
                 p = doc.add_paragraph(); centered(p); p.add_run().add_picture(str(path), width=Cm(width_cm))
                 caption(doc, 'Hình', match[2]); source(doc, match[3])
             else:
@@ -323,8 +323,8 @@ def build(out, skip_com=False):
         section.top_margin = section.bottom_margin = Cm(2)
     normal = doc.styles['Normal']
     font(normal, 12)
-    normal.paragraph_format.line_spacing = 1.15
-    normal.paragraph_format.space_after = Pt(4)
+    normal.paragraph_format.line_spacing = 1.1
+    normal.paragraph_format.space_after = Pt(3)
     normal.paragraph_format.first_line_indent = Cm(1)
     normal.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     for name, bold in [('TOC 1', True), ('TOC 2', False)]:
@@ -365,9 +365,9 @@ def build(out, skip_com=False):
                 p.paragraph_format.left_indent = Cm(1.27)
                 p.paragraph_format.first_line_indent = Cm(-1.27)
                 p.paragraph_format.line_spacing = 1.0
-                p.paragraph_format.space_after = Pt(3)
+                p.paragraph_format.space_after = Pt(1)
                 for run in p.runs:
-                    run.font.size = Pt(11)
+                    run.font.size = Pt(10.5)
     else:
         warn('Thiếu tài liệu tham khảo: ' + str(refs))
     out.parent.mkdir(parents=True, exist_ok=True)

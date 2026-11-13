@@ -138,7 +138,25 @@ def claim_supported(source, claim):
     measure = re.match(r'(\d+(?:[.,]\d+)?)\s*(?:cm|mm|kg|inch|inches|in)$', claim, re.IGNORECASE)
     if measure:
         return measure.group(1) in source
+    # Claim giá ("279.000 đồng", "$25.99"): so theo giá trị số, vì brief lưu giá dạng 279000.
+    if re.search(r'\d', claim) and re.search(r'đồng|vnđ|vnd|đ\b|usd|dollars|\$', claim, re.IGNORECASE):
+        found = re.search(r'\d[\d.,]*', claim)
+        value = _number(found.group()) if found else None
+        if value is not None:
+            return any(abs(value - n) < 0.01 for n in (_number(x) for x in re.findall(r'\d[\d.,]*', source)) if n is not None)
     return matches(source, claim)
+
+
+def _number(raw):
+    """Đọc số kiểu Việt Nam hoặc Mỹ: '279.000' -> 279000, '25.99' -> 25.99, '1,299.50' -> 1299.5."""
+    raw = raw.strip('.,')
+    if not raw:
+        return None
+    decimal = re.search(r'[.,](\d{1,2})$', raw)
+    if decimal:
+        whole = re.sub(r'[.,]', '', raw[:decimal.start()])
+        return float(whole + '.' + decimal.group(1)) if whole else None
+    return float(re.sub(r'[.,]', '', raw))
 
 
 def detect_lang(text):

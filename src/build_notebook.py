@@ -21,7 +21,7 @@ code('''import os, sys, json, subprocess
 from pathlib import Path
 IN_COLAB = 'google.colab' in sys.modules
 REPO_URL = 'https://github.com/minhnguyen66690-source/genai-marketing-thoi-trang-nu'
-WEB_URL = ''
+WEB_URL = 'https://genai-thoitrangnu.streamlit.app'
 if IN_COLAB:
     if not REPO_URL:
         raise ValueError('Hãy điền REPO_URL trước khi chạy trên Colab.')
@@ -138,11 +138,16 @@ code('''# OR là liên hệ có kiểm soát, không phải hiệu ứng nhân q
 if not df.empty:
     try:
         import statsmodels.api as sm
-        from rq1_inference import build_design
+        from statsmodels.stats.multitest import multipletests
+        from rq1_inference import build_design, CONTENT_CONTINUOUS, CONTENT_BINARY
         design = build_design(df)
         fit = sm.Logit(df.best_seller.astype(int), design).fit(disp=False, maxiter=200)
         ci = fit.conf_int()
-        display(pd.DataFrame({'OR': np.exp(fit.params), 'CI thấp': np.exp(ci[0]), 'CI cao': np.exp(ci[1]), 'p': fit.pvalues}))
+        table = pd.DataFrame({'OR': np.exp(fit.params), 'CI thấp': np.exp(ci[0]), 'CI cao': np.exp(ci[1]), 'p': fit.pvalues})
+        # Hiệu chỉnh Holm cho họ kiểm định gồm 9 đặc trưng nội dung.
+        content = [c for c in table.index if c in CONTENT_CONTINUOUS or c in CONTENT_BINARY]
+        table.loc[content, 'p Holm'] = multipletests(table.loc[content, 'p'], method='holm')[1]
+        display(table)
     except (ValueError, np.linalg.LinAlgError) as exc:
         print('chưa có kết quả Logit:', type(exc).__name__)''')
 md('''## 7. Từ khóa đặc trưng
@@ -227,6 +232,17 @@ for path in summary_files:
 if not summary_files: print('chưa có kết quả: Wilcoxon')
 from evaluate import SEO_LABELS, EMAIL_LABELS
 display(pd.DataFrame([{'Loại': kind, 'Tiêu chí': k, 'Nguồn': v} for kind, labels in [('SEO', SEO_LABELS), ('Email', EMAIL_LABELS)] for k, v in labels.items()]))''')
+md('''### 11b. Kiểm tra độ vững
+Prompt v2 được sửa sau khi xem lỗi trên tập kiểm tra, nên M0, M2, M3 được chạy lại trên 40 sản phẩm của tập kiểm định chưa dùng khi sửa prompt. Bảng dưới so sánh cùng một bộ chỉ số trên hai tập; tiếp theo là tỷ lệ tuân thủ trên năm tiêu chí chung (bỏ hai tiêu chí meta mà nội dung người bán không có) và độ chính xác, độ phủ ROUGE-L.''')
+code('''holdout = read_json(PUBLIC / 'holdout_check.json')
+if holdout:
+    display(pd.DataFrame([{'Tập': split, 'Cấu hình': m, **v} for split in ('val', 'test') for m, v in holdout.get(split, {}).items()]))
+extra = read_json(PUBLIC / 'extra_checks.json')
+if extra:
+    display(pd.DataFrame(extra.get('seo_common_5', {})).rename_axis('Cấu hình'))
+    display(pd.DataFrame(extra.get('rougeL_precision_recall', {}).get('tiki', {})).T)
+else:
+    print('chưa có kết quả kiểm tra độ vững')''')
 md('''## 12. Phân tích đề xuất
 Chọn cấu hình theo từng chỉ số thực đo. Độ trễ nhân 100 là ước tính tuần tự, không bao gồm kiểm duyệt; các chỉ số thiếu không được suy diễn.''')
 code('''if not evaluation.empty:
@@ -242,11 +258,13 @@ md('''## 13. Công cụ AI được sử dụng
 |---|---|
 | Claude Opus 5.5 qua Claude Code | Điều phối, viết bài, kiểm chứng |
 | GPT-6.1-Terra / GPT-6.1-Sol qua Codex CLI | Viết code, tra cứu, sinh nội dung M1–M3 |
-| Gemini 3.8 Flash qua Antigravity CLI | Giám khảo LLM |
+| Gemini 3.8 Flash qua Antigravity CLI | Giám khảo LLM chính |
+| GPT-5.6-Luna qua Codex CLI | Giám khảo thứ hai, chỉ dùng đo đồng thuận |
+| Claude Haiku và Sonnet | Kiểm chứng trích dẫn, dựng slide |
 | Qwen2.5-0.5B-Instruct | Mô hình tinh chỉnh LoRA |
 | bert-base-multilingual-cased | BERTScore |
 
-Tên và vai trò do nhóm nghiên cứu cung cấp; đối chiếu nhật ký trước khi công bố.''')
+Vai trò ghi theo nhật ký thực hiện của tác giả; mọi số liệu được tính bằng mã nguồn trong kho, không lấy từ câu trả lời của mô hình.''')
 md('''## 14. Tài liệu tham khảo chính
 - Hou, Y., et al. (2024). *Bridging language and items for retrieval and recommendation*. Amazon Reviews 2023.
 - Google. *Search Central: Creating helpful, reliable, people-first content*. https://developers.google.com/search/docs/fundamentals/creating-helpful-content

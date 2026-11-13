@@ -1,6 +1,6 @@
 {
- "caption": "Tỷ lệ đạt (%) từng tiêu chí tối ưu hóa tìm kiếm và tiêu đề email (RQ3), Tiki n = 99 (M4a n = 59)",
- "source": "Nguồn: tác giả tính; mã tiêu chí theo mục 4.5. (*) Không tính vào tỷ lệ tuân thủ gộp; '–': không áp dụng (Tiki không công khai meta, M4 chỉ sinh mô tả)",
+ "caption": "Tỷ lệ đạt (%) từng tiêu chí tối ưu hóa tìm kiếm và tiêu đề email (RQ3), Tiki n = 99 (M4 n = 59)",
+ "source": "Nguồn: tác giả tính; ngưỡng và nguồn của từng tiêu chí ở mục 4.5. (*) Báo cáo riêng, không tính vào tỷ lệ gộp. Năm tiêu chí chung là các tiêu chí không cần meta description, áp dụng được cho cả nội dung người bán; '–': không áp dụng (Tiki không công khai meta description của người bán; M4 không sinh meta description và tiêu đề email)",
  "columns": [
   "Tiêu chí",
   "M0",
@@ -8,96 +8,137 @@
   "M2",
   "M3",
   "M4a",
+  "M4b",
   "Người bán"
  ],
  "rows": [
   [
-   "Tiêu đề 50–60 ký tự (S19)",
+   "Tiêu đề 50–60 ký tự (Ahrefs)",
    "9,1",
    "30,3",
    "25,3",
    "31,3",
    "3,4",
+   "5,1",
    "23,2"
   ],
   [
-   "Tên 15–50 ký tự (S23)*",
+   "Tên ≤ 225 ký tự (Tiki)",
+   "100,0",
+   "100,0",
+   "100,0",
+   "100,0",
+   "88,1",
+   "88,1",
+   "100,0"
+  ],
+  [
+   "Tên 15–50 ký tự (Tiki)*",
    "90,9",
    "67,7",
    "87,9",
    "77,8",
    "18,6",
+   "50,8",
    "36,4"
   ],
   [
-   "Meta 120–156 ký tự (S12)",
+   "Meta 120–156 ký tự (Yoast)",
    "0,0",
    "34,3",
    "41,4",
    "66,7",
    "–",
+   "–",
    "–"
   ],
   [
-   "Mô tả ≥ 200 từ (S13, S24)",
+   "Từ khóa trong meta (Yoast)",
+   "100,0",
+   "82,8",
+   "100,0",
+   "100,0",
+   "–",
+   "–",
+   "–"
+  ],
+  [
+   "Mô tả ≥ 200 từ (Yoast, Tiki)",
    "0,0",
    "0,0",
    "100,0",
    "100,0",
    "6,8",
+   "40,7",
    "34,3"
   ],
   [
-   "Từ khóa trong tiêu đề (S11)",
+   "Từ khóa trong tiêu đề (Yoast)",
    "100,0",
    "82,8",
    "100,0",
    "100,0",
    "23,7",
+   "81,4",
    "99,0"
   ],
   [
-   "Từ khóa ở đoạn đầu (S10)",
+   "Từ khóa ở đoạn đầu (Yoast)",
    "100,0",
    "82,8",
    "100,0",
    "100,0",
    "23,7",
+   "83,1",
    "66,7"
   ],
   [
-   "Mật độ 0,5–3% (S09, proxy)*",
+   "Mật độ từ khóa 0,5–3% (Yoast, gần đúng)*",
    "9,1",
    "79,8",
    "91,9",
    "93,9",
    "71,2",
+   "40,7",
    "47,5"
   ],
   [
-   "Tỷ lệ tuân thủ gộp (Tiki)",
+   "Tỷ lệ tuân thủ gộp, 7 tiêu chí",
    "58,4",
    "59,0",
    "81,0",
    "85,4",
    "29,2",
+   "59,7",
    "64,6"
   ],
   [
-   "Email ≤ 9 từ, ≤ 60 ký tự (E01)",
+   "Tỷ lệ tuân thủ trên 5 tiêu chí chung",
+   "61,8",
+   "59,2",
+   "85,1",
+   "86,3",
+   "29,2",
+   "59,7",
+   "64,6"
+  ],
+  [
+   "Email ≤ 9 từ, ≤ 60 ký tự (Mailchimp)",
    "87,5",
    "53,9",
    "100,0",
    "100,0",
    "–",
+   "–",
    "–"
   ],
   [
-   "Email 4–6 từ hoặc 21–40 ký tự (E05)",
+   "Email 4–6 từ hoặc 21–40 ký tự (Omnisend)",
    "93,9",
    "54,9",
    "100,0",
    "99,7",
+   "–",
    "–",
    "–"
   ],
@@ -108,25 +149,28 @@
    "98,7",
    "99,0",
    "–",
+   "–",
    "–"
   ],
   [
-   "Tỷ lệ tuân thủ gộp (Amazon, n = 50)",
+   "Tuân thủ gộp, Amazon (n = 50)",
    "53,0",
    "43,7",
    "89,0",
    "92,0",
    "–",
+   "–",
    "38,5"
   ]
  ],
  "col_widths_cm": [
-  5.4,
-  1.65,
-  1.65,
-  1.65,
-  1.65,
-  1.65,
-  1.95
+  4.9,
+  1.45,
+  1.45,
+  1.45,
+  1.45,
+  1.45,
+  1.45,
+  1.75
  ]
 }

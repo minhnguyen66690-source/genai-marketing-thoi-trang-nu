@@ -77,6 +77,12 @@ def main():
     # Ablation giữ cùng thuật toán.
     estimator,params=models[best]; ctrl=RandomizedSearchCV(pipeline(estimator,CONTROL),params,n_iter=20,scoring="roc_auc",cv=cv,random_state=SEED,n_jobs=1,error_score="raise"); ctrl.fit(xt,yt)
     auc_ctrl=roc_auc_score(yv,ctrl.predict_proba(xv)[:,1]); result["ablation"]={"control_roc_auc":auc_ctrl,"control_cv_mean":ctrl.best_score_,"control_cv_std":ctrl.cv_results_["std_test_score"][ctrl.best_index_],"control_best_params":ctrl.best_params_,"control_plus_content_roc_auc":result["models"][best]["roc_auc"],"delta_roc_auc":result["models"][best]["roc_auc"]-auc_ctrl,"selection_note":"Chọn thuật toán theo AUC trung bình CV trên tập train."}
+    # Khoảng tin cậy bootstrap có cặp (2.000 lần lấy mẫu lại tập kiểm tra) cho mức tăng ROC-AUC khi thêm nhóm nội dung.
+    p_full=fitted[best].predict_proba(xv)[:,1]; p_ctrl=ctrl.predict_proba(xv)[:,1]; yy=np.asarray(yv); rng=np.random.default_rng(SEED); deltas=[]
+    for _ in range(2000):
+        idx=rng.integers(0,len(yy),len(yy))
+        if len(np.unique(yy[idx]))==2: deltas.append(roc_auc_score(yy[idx],p_full[idx])-roc_auc_score(yy[idx],p_ctrl[idx]))
+    deltas=np.array(deltas); result["ablation"].update(delta_ci95=[float(np.percentile(deltas,2.5)),float(np.percentile(deltas,97.5))],delta_share_le_0=float((deltas<=0).mean()),delta_n_boot=int(len(deltas)))
     fig,ax=plt.subplots(figsize=(5,4)); ConfusionMatrixDisplay.from_estimator(model,xv,yv,display_labels=["Khác","Bán chạy"],ax=ax,colorbar=False); ax.set_title("Ma trận nhầm lẫn trên tập kiểm tra"); save_figure(fig,FIGURES/"predictive_02_ma_tran.png",source_text(d))
     imp=permutation_importance(model,xv,yv,n_repeats=10,random_state=SEED,scoring="roc_auc",n_jobs=1); order=np.argsort(imp.importances_mean)[-15:]; fig,ax=plt.subplots(figsize=(9,7)); ax.barh([LABELS.get(x.columns[i],x.columns[i]) for i in order],imp.importances_mean[order]); ax.set(title="Mức quan trọng hoán vị trên tập kiểm tra",xlabel="Mức giảm ROC-AUC"); save_figure(fig,FIGURES/"predictive_03_quan_trong.png",source_text(d))
     result["permutation_importance"]=[{"feature":x.columns[i],"mean_auc_decrease":float(imp.importances_mean[i]),"std":float(imp.importances_std[i])} for i in order[::-1]]

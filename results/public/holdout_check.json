@@ -1,0 +1,67 @@
+{
+  "note": "Cùng cách tính cho hai tập; tập kiểm định gồm 40 sản phẩm không dùng khi sửa prompt.",
+  "val": {
+    "M0": {
+      "n": 40,
+      "seo_compliance_7": 61.1,
+      "seo_common_5": 65.5,
+      "email_mailchimp": 88.3,
+      "objection_theme_coverage": 9.0,
+      "unsupported_claims": "1/144",
+      "unsupported_rate": 0.7,
+      "prompt_leakage": 0.0
+    },
+    "M2": {
+      "n": 40,
+      "seo_compliance_7": 91.1,
+      "seo_common_5": 91.5,
+      "email_mailchimp": 100.0,
+      "objection_theme_coverage": 100.0,
+      "unsupported_claims": "6/185",
+      "unsupported_rate": 3.2,
+      "prompt_leakage": 0.0
+    },
+    "M3": {
+      "n": 40,
+      "seo_compliance_7": 86.4,
+      "seo_common_5": 90.0,
+      "email_mailchimp": 100.0,
+      "objection_theme_coverage": 100.0,
+      "unsupported_claims": "7/191",
+      "unsupported_rate": 3.7,
+      "prompt_leakage": 0.0
+    }
+  },
+  "test": {
+    "M0": {
+      "n": 99,
+      "seo_compliance_7": 58.4,
+      "seo_common_5": 61.8,
+      "email_mailchimp": 87.5,
+      "objection_theme_coverage": 12.4,
+      "unsupported_claims": "1/249",
+      "unsupported_rate": 0.4,
+      "prompt_leakage": 0.0
+    },
+    "M2": {
+      "n": 99,
+      "seo_compliance_7": 81.0,
+      "seo_common_5": 85.1,
+      "email_mailchimp": 100.0,
+      "objection_theme_coverage": 100.0,
+      "unsupported_claims": "11/261",
+      "unsupported_rate": 4.2,
+      "prompt_leakage": 0.0
+    },
+    "M3": {
+      "n": 99,
+      "seo_compliance_7": 85.4,
+      "seo_common_5": 86.3,
+      "email_mailchimp": 100.0,
+      "objection_theme_coverage": 100.0,
+      "unsupported_claims": "9/283",
+      "unsupported_rate": 3.2,
+      "prompt_leakage": 0.0
+    }
+  }
+}

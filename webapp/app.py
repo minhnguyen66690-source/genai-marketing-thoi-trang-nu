@@ -99,7 +99,10 @@ def checklist(content, brief, lang):
             rows.append({"Tiêu chí": f"Email {index}: {label}", "Giá trị đo": str(values.get(key, flag)) if flag is not None else "—", "Ngưỡng": threshold, "Đạt?": "✅" if flag is True else "❌" if flag is False else "—", "Nguồn": source(ref)})
     script = script_rule_checks(content.get("sales_script", ""), brief, brief.get("objections", []))
     flag = script["cta_present"]
-    rows.append({"Tiêu chí": "Kịch bản: lời kêu gọi hành động", "Giá trị đo": str(flag), "Ngưỡng": "Có cụm CTA theo từ điển", "Đạt?": "✅" if flag else "❌", "Nguồn": "Quy tắc đối chiếu nội bộ"})
+    rows.append({"Tiêu chí": "Kịch bản: lời kêu gọi hành động", "Giá trị đo": str(flag), "Ngưỡng": "Có cụm kêu gọi hành động theo từ điển", "Đạt?": "✅" if flag else "❌", "Nguồn": "Quy tắc đối chiếu nội bộ"})
+    coverage = script["objection_keyword_coverage"]
+    if coverage is not None:
+        rows.append({"Tiêu chí": "Kịch bản: nhắc đến chủ đề phản đối", "Giá trị đo": f"{100 * coverage:.0f}%", "Ngưỡng": "100% chủ đề trong brief (đối chiếu từ vựng)", "Đạt?": "✅" if coverage == 1 else "❌", "Nguồn": "Quy tắc đối chiếu nội bộ"})
     st.subheader("Bảng kiểm tra")
     st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
     def rate_text(values):
@@ -191,7 +194,7 @@ with generation:
         color = cols[1].text_input("Màu sắc")
         size = cols[2].text_input("Kích cỡ")
         price = cols[3].text_input("Giá")
-        method = st.selectbox("Phương pháp", ["M0 – Mẫu cố định (không cần API)", "M1 – Zero-shot", "M2 – Prompt engineering (khuyến nghị)"])
+        method = st.selectbox("Phương pháp", ["M0 – Mẫu cố định (không cần API)", "M1 – Zero-shot", "M2 – Thiết kế câu lệnh (khuyến nghị)"])
         submitted = st.form_submit_button("Sinh nội dung", type="primary")
     if demo and not st.session_state.get("demo_done"):
         submitted = True

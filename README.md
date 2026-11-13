@@ -3,20 +3,22 @@
 Mã nguồn của bài thu hoạch cuối kỳ môn Chuyên đề Ngoại khóa (UEH, 2026): hệ thống sinh **mô tả sản phẩm chuẩn tối ưu hóa tìm kiếm, kịch bản chốt sale và tiêu đề email marketing** từ vài từ khóa đặc trưng, kèm bộ chỉ số đánh giá tự động mà mỗi ngưỡng đều có nguồn công bố.
 
 - Tác giả: Nguyễn Quang Minh. Giảng viên: TS. Võ Văn Hải.
-- Website demo: {{WEB_URL}} (chạy local: `streamlit run webapp/app.py`; thêm `?demo=1` để xem ví dụ có sẵn)
+- Website demo: https://genai-thoitrangnu.streamlit.app (chạy local: `streamlit run webapp/app.py`; thêm `?demo=1` để xem ví dụ có sẵn)
 - Notebook Colab: `notebook/GenAI_Marketing_ThoiTrangNu.ipynb`
 
 ## Kết quả chính (tập kiểm tra 99 sản phẩm Tiki)
 
-| Cấu hình | Tuân thủ checklist tối ưu hóa tìm kiếm | chrF++ | Xử lý phản đối (giám khảo, 1–5) | Thuộc tính không có căn cứ |
-|---|---|---|---|---|
-| M0 Mẫu cố định | 58,4% | 13,4 | 1,21 | 0,4% |
-| M1 Zero-shot (GPT) | 59,0% | 14,1 | 4,74 | 2,7% |
-| M2 Prompt engineering (GPT) | 81,0% | 19,2 | 5,00 | 4,9% |
-| M3 Few-shot có truy hồi (GPT) | 85,4% | 19,7 | 5,00 | 4,0% |
-| Nội dung người bán (đối chứng) | 64,6% | – | – | – |
+| Cấu hình | Tuân thủ 5 tiêu chí tối ưu hóa tìm kiếm chung | chrF++ | BLEU | Kịch bản nhắc đủ chủ đề phản đối | Thuộc tính không có căn cứ |
+|---|---|---|---|---|---|
+| M0 Mẫu cố định | 61,8% | 13,4 | 1,28 | 12,4% | 0,4% |
+| M1 Zero-shot (GPT) | 59,2% | 14,1 | 1,33 | 88,7% | 2,7% |
+| M2 Thiết kế câu lệnh (GPT) | 85,1% | 19,2 | 1,80 | 100% | 4,9% |
+| M3 Few-shot có truy hồi (GPT) | 86,3% | 19,7 | 2,36 | 100% | 4,0% |
+| Nội dung người bán (đối chứng) | 64,6% | – | – | – | – |
 
-Số liệu đầy đủ trong `results/public/` (eval_summary_tiki.json, eval_summary_amazon.json). Bảng trên lấy từ `results/public/eval_summary_tiki.json`.
+Hai cấu hình tinh chỉnh LoRA Qwen2.5-0.5B trên CPU (M4a, M4b) chưa dùng được: 98,3% đầu ra của M4b lặp từ và cả hai không sinh được kịch bản hay tiêu đề email.
+
+Số liệu đầy đủ trong `results/public/` (eval_summary_tiki.json, eval_summary_amazon.json, holdout_check.json, extra_checks.json). Kết quả được kiểm tra lại trên 40 sản phẩm của tập kiểm định chưa dùng khi sửa prompt.
 
 ## Cấu trúc thư mục
 

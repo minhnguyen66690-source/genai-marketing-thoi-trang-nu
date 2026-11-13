@@ -95,11 +95,13 @@ def table_odds():
     for r in o["coefficients"]:
         p = r["p_value"]
         p_text = "< 0,001" if p < 0.001 else vn(p, 3)
+        ph = r.get("p_holm")
+        ph_text = "–" if ph is None else ("< 0,001" if ph < 0.001 else vn(ph, 3))
         rows.append([r["label"], "Nội dung" if r["group"] == "content" else "Kiểm soát", vn(r["odds_ratio"], 2),
-                     f"[{vn(r['ci_low'], 2)}; {vn(r['ci_high'], 2)}]", p_text])
+                     f"[{vn(r['ci_low'], 2)}; {vn(r['ci_high'], 2)}]", p_text, ph_text])
     save("odds_ratios", f"Tỷ số chênh (OR) của mô hình Logit có kiểm soát danh mục (n = {vn(o['n'], 0)}, pseudo R² McFadden = {vn(o['pseudo_r2_mcfadden'], 3)})",
-         "Nguồn: tác giả ước lượng bằng statsmodels; biến nội dung liên tục chuẩn hóa z-score, OR ứng với tăng 1 độ lệch chuẩn",
-         ["Biến", "Nhóm", "OR", "KTC 95%", "p"], rows, [6.2, 2.4, 1.8, 3.4, 2.2])
+         "Nguồn: tác giả ước lượng bằng statsmodels; biến nội dung liên tục chuẩn hóa z-score (biến đếm lấy log1p trước), OR ứng với tăng 1 độ lệch chuẩn; p Holm hiệu chỉnh cho 9 đặc trưng nội dung",
+         ["Biến", "Nhóm", "OR", "KTC 95%", "p", "p Holm"], rows, [5.6, 2.0, 1.6, 3.2, 1.8, 1.8])
 
 
 def table_related():
@@ -117,7 +119,7 @@ def table_related():
          ["Nghiên cứu", "Bài toán", "Phương pháp", "Kết quả chính", "Hạn chế"], rows, [3.3, 2.7, 3.8, 3.6, 2.8])
 
 
-METHOD_NAMES = {"M0": "M0 Mẫu cố định", "M1": "M1 Zero-shot", "M2": "M2 Prompt engineering", "M3": "M3 Few-shot truy hồi",
+METHOD_NAMES = {"M0": "M0 Mẫu cố định", "M1": "M1 Zero-shot", "M2": "M2 Thiết kế câu lệnh", "M3": "M3 Few-shot có truy hồi",
                 "M4a": "M4a Qwen gốc", "M4b": "M4b Qwen + LoRA", "reference": "Nội dung người bán"}
 
 
@@ -144,30 +146,56 @@ def table_similarity():
             if m not in s["metrics"]:
                 continue
             n = s["metrics"][m]["rougeL"]["n"]
-            rows.append([label, METHOD_NAMES[m], str(n), mean_of(s, m, "rougeL", 1, 3), mean_of(s, m, "chrf_plus_plus", 1, 1), mean_of(s, m, "bertscore_f1", 1, 3)])
+            bleu = s.get("corpus_bleu_13a", {}).get(m)
+            rows.append([label, METHOD_NAMES[m], str(n), "–" if bleu is None else vn(bleu, 2), mean_of(s, m, "rougeL", 1, 3),
+                         mean_of(s, m, "chrf_plus_plus", 1, 1), mean_of(s, m, "bertscore_f1", 1, 3)])
     save("similarity", "Mức tương đồng giữa mô tả sinh ra và mô tả thật của người bán (RQ2)",
-         "Nguồn: tác giả tính bằng rouge-score (tách từ Unicode), sacreBLEU chrF++ và BERTScore (bert-base-multilingual-cased, lớp 9)",
-         ["Dữ liệu", "Cấu hình", "n", "ROUGE-L", "chrF++", "BERTScore F1"], rows, [2.0, 4.6, 1.2, 2.4, 2.4, 2.8])
+         "Nguồn: tác giả tính bằng sacreBLEU (BLEU cấp kho, tokenizer 13a; chrF++), rouge-score (tách từ Unicode) và BERTScore (bert-base-multilingual-cased, lớp 9)",
+         ["Dữ liệu", "Cấu hình", "n", "BLEU", "ROUGE-L", "chrF++", "BERTScore F1"], rows, [1.8, 4.4, 1.0, 1.7, 2.1, 1.9, 2.5])
+
+
+COMMON_SEO = ["seo_title_len_50_60", "seo_title_tiki_max_225", "seo_keyphrase_in_title", "seo_keyphrase_in_first_paragraph", "seo_desc_words_ge_200"]
+
+
+def common_rate(dataset, method):
+    """Tỷ lệ tuân thủ trên các tiêu chí mà cả nội dung sinh và nội dung người bán đều chấm được (bỏ hai tiêu chí meta)."""
+    d = pd.read_csv(RESULTS / f"eval_per_item_{dataset}.csv")
+    d = d[d["method"] == method]
+    if d.empty:
+        return "–"
+    cols = [c for c in COMMON_SEO if c in d.columns]
+    x = d[cols].replace({"True": 1, "False": 0, True: 1, False: 0}).apply(pd.to_numeric, errors="coerce")
+    return vn(100 * x.mean(axis=1, skipna=True).mean(), 1)
 
 
 def table_checklist():
     """Bảng RQ3: tỷ lệ đạt từng tiêu chí tối ưu hóa tìm kiếm và tiêu đề email (Tiki), kèm dòng tổng Amazon."""
     s = load_summary("tiki")
     a = load_summary("amazon")
-    methods = ["M0", "M1", "M2", "M3", "M4a", "reference"]
-    spec = [("seo_title_len_50_60", "Tiêu đề 50–60 ký tự (S19)"), ("seo_title_tiki_15_50", "Tên 15–50 ký tự (S23)*"),
-            ("seo_meta_len_120_156", "Meta 120–156 ký tự (S12)"), ("seo_desc_words_ge_200", "Mô tả ≥ 200 từ (S13, S24)"),
-            ("seo_keyphrase_in_title", "Từ khóa trong tiêu đề (S11)"), ("seo_keyphrase_in_first_paragraph", "Từ khóa ở đoạn đầu (S10)"),
-            ("seo_density_proxy_0_5_3", "Mật độ 0,5–3% (S09, proxy)*"), ("seo_compliance_rate", "Tỷ lệ tuân thủ gộp (Tiki)"),
-            ("email_mailchimp_le9w_le60c", "Email ≤ 9 từ, ≤ 60 ký tự (E01)"), ("email_omnisend_4_6w_or_21_40c", "Email 4–6 từ hoặc 21–40 ký tự (E05)"),
+    methods = [m for m in ["M0", "M1", "M2", "M3", "M4a", "M4b"] if m in s["metrics"]] + ["reference"]
+    spec = [("seo_title_len_50_60", "Tiêu đề 50–60 ký tự (Ahrefs)"), ("seo_title_tiki_max_225", "Tên ≤ 225 ký tự (Tiki)"),
+            ("seo_title_tiki_15_50", "Tên 15–50 ký tự (Tiki)*"),
+            ("seo_meta_len_120_156", "Meta 120–156 ký tự (Yoast)"), ("seo_keyphrase_in_meta", "Từ khóa trong meta (Yoast)"),
+            ("seo_desc_words_ge_200", "Mô tả ≥ 200 từ (Yoast, Tiki)"),
+            ("seo_keyphrase_in_title", "Từ khóa trong tiêu đề (Yoast)"), ("seo_keyphrase_in_first_paragraph", "Từ khóa ở đoạn đầu (Yoast)"),
+            ("seo_density_proxy_0_5_3", "Mật độ từ khóa 0,5–3% (Yoast, gần đúng)*"), ("seo_compliance_rate", "Tỷ lệ tuân thủ gộp, 7 tiêu chí"),
+            (None, "Tỷ lệ tuân thủ trên 5 tiêu chí chung"),
+            ("email_mailchimp_le9w_le60c", "Email ≤ 9 từ, ≤ 60 ký tự (Mailchimp)"), ("email_omnisend_4_6w_or_21_40c", "Email 4–6 từ hoặc 21–40 ký tự (Omnisend)"),
             ("email_keyword_relevance", "Email chứa từ khóa")]
     rows = []
     for key, label in spec:
-        rows.append([label] + [mean_of(s, m, key, 100, 1) for m in methods])
-    rows.append(["Tỷ lệ tuân thủ gộp (Amazon, n = 50)"] + [mean_of(a, m, "seo_compliance_rate", 100, 1) if m != "M4a" else "–" for m in methods])
-    save("checklist", "Tỷ lệ đạt (%) từng tiêu chí tối ưu hóa tìm kiếm và tiêu đề email (RQ3), Tiki n = 99 (M4a n = 59)",
-         "Nguồn: tác giả tính; mã tiêu chí theo mục 4.5. (*) Không tính vào tỷ lệ tuân thủ gộp; '–': không áp dụng (Tiki không công khai meta, M4 chỉ sinh mô tả)",
-         ["Tiêu chí", "M0", "M1", "M2", "M3", "M4a", "Người bán"], rows, [5.4, 1.65, 1.65, 1.65, 1.65, 1.65, 1.95])
+        if key is None:
+            rows.append([label] + [common_rate("tiki", m) for m in methods])
+        else:
+            rows.append([label] + [mean_of(s, m, key, 100, 1) for m in methods])
+    rows.append(["Tuân thủ gộp, Amazon (n = 50)"] + [mean_of(a, m, "seo_compliance_rate", 100, 1) if not m.startswith("M4") else "–" for m in methods])
+    n_m4 = s["metrics"].get("M4a", {}).get("seo_compliance_rate", {}).get("n", "–")
+    save("checklist", f"Tỷ lệ đạt (%) từng tiêu chí tối ưu hóa tìm kiếm và tiêu đề email (RQ3), Tiki n = 99 (M4 n = {n_m4})",
+         "Nguồn: tác giả tính; ngưỡng và nguồn của từng tiêu chí ở mục 4.5. (*) Báo cáo riêng, không tính vào tỷ lệ gộp. "
+         "Năm tiêu chí chung là các tiêu chí không cần meta description, áp dụng được cho cả nội dung người bán; "
+         "'–': không áp dụng (Tiki không công khai meta description của người bán; M4 không sinh meta description và tiêu đề email)",
+         ["Tiêu chí"] + [m if m != "reference" else "Người bán" for m in methods], rows,
+         [4.9] + [1.45] * (len(methods) - 1) + [1.75])
 
 
 def table_judge():
@@ -176,14 +204,14 @@ def table_judge():
     methods = ["M0", "M1", "M2", "M3"]
     spec = [("judge_mo_ta_tu_nhien", "Mô tả: tự nhiên", 1, 2), ("judge_mo_ta_thuyet_phuc", "Mô tả: thuyết phục", 1, 2),
             ("judge_mo_ta_lien_quan_tu_khoa", "Mô tả: liên quan từ khóa", 1, 2), ("judge_mo_ta_nhat_quan_thong_tin", "Mô tả: nhất quán thông tin", 1, 2),
-            ("judge_email_gay_to_mo", "Email: gây tò mò", 1, 2), ("judge_kich_ban_cta_ro_rang", "Kịch bản: CTA rõ ràng", 1, 2),
+            ("judge_email_gay_to_mo", "Email: gây tò mò", 1, 2), ("judge_kich_ban_cta_ro_rang", "Kịch bản: lời kêu gọi hành động rõ", 1, 2),
             ("judge_kich_ban_nhu_cau_loi_ich", "Kịch bản: nhu cầu và lợi ích (SPIN)", 1, 2), ("judge_kich_ban_xu_ly_phan_doi", "Kịch bản: xử lý phản đối", 1, 2),
-            ("judge_kich_ban_dung_su_that", "Kịch bản: đúng sự thật", 1, 2), ("script_objection_keyword_coverage", "Bao phủ phản đối theo luật (%)", 100, 1),
+            ("judge_kich_ban_dung_su_that", "Kịch bản: đúng sự thật", 1, 2), ("script_objection_keyword_coverage", "Kịch bản nhắc đến chủ đề phản đối (%)", 100, 1),
             ("hallucination_rate", "Thuộc tính không có căn cứ trong mô tả (%)", 100, 1), ("script_hallucination_rate", "Thuộc tính không có căn cứ trong kịch bản (%)", 100, 1),
             ("latency_s", "Độ trễ sinh (giây/sản phẩm)", 1, 1)]
     rows = [[label] + [mean_of(s, m, key, scale, digits) for m in methods] for key, label, scale, digits in spec]
     save("judge", "Điểm giám khảo Gemini (thang 1–5) và các chỉ số kịch bản, Tiki n = 99 (RQ4)",
-         "Nguồn: tác giả tính; giám khảo Gemini 3.8 Flash chấm ẩn danh theo rubric G-Eval; tỷ lệ không căn cứ tính trên các mẫu có ít nhất một thuộc tính được nhắc",
+         "Nguồn: tác giả tính; giám khảo Gemini 3.8 Flash chấm ẩn danh theo rubric G-Eval; chủ đề phản đối được đối chiếu bằng từ vựng của từng chủ đề; tỷ lệ không căn cứ là trung bình trên các mẫu có ít nhất một thuộc tính được nhắc",
          ["Chỉ số", "M0", "M1", "M2", "M3"], rows, [7.6, 2.1, 2.1, 2.1, 2.1])
 
 
@@ -202,7 +230,7 @@ def table_leakage_and_m4():
          ["Dữ liệu", "Cấu hình", "n", "Tỷ lệ rò rỉ"], rows, [2.6, 5.0, 1.6, 3.0])
     rows = []
     for key, name in (("M4a", "M4a Qwen gốc"), ("M4b (LoRA v1)", "M4b LoRA, dữ liệu chưa làm sạch"), ("M4b", "M4b LoRA, dữ liệu đã làm sạch"),
-                      ("M2", "M2 Prompt engineering (GPT)"), ("reference", "Nội dung người bán")):
+                      ("M2", "M2 Thiết kế câu lệnh (GPT)"), ("reference", "Nội dung người bán")):
         if key not in biz:
             continue
         b = biz[key]

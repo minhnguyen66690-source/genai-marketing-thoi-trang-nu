@@ -49,7 +49,7 @@ def steps():
     odds = {r["feature"]: r for r in load("rq1_logit_odds_ratios.json").get("coefficients", [])}
     leak = load("prompt_leakage.json").get("results", {}).get("tiki", {})
     tiki = load("eval_summary_tiki.json")
-    agree = load("judge_agreement_amazon.json").get("pooled", {})
+    agree = load("judge_agreement_tiki.json").get("pooled", {})
     best = pred.get("best_model_by_cv_auc", "")
     best_auc = pred.get("models", {}).get(best, {}).get("roc_auc")
     ab = pred.get("ablation", {})
@@ -60,19 +60,19 @@ def steps():
         ("1. Thu thập dữ liệu", [f"Tiki: {vn(funnel.get('raw_valid'), 0)} SP",
                                  f"{vn(reviews.get('review_records'), 0)} đánh giá ẩn danh",
                                  f"Amazon: {vn(funnel_a.get('amazon_raw'), 0)} bản ghi"]),
-        ("2. Làm sạch, lọc", ["Bỏ văn mẫu thuế của Tiki", "Lọc 7 năm, mô tả ≥ 50 ký tự",
+        ("2. Làm sạch, lọc", ["Bỏ văn mẫu thuế của Tiki", "Lọc: 7 năm, ≥ 50 ký tự",
                               f"Tiki {vn(funnel.get('deduplicated'), 0)} · Amazon {vn(funnel_a.get('amazon_description_at_least_50'), 0)} SP"]),
         ("3. Từ khóa, chia tập", [f"{vn(kw.get('keywords_per_product_mean'))} từ khóa/sản phẩm",
                                   f"Train {vn(split.get('train'), 0)} · Val {vn(split.get('val'), 0)}",
                                   f"Test {vn(split.get('test'), 0)} (cố định)"]),
         ("4. Dự báo (RQ1)", [f"{'XGBoost' if best == 'xgboost' else best.replace('_', ' ').title()}: AUC {vn(best_auc, 3)}",
                                        f"Thêm nội dung: +{vn(ab.get('delta_roc_auc'), 3)}",
-                                       f"OR gạch đầu dòng {vn(odds.get('n_bullets', {}).get('odds_ratio'), 2)}"]),
-        ("5. Sinh nội dung", ["M0–M3: Tiki 99, Amazon 50", "M4a/M4b (Qwen, LoRA): 59",
+                                       f"OR độ dài tên {vn(odds.get('title_len_chars', {}).get('odds_ratio'), 2)} (Holm)"]),
+        ("5. Sinh nội dung", ["M0–M3: Tiki 99, Amazon 50", f"M4a/M4b (Qwen, LoRA): {tiki.get('metrics', {}).get('M4b', tiki.get('metrics', {}).get('M4a', {})).get('rougeL', {}).get('n', '–')}",
                               f"Rò rỉ: v1 {vn(None if v1 is None else 100 * v1, 0)}% → v2 {vn(None if v2 is None else 100 * v2, 0)}%"]),
-        ("6. Đánh giá", [f"SEO M3 {metric(tiki, 'M3', 'seo_compliance_rate', 100)}% / gốc {metric(tiki, 'reference', 'seo_compliance_rate', 100)}%",
+        ("6. Đánh giá", [f"Tuân thủ M3 {metric(tiki, 'M3', 'seo_compliance_rate', 100)}%, người bán {metric(tiki, 'reference', 'seo_compliance_rate', 100)}%",
                          f"chrF++ M3 {metric(tiki, 'M3', 'chrf_plus_plus')}, M0 {metric(tiki, 'M0', 'chrf_plus_plus')}",
-                         f"Đồng thuận giám khảo {vn(agree.get('quadratic_kappa'), 2)}"]),
+                         f"Đồng thuận giám khảo (Tiki) κ {vn(agree.get('quadratic_kappa'), 2)}"]),
         ("7. Triển khai", ["Website Streamlit", "Notebook Colab", "Mã nguồn GitHub"]),
     ]
 

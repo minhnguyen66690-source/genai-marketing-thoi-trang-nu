@@ -1,126 +1,126 @@
 {
   "tiki": {
     "stats": {
-      "n_products": 1983,
-      "keywords_per_product_mean": 4.7614725163893095,
+      "n_products": 1941,
+      "keywords_per_product_mean": 4.763008758371973,
       "keywords_per_product_min": 1,
       "keywords_per_product_max": 6,
       "min_df": 3,
       "split_counts": {
-        "train": 1586,
-        "test": 199,
-        "val": 198
+        "train": 1488,
+        "val": 354,
+        "test": 99
       }
     },
     "categories": {
       "Chân váy": {
-        "n_products": 85,
+        "n_products": 81,
         "n_best_seller": 23,
         "top_keywords": [
           {
             "keyword": "chân váy",
-            "count": 61,
-            "share": 0.7176,
+            "count": 57,
+            "share": 0.7037,
             "share_best_seller": 0.6957,
-            "lift_best_seller": 0.969
+            "lift_best_seller": 0.989
           },
           {
             "keyword": "chữ",
             "count": 10,
-            "share": 0.1176,
+            "share": 0.1235,
             "share_best_seller": 0.1739,
-            "lift_best_seller": 1.478
+            "lift_best_seller": 1.409
           },
           {
             "keyword": "xòe",
             "count": 8,
-            "share": 0.0941,
+            "share": 0.0988,
             "share_best_seller": 0.087,
-            "lift_best_seller": 0.924
+            "lift_best_seller": 0.88
           },
           {
             "keyword": "ngắn",
             "count": 8,
-            "share": 0.0941,
+            "share": 0.0988,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "chân",
             "count": 7,
-            "share": 0.0824,
+            "share": 0.0864,
             "share_best_seller": 0.1304,
-            "lift_best_seller": 1.584
-          },
-          {
-            "keyword": "đuôi cá",
-            "count": 6,
-            "share": 0.0706,
-            "share_best_seller": 0.087,
-            "lift_best_seller": 1.232
+            "lift_best_seller": 1.509
           },
           {
             "keyword": "thể thao",
             "count": 6,
-            "share": 0.0706,
+            "share": 0.0741,
             "share_best_seller": 0.0435,
-            "lift_best_seller": 0.616
+            "lift_best_seller": 0.587
           },
           {
             "keyword": "nút",
             "count": 6,
-            "share": 0.0706,
+            "share": 0.0741,
             "share_best_seller": 0.2174,
-            "lift_best_seller": 3.08
+            "lift_best_seller": 2.935
           },
           {
             "keyword": "xếp ly",
             "count": 5,
-            "share": 0.0588,
+            "share": 0.0617,
             "share_best_seller": 0.0435,
-            "lift_best_seller": 0.739
+            "lift_best_seller": 0.704
           },
           {
             "keyword": "sành điệu",
             "count": 5,
-            "share": 0.0588,
+            "share": 0.0617,
             "share_best_seller": 0.0435,
-            "lift_best_seller": 0.739
+            "lift_best_seller": 0.704
           },
           {
             "keyword": "thiết kế",
             "count": 5,
-            "share": 0.0588,
+            "share": 0.0617,
             "share_best_seller": 0.087,
-            "lift_best_seller": 1.478
+            "lift_best_seller": 1.409
           },
           {
             "keyword": "váy xòe",
             "count": 5,
-            "share": 0.0588,
+            "share": 0.0617,
             "share_best_seller": 0.1304,
-            "lift_best_seller": 2.217
+            "lift_best_seller": 2.113
           },
           {
             "keyword": "công sở",
             "count": 5,
-            "share": 0.0588,
+            "share": 0.0617,
             "share_best_seller": 0.0435,
-            "lift_best_seller": 0.739
+            "lift_best_seller": 0.704
           },
           {
             "keyword": "váy",
             "count": 4,
-            "share": 0.0471,
+            "share": 0.0494,
             "share_best_seller": 0.0435,
-            "lift_best_seller": 0.924
+            "lift_best_seller": 0.88
           },
           {
             "keyword": "tennis",
             "count": 4,
-            "share": 0.0471,
+            "share": 0.0494,
             "share_best_seller": 0.087,
-            "lift_best_seller": 1.848
+            "lift_best_seller": 1.761
+          },
+          {
+            "keyword": "đuôi cá",
+            "count": 4,
+            "share": 0.0494,
+            "share_best_seller": 0.087,
+            "lift_best_seller": 1.761
           }
         ]
       },
@@ -236,113 +236,113 @@
         ]
       },
       "Quần nữ": {
-        "n_products": 200,
-        "n_best_seller": 58,
+        "n_products": 196,
+        "n_best_seller": 49,
         "top_keywords": [
           {
             "keyword": "quần",
             "count": 50,
-            "share": 0.25,
-            "share_best_seller": 0.1379,
-            "lift_best_seller": 0.552
+            "share": 0.2551,
+            "share_best_seller": 0.1633,
+            "lift_best_seller": 0.64
           },
           {
             "keyword": "rộng",
             "count": 27,
-            "share": 0.135,
-            "share_best_seller": 0.2241,
-            "lift_best_seller": 1.66
+            "share": 0.1378,
+            "share_best_seller": 0.2449,
+            "lift_best_seller": 1.778
           },
           {
             "keyword": "thể thao",
-            "count": 23,
-            "share": 0.115,
-            "share_best_seller": 0.0862,
-            "lift_best_seller": 0.75
+            "count": 22,
+            "share": 0.1122,
+            "share_best_seller": 0.102,
+            "lift_best_seller": 0.909
           },
           {
             "keyword": "quần đùi",
             "count": 21,
-            "share": 0.105,
-            "share_best_seller": 0.1207,
-            "lift_best_seller": 1.149
+            "share": 0.1071,
+            "share_best_seller": 0.102,
+            "lift_best_seller": 0.952
           },
           {
             "keyword": "suông",
             "count": 20,
-            "share": 0.1,
-            "share_best_seller": 0.1379,
-            "lift_best_seller": 1.379
-          },
-          {
-            "keyword": "đen",
-            "count": 18,
-            "share": 0.09,
-            "share_best_seller": 0.1207,
-            "lift_best_seller": 1.341
+            "share": 0.102,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 1.4
           },
           {
             "keyword": "co giãn",
             "count": 18,
-            "share": 0.09,
-            "share_best_seller": 0.0862,
-            "lift_best_seller": 0.958
+            "share": 0.0918,
+            "share_best_seller": 0.0816,
+            "lift_best_seller": 0.889
           },
           {
             "keyword": "quần short",
             "count": 17,
-            "share": 0.085,
-            "share_best_seller": 0.1207,
-            "lift_best_seller": 1.42
+            "share": 0.0867,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 1.647
           },
           {
-            "keyword": "quần baggy",
+            "keyword": "đen",
             "count": 16,
-            "share": 0.08,
-            "share_best_seller": 0.069,
-            "lift_best_seller": 0.862
+            "share": 0.0816,
+            "share_best_seller": 0.102,
+            "lift_best_seller": 1.25
           },
           {
             "keyword": "quần ống rộng",
             "count": 15,
-            "share": 0.075,
-            "share_best_seller": 0.1724,
-            "lift_best_seller": 2.299
+            "share": 0.0765,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 1.867
           },
           {
             "keyword": "thoải mái",
             "count": 15,
-            "share": 0.075,
-            "share_best_seller": 0.1207,
-            "lift_best_seller": 1.609
+            "share": 0.0765,
+            "share_best_seller": 0.1224,
+            "lift_best_seller": 1.6
+          },
+          {
+            "keyword": "quần baggy",
+            "count": 14,
+            "share": 0.0714,
+            "share_best_seller": 0.0612,
+            "lift_best_seller": 0.857
           },
           {
             "keyword": "quần jean",
             "count": 14,
-            "share": 0.07,
-            "share_best_seller": 0.0862,
-            "lift_best_seller": 1.232
+            "share": 0.0714,
+            "share_best_seller": 0.0612,
+            "lift_best_seller": 0.857
           },
           {
             "keyword": "aaa jeans",
             "count": 13,
-            "share": 0.065,
-            "share_best_seller": 0.0345,
-            "lift_best_seller": 0.531
+            "share": 0.0663,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
           },
           {
             "keyword": "mát",
             "count": 13,
-            "share": 0.065,
-            "share_best_seller": 0.1207,
-            "lift_best_seller": 1.857
+            "share": 0.0663,
+            "share_best_seller": 0.1224,
+            "lift_best_seller": 1.846
           },
           {
             "keyword": "quần tây",
             "count": 12,
-            "share": 0.06,
-            "share_best_seller": 0.0862,
-            "lift_best_seller": 1.437
+            "share": 0.0612,
+            "share_best_seller": 0.102,
+            "lift_best_seller": 1.667
           }
         ]
       },
@@ -497,13 +497,6 @@
             "lift_best_seller": 1.111
           },
           {
-            "keyword": "quần",
-            "count": 17,
-            "share": 0.1466,
-            "share_best_seller": 0.1379,
-            "lift_best_seller": 0.941
-          },
-          {
             "keyword": "mảnh",
             "count": 16,
             "share": 0.1379,
@@ -523,6 +516,13 @@
             "share": 0.1379,
             "share_best_seller": 0.0345,
             "lift_best_seller": 0.25
+          },
+          {
+            "keyword": "quần",
+            "count": 16,
+            "share": 0.1379,
+            "share_best_seller": 0.1379,
+            "lift_best_seller": 1.0
           },
           {
             "keyword": "áo tắm",
@@ -680,779 +680,779 @@
         ]
       },
       "Áo liền quần - Bộ trang phục": {
-        "n_products": 127,
+        "n_products": 122,
         "n_best_seller": 17,
         "top_keywords": [
           {
-            "keyword": "áo dài",
-            "count": 30,
-            "share": 0.2362,
-            "share_best_seller": 0.0588,
-            "lift_best_seller": 0.249
+            "keyword": "set",
+            "count": 27,
+            "share": 0.2213,
+            "share_best_seller": 0.2941,
+            "lift_best_seller": 1.329
           },
           {
             "keyword": "hoa",
-            "count": 29,
-            "share": 0.2283,
+            "count": 27,
+            "share": 0.2213,
             "share_best_seller": 0.0588,
-            "lift_best_seller": 0.258
+            "lift_best_seller": 0.266
           },
           {
-            "keyword": "set",
-            "count": 27,
-            "share": 0.2126,
-            "share_best_seller": 0.2941,
-            "lift_best_seller": 1.383
+            "keyword": "áo dài",
+            "count": 25,
+            "share": 0.2049,
+            "share_best_seller": 0.0588,
+            "lift_best_seller": 0.287
           },
           {
             "keyword": "quần",
             "count": 19,
-            "share": 0.1496,
+            "share": 0.1557,
             "share_best_seller": 0.1765,
-            "lift_best_seller": 1.18
+            "lift_best_seller": 1.133
           },
           {
             "keyword": "lụa",
             "count": 18,
-            "share": 0.1417,
+            "share": 0.1475,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "áo dài cách tân",
             "count": 18,
-            "share": 0.1417,
+            "share": 0.1475,
             "share_best_seller": 0.1176,
-            "lift_best_seller": 0.83
+            "lift_best_seller": 0.797
           },
           {
             "keyword": "thiết kế",
             "count": 14,
-            "share": 0.1102,
+            "share": 0.1148,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "bộ bà ba",
             "count": 14,
-            "share": 0.1102,
+            "share": 0.1148,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
-            "keyword": "suông",
-            "count": 13,
-            "share": 0.1024,
-            "share_best_seller": 0.0588,
-            "lift_best_seller": 0.575
-          },
-          {
             "keyword": "bà ba gấm",
             "count": 13,
-            "share": 0.1024,
+            "share": 0.1066,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "linen",
-            "count": 12,
-            "share": 0.0945,
+            "count": 13,
+            "share": 0.1066,
             "share_best_seller": 0.2353,
-            "lift_best_seller": 2.49
+            "lift_best_seller": 2.208
+          },
+          {
+            "keyword": "suông",
+            "count": 12,
+            "share": 0.0984,
+            "share_best_seller": 0.0588,
+            "lift_best_seller": 0.598
           },
           {
             "keyword": "xl",
             "count": 11,
-            "share": 0.0866,
+            "share": 0.0902,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "truyền thống",
             "count": 11,
-            "share": 0.0866,
+            "share": 0.0902,
             "share_best_seller": 0.0588,
-            "lift_best_seller": 0.679
+            "lift_best_seller": 0.652
           },
           {
             "keyword": "may sỉ bà ba",
             "count": 9,
-            "share": 0.0709,
+            "share": 0.0738,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "bà ba bigsize",
             "count": 9,
-            "share": 0.0709,
+            "share": 0.0738,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           }
         ]
       },
       "Áo sơ mi nữ": {
-        "n_products": 102,
+        "n_products": 101,
         "n_best_seller": 28,
         "top_keywords": [
           {
             "keyword": "áo sơ mi",
-            "count": 79,
-            "share": 0.7745,
+            "count": 78,
+            "share": 0.7723,
             "share_best_seller": 0.9286,
-            "lift_best_seller": 1.199
+            "lift_best_seller": 1.202
           },
           {
             "keyword": "ngắn",
             "count": 20,
-            "share": 0.1961,
+            "share": 0.198,
             "share_best_seller": 0.2143,
-            "lift_best_seller": 1.093
+            "lift_best_seller": 1.082
           },
           {
             "keyword": "rộng",
             "count": 20,
-            "share": 0.1961,
+            "share": 0.198,
             "share_best_seller": 0.3929,
-            "lift_best_seller": 2.004
+            "lift_best_seller": 1.984
           },
           {
             "keyword": "công sở",
             "count": 16,
-            "share": 0.1569,
+            "share": 0.1584,
             "share_best_seller": 0.2143,
-            "lift_best_seller": 1.366
-          },
-          {
-            "keyword": "lụa",
-            "count": 14,
-            "share": 0.1373,
-            "share_best_seller": 0.2857,
-            "lift_best_seller": 2.082
+            "lift_best_seller": 1.353
           },
           {
             "keyword": "họa tiết",
-            "count": 13,
-            "share": 0.1275,
+            "count": 12,
+            "share": 0.1188,
             "share_best_seller": 0.0357,
-            "lift_best_seller": 0.28
+            "lift_best_seller": 0.301
           },
           {
             "keyword": "thiết kế",
             "count": 12,
-            "share": 0.1176,
+            "share": 0.1188,
             "share_best_seller": 0.1429,
-            "lift_best_seller": 1.214
+            "lift_best_seller": 1.202
+          },
+          {
+            "keyword": "lụa",
+            "count": 11,
+            "share": 0.1089,
+            "share_best_seller": 0.2857,
+            "lift_best_seller": 2.623
           },
           {
             "keyword": "mềm mịn",
             "count": 9,
-            "share": 0.0882,
+            "share": 0.0891,
             "share_best_seller": 0.2143,
-            "lift_best_seller": 2.429
+            "lift_best_seller": 2.405
           },
           {
             "keyword": "trắng",
             "count": 9,
-            "share": 0.0882,
+            "share": 0.0891,
             "share_best_seller": 0.0357,
-            "lift_best_seller": 0.405
+            "lift_best_seller": 0.401
           },
           {
             "keyword": "sọc",
             "count": 9,
-            "share": 0.0882,
+            "share": 0.0891,
             "share_best_seller": 0.0357,
-            "lift_best_seller": 0.405
+            "lift_best_seller": 0.401
           },
           {
             "keyword": "sơ mi",
             "count": 9,
-            "share": 0.0882,
+            "share": 0.0891,
             "share_best_seller": 0.0357,
-            "lift_best_seller": 0.405
+            "lift_best_seller": 0.401
           },
           {
-            "keyword": "túi",
+            "keyword": "linen",
             "count": 8,
-            "share": 0.0784,
+            "share": 0.0792,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "mát",
             "count": 7,
-            "share": 0.0686,
+            "share": 0.0693,
             "share_best_seller": 0.1071,
-            "lift_best_seller": 1.561
+            "lift_best_seller": 1.546
           },
           {
-            "keyword": "linen",
+            "keyword": "túi",
             "count": 7,
-            "share": 0.0686,
+            "share": 0.0693,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "áo",
             "count": 7,
-            "share": 0.0686,
+            "share": 0.0693,
             "share_best_seller": 0.0357,
-            "lift_best_seller": 0.52
+            "lift_best_seller": 0.515
           }
         ]
       },
       "Áo thun nữ": {
-        "n_products": 132,
+        "n_products": 129,
         "n_best_seller": 42,
         "top_keywords": [
           {
             "keyword": "áo thun",
-            "count": 81,
-            "share": 0.6136,
+            "count": 79,
+            "share": 0.6124,
             "share_best_seller": 0.5952,
-            "lift_best_seller": 0.97
+            "lift_best_seller": 0.972
           },
           {
             "keyword": "cotton",
             "count": 26,
-            "share": 0.197,
+            "share": 0.2016,
             "share_best_seller": 0.2143,
-            "lift_best_seller": 1.088
+            "lift_best_seller": 1.063
           },
           {
             "keyword": "thun cá sấu",
             "count": 13,
-            "share": 0.0985,
+            "share": 0.1008,
             "share_best_seller": 0.2143,
-            "lift_best_seller": 2.176
+            "lift_best_seller": 2.126
           },
           {
             "keyword": "áo",
             "count": 13,
-            "share": 0.0985,
+            "share": 0.1008,
             "share_best_seller": 0.119,
-            "lift_best_seller": 1.209
+            "lift_best_seller": 1.181
           },
           {
             "keyword": "thun lạnh",
             "count": 12,
-            "share": 0.0909,
+            "share": 0.093,
             "share_best_seller": 0.0476,
-            "lift_best_seller": 0.524
+            "lift_best_seller": 0.512
           },
           {
             "keyword": "áo phông",
             "count": 10,
-            "share": 0.0758,
+            "share": 0.0775,
             "share_best_seller": 0.0238,
-            "lift_best_seller": 0.314
+            "lift_best_seller": 0.307
           },
           {
             "keyword": "thể thao",
             "count": 10,
-            "share": 0.0758,
+            "share": 0.0775,
             "share_best_seller": 0.1429,
-            "lift_best_seller": 1.886
+            "lift_best_seller": 1.843
           },
           {
             "keyword": "co giãn",
             "count": 10,
-            "share": 0.0758,
+            "share": 0.0775,
             "share_best_seller": 0.0476,
-            "lift_best_seller": 0.629
+            "lift_best_seller": 0.614
           },
           {
             "keyword": "dây",
             "count": 10,
-            "share": 0.0758,
+            "share": 0.0775,
             "share_best_seller": 0.1429,
-            "lift_best_seller": 1.886
+            "lift_best_seller": 1.843
           },
           {
             "keyword": "ngắn",
             "count": 9,
-            "share": 0.0682,
+            "share": 0.0698,
             "share_best_seller": 0.0476,
-            "lift_best_seller": 0.698
+            "lift_best_seller": 0.683
           },
           {
             "keyword": "áo ba lỗ",
             "count": 9,
-            "share": 0.0682,
+            "share": 0.0698,
             "share_best_seller": 0.0476,
-            "lift_best_seller": 0.698
+            "lift_best_seller": 0.683
           },
           {
             "keyword": "thấm hút mồ hôi",
             "count": 8,
-            "share": 0.0606,
+            "share": 0.062,
             "share_best_seller": 0.0238,
-            "lift_best_seller": 0.393
+            "lift_best_seller": 0.384
           },
           {
             "keyword": "chiều",
             "count": 8,
-            "share": 0.0606,
+            "share": 0.062,
             "share_best_seller": 0.0238,
-            "lift_best_seller": 0.393
+            "lift_best_seller": 0.384
           },
           {
             "keyword": "yoga",
             "count": 8,
-            "share": 0.0606,
+            "share": 0.062,
             "share_best_seller": 0.1429,
-            "lift_best_seller": 2.357
+            "lift_best_seller": 2.304
           },
           {
             "keyword": "tập gym",
             "count": 7,
-            "share": 0.053,
+            "share": 0.0543,
             "share_best_seller": 0.119,
-            "lift_best_seller": 2.245
+            "lift_best_seller": 2.194
           }
         ]
       },
       "Áo vest - Áo khoác nữ": {
-        "n_products": 330,
-        "n_best_seller": 87,
+        "n_products": 314,
+        "n_best_seller": 85,
         "top_keywords": [
           {
             "keyword": "áo khoác",
-            "count": 222,
-            "share": 0.6727,
-            "share_best_seller": 0.6552,
-            "lift_best_seller": 0.974
+            "count": 211,
+            "share": 0.672,
+            "share_best_seller": 0.6588,
+            "lift_best_seller": 0.98
           },
           {
             "keyword": "dù",
             "count": 42,
-            "share": 0.1273,
-            "share_best_seller": 0.069,
-            "lift_best_seller": 0.542
+            "share": 0.1338,
+            "share_best_seller": 0.0706,
+            "lift_best_seller": 0.528
           },
           {
             "keyword": "rộng",
             "count": 39,
-            "share": 0.1182,
-            "share_best_seller": 0.0575,
-            "lift_best_seller": 0.486
+            "share": 0.1242,
+            "share_best_seller": 0.0588,
+            "lift_best_seller": 0.474
           },
           {
             "keyword": "kaki",
             "count": 29,
-            "share": 0.0879,
-            "share_best_seller": 0.1034,
-            "lift_best_seller": 1.177
-          },
-          {
-            "keyword": "chống nắng",
-            "count": 28,
-            "share": 0.0848,
-            "share_best_seller": 0.1609,
-            "lift_best_seller": 1.897
-          },
-          {
-            "keyword": "áo khoát",
-            "count": 26,
-            "share": 0.0788,
-            "share_best_seller": 0.1034,
-            "lift_best_seller": 1.313
+            "share": 0.0924,
+            "share_best_seller": 0.1059,
+            "lift_best_seller": 1.146
           },
           {
             "keyword": "túi",
             "count": 26,
-            "share": 0.0788,
-            "share_best_seller": 0.092,
-            "lift_best_seller": 1.167
+            "share": 0.0828,
+            "share_best_seller": 0.0941,
+            "lift_best_seller": 1.137
+          },
+          {
+            "keyword": "áo khoát",
+            "count": 25,
+            "share": 0.0796,
+            "share_best_seller": 0.0941,
+            "lift_best_seller": 1.182
+          },
+          {
+            "keyword": "chống nắng",
+            "count": 25,
+            "share": 0.0796,
+            "share_best_seller": 0.1412,
+            "lift_best_seller": 1.773
           },
           {
             "keyword": "ảnh thật",
             "count": 23,
-            "share": 0.0697,
+            "share": 0.0732,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "jean",
             "count": 21,
-            "share": 0.0636,
-            "share_best_seller": 0.069,
-            "lift_best_seller": 1.084
+            "share": 0.0669,
+            "share_best_seller": 0.0706,
+            "lift_best_seller": 1.055
           },
           {
             "keyword": "lớp",
             "count": 20,
-            "share": 0.0606,
-            "share_best_seller": 0.0805,
-            "lift_best_seller": 1.328
+            "share": 0.0637,
+            "share_best_seller": 0.0824,
+            "lift_best_seller": 1.293
           },
           {
             "keyword": "áo hoodie",
             "count": 19,
-            "share": 0.0576,
-            "share_best_seller": 0.023,
-            "lift_best_seller": 0.399
-          },
-          {
-            "keyword": "dây",
-            "count": 16,
-            "share": 0.0485,
-            "share_best_seller": 0.0,
-            "lift_best_seller": 0.0
+            "share": 0.0605,
+            "share_best_seller": 0.0235,
+            "lift_best_seller": 0.389
           },
           {
             "keyword": "nỉ",
             "count": 16,
-            "share": 0.0485,
-            "share_best_seller": 0.023,
-            "lift_best_seller": 0.474
+            "share": 0.051,
+            "share_best_seller": 0.0235,
+            "lift_best_seller": 0.462
           },
           {
             "keyword": "thêu",
             "count": 14,
-            "share": 0.0424,
-            "share_best_seller": 0.023,
-            "lift_best_seller": 0.542
+            "share": 0.0446,
+            "share_best_seller": 0.0235,
+            "lift_best_seller": 0.528
           },
           {
-            "keyword": "hoodie",
+            "keyword": "in",
             "count": 13,
-            "share": 0.0394,
-            "share_best_seller": 0.0115,
-            "lift_best_seller": 0.292
+            "share": 0.0414,
+            "share_best_seller": 0.0118,
+            "lift_best_seller": 0.284
+          },
+          {
+            "keyword": "linen",
+            "count": 13,
+            "share": 0.0414,
+            "share_best_seller": 0.0353,
+            "lift_best_seller": 0.852
           }
         ]
       },
       "Đầm nữ": {
-        "n_products": 185,
+        "n_products": 182,
         "n_best_seller": 51,
         "top_keywords": [
           {
             "keyword": "đầm",
-            "count": 63,
-            "share": 0.3405,
-            "share_best_seller": 0.4706,
-            "lift_best_seller": 1.382
+            "count": 64,
+            "share": 0.3516,
+            "share_best_seller": 0.4902,
+            "lift_best_seller": 1.394
           },
           {
             "keyword": "thiết kế",
             "count": 27,
-            "share": 0.1459,
+            "share": 0.1484,
             "share_best_seller": 0.1765,
-            "lift_best_seller": 1.209
+            "lift_best_seller": 1.19
           },
           {
             "keyword": "dây",
             "count": 22,
-            "share": 0.1189,
+            "share": 0.1209,
             "share_best_seller": 0.0784,
-            "lift_best_seller": 0.66
+            "lift_best_seller": 0.649
           },
           {
             "keyword": "cotton",
             "count": 20,
-            "share": 0.1081,
+            "share": 0.1099,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "xòe",
             "count": 17,
-            "share": 0.0919,
+            "share": 0.0934,
             "share_best_seller": 0.0784,
-            "lift_best_seller": 0.854
+            "lift_best_seller": 0.84
           },
           {
             "keyword": "maxi",
             "count": 15,
-            "share": 0.0811,
+            "share": 0.0824,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "ngắn",
             "count": 14,
-            "share": 0.0757,
+            "share": 0.0769,
             "share_best_seller": 0.1373,
-            "lift_best_seller": 1.814
+            "lift_best_seller": 1.784
           },
           {
             "keyword": "suông",
             "count": 14,
-            "share": 0.0757,
+            "share": 0.0769,
             "share_best_seller": 0.0784,
-            "lift_best_seller": 1.036
+            "lift_best_seller": 1.02
           },
           {
             "keyword": "váy",
             "count": 12,
-            "share": 0.0649,
+            "share": 0.0659,
             "share_best_seller": 0.1176,
-            "lift_best_seller": 1.814
+            "lift_best_seller": 1.784
           },
           {
             "keyword": "la mộc",
             "count": 11,
-            "share": 0.0595,
+            "share": 0.0604,
             "share_best_seller": 0.0,
             "lift_best_seller": 0.0
           },
           {
             "keyword": "linen",
             "count": 10,
-            "share": 0.0541,
+            "share": 0.0549,
             "share_best_seller": 0.0588,
-            "lift_best_seller": 1.088
+            "lift_best_seller": 1.071
           },
           {
             "keyword": "xinh xắn",
             "count": 10,
-            "share": 0.0541,
+            "share": 0.0549,
             "share_best_seller": 0.0588,
-            "lift_best_seller": 1.088
+            "lift_best_seller": 1.071
+          },
+          {
+            "keyword": "hoa",
+            "count": 10,
+            "share": 0.0549,
+            "share_best_seller": 0.0784,
+            "lift_best_seller": 1.427
           },
           {
             "keyword": "dự tiệc",
             "count": 10,
-            "share": 0.0541,
+            "share": 0.0549,
             "share_best_seller": 0.0784,
-            "lift_best_seller": 1.451
-          },
-          {
-            "keyword": "đầm ôm",
-            "count": 10,
-            "share": 0.0541,
-            "share_best_seller": 0.0784,
-            "lift_best_seller": 1.451
+            "lift_best_seller": 1.427
           },
           {
             "keyword": "sang trọng",
             "count": 9,
-            "share": 0.0486,
+            "share": 0.0495,
             "share_best_seller": 0.0784,
-            "lift_best_seller": 1.612
+            "lift_best_seller": 1.586
           }
         ]
       },
       "Đồ lót nữ": {
-        "n_products": 318,
-        "n_best_seller": 83,
+        "n_products": 316,
+        "n_best_seller": 82,
         "top_keywords": [
           {
             "keyword": "quần lót",
             "count": 108,
-            "share": 0.3396,
-            "share_best_seller": 0.5422,
-            "lift_best_seller": 1.596
+            "share": 0.3418,
+            "share_best_seller": 0.5488,
+            "lift_best_seller": 1.606
           },
           {
             "keyword": "ren",
             "count": 69,
-            "share": 0.217,
-            "share_best_seller": 0.2048,
-            "lift_best_seller": 0.944
+            "share": 0.2184,
+            "share_best_seller": 0.2073,
+            "lift_best_seller": 0.949
           },
           {
             "keyword": "combo",
             "count": 69,
-            "share": 0.217,
-            "share_best_seller": 0.253,
-            "lift_best_seller": 1.166
+            "share": 0.2184,
+            "share_best_seller": 0.2561,
+            "lift_best_seller": 1.173
           },
           {
             "keyword": "gọng",
-            "count": 53,
-            "share": 0.1667,
-            "share_best_seller": 0.2048,
-            "lift_best_seller": 1.229
+            "count": 52,
+            "share": 0.1646,
+            "share_best_seller": 0.1951,
+            "lift_best_seller": 1.186
           },
           {
             "keyword": "áo ngực",
             "count": 50,
-            "share": 0.1572,
-            "share_best_seller": 0.1446,
-            "lift_best_seller": 0.92
+            "share": 0.1582,
+            "share_best_seller": 0.1463,
+            "lift_best_seller": 0.925
           },
           {
             "keyword": "áo lót",
-            "count": 48,
-            "share": 0.1509,
-            "share_best_seller": 0.1446,
-            "lift_best_seller": 0.958
+            "count": 47,
+            "share": 0.1487,
+            "share_best_seller": 0.1341,
+            "lift_best_seller": 0.902
           },
           {
             "keyword": "mút",
-            "count": 46,
-            "share": 0.1447,
-            "share_best_seller": 0.0723,
-            "lift_best_seller": 0.5
+            "count": 45,
+            "share": 0.1424,
+            "share_best_seller": 0.061,
+            "lift_best_seller": 0.428
           },
           {
             "keyword": "cotton",
             "count": 32,
-            "share": 0.1006,
-            "share_best_seller": 0.1928,
-            "lift_best_seller": 1.916
+            "share": 0.1013,
+            "share_best_seller": 0.1951,
+            "lift_best_seller": 1.927
           },
           {
             "keyword": "dây",
             "count": 28,
-            "share": 0.0881,
-            "share_best_seller": 0.012,
-            "lift_best_seller": 0.137
+            "share": 0.0886,
+            "share_best_seller": 0.0122,
+            "lift_best_seller": 0.138
           },
           {
             "keyword": "sexy",
             "count": 24,
-            "share": 0.0755,
-            "share_best_seller": 0.0843,
-            "lift_best_seller": 1.117
+            "share": 0.0759,
+            "share_best_seller": 0.0854,
+            "lift_best_seller": 1.124
           },
           {
             "keyword": "nâng ngực",
             "count": 23,
-            "share": 0.0723,
-            "share_best_seller": 0.0361,
-            "lift_best_seller": 0.5
-          },
-          {
-            "keyword": "bộ đồ",
-            "count": 21,
-            "share": 0.066,
-            "share_best_seller": 0.0482,
-            "lift_best_seller": 0.73
-          },
-          {
-            "keyword": "mỏng",
-            "count": 21,
-            "share": 0.066,
-            "share_best_seller": 0.1205,
-            "lift_best_seller": 1.824
+            "share": 0.0728,
+            "share_best_seller": 0.0366,
+            "lift_best_seller": 0.503
           },
           {
             "keyword": "quần",
             "count": 20,
-            "share": 0.0629,
-            "share_best_seller": 0.0482,
-            "lift_best_seller": 0.766
+            "share": 0.0633,
+            "share_best_seller": 0.0488,
+            "lift_best_seller": 0.771
+          },
+          {
+            "keyword": "bộ đồ",
+            "count": 20,
+            "share": 0.0633,
+            "share_best_seller": 0.0488,
+            "lift_best_seller": 0.771
+          },
+          {
+            "keyword": "mỏng",
+            "count": 20,
+            "share": 0.0633,
+            "share_best_seller": 0.1098,
+            "lift_best_seller": 1.734
           },
           {
             "keyword": "lọt khe",
             "count": 19,
-            "share": 0.0597,
-            "share_best_seller": 0.0482,
-            "lift_best_seller": 0.807
+            "share": 0.0601,
+            "share_best_seller": 0.0488,
+            "lift_best_seller": 0.811
           }
         ]
       },
       "Đồ ngủ - Đồ mặc nhà nữ": {
-        "n_products": 224,
-        "n_best_seller": 67,
+        "n_products": 220,
+        "n_best_seller": 66,
         "top_keywords": [
           {
             "keyword": "đồ bộ",
             "count": 95,
-            "share": 0.4241,
-            "share_best_seller": 0.403,
-            "lift_best_seller": 0.95
+            "share": 0.4318,
+            "share_best_seller": 0.4091,
+            "lift_best_seller": 0.947
           },
           {
             "keyword": "lụa",
-            "count": 70,
-            "share": 0.3125,
-            "share_best_seller": 0.3134,
-            "lift_best_seller": 1.003
+            "count": 68,
+            "share": 0.3091,
+            "share_best_seller": 0.3182,
+            "lift_best_seller": 1.029
           },
           {
             "keyword": "đồ ngủ",
-            "count": 65,
-            "share": 0.2902,
-            "share_best_seller": 0.3433,
-            "lift_best_seller": 1.183
+            "count": 63,
+            "share": 0.2864,
+            "share_best_seller": 0.3485,
+            "lift_best_seller": 1.217
           },
           {
             "keyword": "dây",
             "count": 49,
-            "share": 0.2188,
-            "share_best_seller": 0.2537,
-            "lift_best_seller": 1.16
+            "share": 0.2227,
+            "share_best_seller": 0.2576,
+            "lift_best_seller": 1.156
           },
           {
             "keyword": "váy ngủ",
-            "count": 48,
-            "share": 0.2143,
-            "share_best_seller": 0.2985,
-            "lift_best_seller": 1.393
+            "count": 46,
+            "share": 0.2091,
+            "share_best_seller": 0.303,
+            "lift_best_seller": 1.449
           },
           {
             "keyword": "đầm ngủ",
-            "count": 44,
-            "share": 0.1964,
-            "share_best_seller": 0.2537,
-            "lift_best_seller": 1.292
+            "count": 42,
+            "share": 0.1909,
+            "share_best_seller": 0.2576,
+            "lift_best_seller": 1.349
           },
           {
             "keyword": "bộ mặc nhà",
             "count": 37,
-            "share": 0.1652,
-            "share_best_seller": 0.2239,
-            "lift_best_seller": 1.355
+            "share": 0.1682,
+            "share_best_seller": 0.2273,
+            "lift_best_seller": 1.351
           },
           {
             "keyword": "gợi cảm",
-            "count": 31,
-            "share": 0.1384,
-            "share_best_seller": 0.209,
-            "lift_best_seller": 1.51
+            "count": 29,
+            "share": 0.1318,
+            "share_best_seller": 0.2121,
+            "lift_best_seller": 1.609
           },
           {
             "keyword": "nhà",
             "count": 28,
-            "share": 0.125,
-            "share_best_seller": 0.194,
-            "lift_best_seller": 1.552
+            "share": 0.1273,
+            "share_best_seller": 0.197,
+            "lift_best_seller": 1.548
           },
           {
             "keyword": "ngủ",
-            "count": 27,
-            "share": 0.1205,
-            "share_best_seller": 0.1493,
-            "lift_best_seller": 1.238
+            "count": 26,
+            "share": 0.1182,
+            "share_best_seller": 0.1515,
+            "lift_best_seller": 1.282
           },
           {
             "keyword": "bộ đồ",
-            "count": 26,
-            "share": 0.1161,
-            "share_best_seller": 0.0448,
-            "lift_best_seller": 0.386
-          },
-          {
-            "keyword": "quyến rũ",
-            "count": 24,
-            "share": 0.1071,
-            "share_best_seller": 0.1791,
-            "lift_best_seller": 1.672
+            "count": 25,
+            "share": 0.1136,
+            "share_best_seller": 0.0455,
+            "lift_best_seller": 0.4
           },
           {
             "keyword": "họa tiết",
             "count": 23,
-            "share": 0.1027,
-            "share_best_seller": 0.1194,
-            "lift_best_seller": 1.163
+            "share": 0.1045,
+            "share_best_seller": 0.1212,
+            "lift_best_seller": 1.159
+          },
+          {
+            "keyword": "quyến rũ",
+            "count": 22,
+            "share": 0.1,
+            "share_best_seller": 0.1818,
+            "lift_best_seller": 1.818
           },
           {
             "keyword": "ngực",
             "count": 20,
-            "share": 0.0893,
-            "share_best_seller": 0.1045,
-            "lift_best_seller": 1.17
+            "share": 0.0909,
+            "share_best_seller": 0.1061,
+            "lift_best_seller": 1.167
           },
           {
             "keyword": "ren",
             "count": 20,
-            "share": 0.0893,
-            "share_best_seller": 0.1642,
-            "lift_best_seller": 1.839
+            "share": 0.0909,
+            "share_best_seller": 0.1667,
+            "lift_best_seller": 1.833
           }
         ]
       },
@@ -1578,8 +1578,8 @@
       "min_df": 3,
       "split_counts": {
         "train": 539,
-        "test": 68,
-        "val": 67
+        "val": 85,
+        "test": 50
       }
     },
     "categories": {
