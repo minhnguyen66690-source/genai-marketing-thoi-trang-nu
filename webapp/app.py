@@ -231,15 +231,18 @@ def show_content(content, brief, lang):
 
 
 def reset_all():
-    """Xóa kết quả và đưa biểu mẫu về mặc định."""
-    for key in list(st.session_state.keys()):
-        if key != "generation_count":
-            del st.session_state[key]
+    """Xóa kết quả và dựng lại biểu mẫu với bộ khóa mới.
+
+    Xóa khóa của widget không đủ để Streamlit trả ô về mặc định, nên mỗi lần làm lại
+    tăng số phiên bản và gắn vào khóa widget để Streamlit coi đó là ô hoàn toàn mới.
+    """
+    st.session_state["form_version"] = st.session_state.get("form_version", 0) + 1
+    st.session_state.pop("generated_result", None)
 
 
 def clear_keywords():
     """Đổi loại sản phẩm thì bỏ các từ khóa gợi ý của loại cũ, vì danh sách gợi ý khác nhau."""
-    st.session_state.pop("suggested", None)
+    st.session_state.pop(f"suggested_{st.session_state.get('form_version', 0)}", None)
 
 
 st.set_page_config(page_title="Trợ lý nội dung sản phẩm", page_icon="✍️", layout="centered")
@@ -274,37 +277,38 @@ with viet:
     demo_category = "Chân váy" if "Chân váy" in category_list else category_list[0]
 
     st.markdown("#### Sản phẩm của bạn")
+    version = st.session_state.get("form_version", 0)
     category = st.selectbox("Loại sản phẩm", category_list,
-                            index=category_list.index(demo_category) if demo else 0, key="category",
+                            index=category_list.index(demo_category) if demo else 0, key=f"category_{version}",
                             on_change=clear_keywords)
     suggested = st.multiselect("Từ khóa khách hay tìm", categories.get(category, []),
-                               placeholder="Chọn vài từ, ví dụ: chân váy chữ a, công sở", key="suggested")
+                               placeholder="Chọn vài từ, ví dụ: chân váy chữ a, công sở", key=f"suggested_{version}")
     free_keywords = st.text_input("Từ khóa khác, cách nhau bằng dấu phẩy",
                                   value="chân váy chữ a, công sở, xếp ly" if demo else "",
-                                  placeholder="váy dự tiệc, vải lụa, dáng suông", key="free_keywords")
-    language = st.radio("Viết bằng", ["Tiếng Việt", "English"], horizontal=True, key="language")
+                                  placeholder="váy dự tiệc, vải lụa, dáng suông", key=f"free_keywords_{version}")
+    language = st.radio("Viết bằng", ["Tiếng Việt", "English"], horizontal=True, key=f"language_{version}")
     lang = "vi" if language == "Tiếng Việt" else "en"
     if lang == "en":
         st.caption("Chọn English thì nên nhập từ khóa và chi tiết sản phẩm bằng tiếng Anh, "
                    "vì phần kiểm tra so khớp đúng chữ bạn nhập.")
 
     # Streamlit đóng lại phần mở rộng sau mỗi lần nhập, nên giữ nó mở khi người dùng đã điền gì đó.
-    detail_keys = ("material", "color", "size", "price", "objections", "free_objections")
+    detail_keys = [f"{name}_{version}" for name in ("material", "color", "size", "price", "objections", "free_objections")]
     keep_open = any(st.session_state.get(key) for key in detail_keys)
     with st.expander("Thêm chi tiết sản phẩm (không bắt buộc, nhập càng đúng bài càng sát)", expanded=keep_open):
         cols = st.columns(4)
-        material = cols[0].text_input("Chất liệu", value="kaki" if demo else "", placeholder="cotton, lụa", key="material")
-        color = cols[1].text_input("Màu sắc", placeholder="đen, be", key="color")
-        size = cols[2].text_input("Kích cỡ", placeholder="S, M, L", key="size")
-        price = cols[3].text_input("Giá", placeholder="259000", key="price")
+        material = cols[0].text_input("Chất liệu", value="kaki" if demo else "", placeholder="cotton, lụa", key=f"material_{version}")
+        color = cols[1].text_input("Màu sắc", placeholder="đen, be", key=f"color_{version}")
+        size = cols[2].text_input("Kích cỡ", placeholder="S, M, L", key=f"size_{version}")
+        price = cols[3].text_input("Giá", placeholder="259000", key=f"price_{version}")
         raw_options = objections.get(category, []) if isinstance(objections, dict) else []
         # objections_by_category.json lưu dạng [{"phrase": chủ đề, "count": n, "share": tỷ lệ}].
         options = [item["phrase"] if isinstance(item, dict) else str(item) for item in raw_options] if isinstance(raw_options, list) else []
         selected_objections = st.multiselect("Lo ngại khách hay nêu (lấy từ đánh giá thật của loại sản phẩm này)",
-                                             options, default=options[:2] if demo else [], key="objections",
+                                             options, default=options[:2] if demo else [], key=f"objections_{version}",
                                              placeholder="Chọn một hoặc vài lo ngại",
                                              help="Kịch bản nhắn tin sẽ trả lời sẵn những lo ngại bạn chọn.")
-        free_objections = st.text_input("Lo ngại khác, cách nhau bằng dấu phẩy", key="free_objections")
+        free_objections = st.text_input("Lo ngại khác, cách nhau bằng dấu phẩy", key=f"free_objections_{version}")
 
     col_run, col_reset = st.columns([3, 1])
     run = col_run.button("✍️ Viết nội dung", type="primary", use_container_width=True)
