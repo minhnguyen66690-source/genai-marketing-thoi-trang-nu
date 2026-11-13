@@ -288,7 +288,10 @@ with viet:
         st.caption("Chọn English thì nên nhập từ khóa và chi tiết sản phẩm bằng tiếng Anh, "
                    "vì phần kiểm tra so khớp đúng chữ bạn nhập.")
 
-    with st.expander("Thêm chi tiết sản phẩm (không bắt buộc, nhập càng đúng bài càng sát)"):
+    # Streamlit đóng lại phần mở rộng sau mỗi lần nhập, nên giữ nó mở khi người dùng đã điền gì đó.
+    detail_keys = ("material", "color", "size", "price", "objections", "free_objections")
+    keep_open = any(st.session_state.get(key) for key in detail_keys)
+    with st.expander("Thêm chi tiết sản phẩm (không bắt buộc, nhập càng đúng bài càng sát)", expanded=keep_open):
         cols = st.columns(4)
         material = cols[0].text_input("Chất liệu", value="kaki" if demo else "", placeholder="cotton, lụa", key="material")
         color = cols[1].text_input("Màu sắc", placeholder="đen, be", key="color")
@@ -299,6 +302,7 @@ with viet:
         options = [item["phrase"] if isinstance(item, dict) else str(item) for item in raw_options] if isinstance(raw_options, list) else []
         selected_objections = st.multiselect("Lo ngại khách hay nêu (lấy từ đánh giá thật của loại sản phẩm này)",
                                              options, default=options[:2] if demo else [], key="objections",
+                                             placeholder="Chọn một hoặc vài lo ngại",
                                              help="Kịch bản nhắn tin sẽ trả lời sẵn những lo ngại bạn chọn.")
         free_objections = st.text_input("Lo ngại khác, cách nhau bằng dấu phẩy", key="free_objections")
 
