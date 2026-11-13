@@ -250,7 +250,10 @@ with st.sidebar:
         st.info("Trang chưa có khóa chung. Bạn có thể dùng khóa riêng, hoặc dùng chế độ không cần khóa ở dưới.")
     with st.expander("Dùng khóa API riêng", expanded=not (owner_gemini or owner_openai)):
         st.markdown(HUONG_DAN_KHOA)
-        provider_label = st.radio("Dịch vụ", ["Gemini (Google)", "ChatGPT (OpenAI)"], horizontal=False)
+        # Mặc định chọn đúng dịch vụ mà chủ trang đã cấu hình khóa, để người dùng không phải tự dò.
+        providers = ["Gemini (Google)", "ChatGPT (OpenAI)"]
+        default_index = 1 if (owner_openai and not owner_gemini) else 0
+        provider_label = st.radio("Dịch vụ", providers, index=default_index)
         provider = "gemini" if provider_label.startswith("Gemini") else "openai"
         user_key = st.text_input("Dán khóa API vào đây", type="password",
                                  placeholder="AIza… hoặc sk-…", help="Chỉ giữ trong phiên này, không lưu lại.")
