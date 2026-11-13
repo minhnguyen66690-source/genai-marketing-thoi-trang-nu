@@ -289,8 +289,10 @@ def render_markdown(doc, path):
             path = ROOT / 'figures' / match[1]
             if path.is_file():
                 with Image.open(path) as image:
-                    width_cm = min(12.6, 5.4 * image.width / image.height)  # rộng tối đa 12,6 cm, cao tối đa 5,4 cm
+                    max_h = 6.4 if path.name == 'web_demo.png' else 5.2  # ảnh chụp website cần cao hơn mới đọc được
+                    width_cm = min(12.6, max_h * image.width / image.height)  # rộng tối đa 12,6 cm
                 p = doc.add_paragraph(); centered(p); p.add_run().add_picture(str(path), width=Cm(width_cm))
+                p.paragraph_format.keep_with_next = True  # chú thích phải nằm cùng trang với hình
                 caption(doc, 'Hình', match[2]); source(doc, match[3])
             else:
                 warn('Thiếu hình: ' + str(path))
