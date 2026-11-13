@@ -367,7 +367,7 @@ def build(out, skip_com=False):
                 p.paragraph_format.line_spacing = 1.0
                 p.paragraph_format.space_after = Pt(1)
                 for run in p.runs:
-                    run.font.size = Pt(10.5)
+                    run.font.size = Pt(10)
     else:
         warn('Thiếu tài liệu tham khảo: ' + str(refs))
     out.parent.mkdir(parents=True, exist_ok=True)
