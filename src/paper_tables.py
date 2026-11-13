@@ -178,7 +178,7 @@ def table_checklist():
             ("seo_meta_len_120_156", "Meta 120–156 ký tự (Yoast)"), ("seo_keyphrase_in_meta", "Từ khóa trong meta (Yoast)"),
             ("seo_desc_words_ge_200", "Mô tả ≥ 200 từ (Yoast, Tiki)"),
             ("seo_keyphrase_in_title", "Từ khóa trong tiêu đề (Yoast)"), ("seo_keyphrase_in_first_paragraph", "Từ khóa ở đoạn đầu (Yoast)"),
-            ("seo_density_proxy_0_5_3", "Mật độ từ khóa 0,5–3% (Yoast, gần đúng)*"), ("seo_compliance_rate", "Tỷ lệ tuân thủ gộp, 7 tiêu chí"),
+            ("seo_density_proxy_0_5_3", "Mật độ từ khóa 0,5–3% (Yoast, gần đúng)*"), ("seo_compliance_rate", "Tỷ lệ tuân thủ gộp (các tiêu chí áp dụng được)"),
             (None, "Tỷ lệ tuân thủ trên 5 tiêu chí chung"),
             ("email_mailchimp_le9w_le60c", "Email ≤ 9 từ, ≤ 60 ký tự (Mailchimp)"), ("email_omnisend_4_6w_or_21_40c", "Email 4–6 từ hoặc 21–40 ký tự (Omnisend)"),
             ("email_keyword_relevance", "Email chứa từ khóa")]
@@ -192,8 +192,9 @@ def table_checklist():
     n_m4 = s["metrics"].get("M4a", {}).get("seo_compliance_rate", {}).get("n", "–")
     save("checklist", f"Tỷ lệ đạt (%) từng tiêu chí tối ưu hóa tìm kiếm và tiêu đề email (RQ3), Tiki n = 99 (M4 n = {n_m4})",
          "Nguồn: tác giả tính; ngưỡng và nguồn của từng tiêu chí ở mục 4.5. (*) Báo cáo riêng, không tính vào tỷ lệ gộp. "
-         "Năm tiêu chí chung là các tiêu chí không cần meta description, áp dụng được cho cả nội dung người bán; "
-         "'–': không áp dụng (Tiki không công khai meta description của người bán; M4 không sinh meta description và tiêu đề email)",
+         "Tỷ lệ gộp tính trên 7 tiêu chí với M0–M3 và trên 5 tiêu chí với M4 cùng nội dung người bán, vì hai nhóm sau không có meta description; "
+         "dòng kế tiếp đưa mọi cấu hình về cùng 5 tiêu chí để so sánh trực tiếp. Với M4, tiêu đề là dòng đầu của mô tả do mô hình sinh. "
+         "'–': không áp dụng",
          ["Tiêu chí"] + [m if m != "reference" else "Người bán" for m in methods], rows,
          [4.9] + [1.45] * (len(methods) - 1) + [1.75])
 
@@ -211,7 +212,7 @@ def table_judge():
             ("latency_s", "Độ trễ sinh (giây/sản phẩm)", 1, 1)]
     rows = [[label] + [mean_of(s, m, key, scale, digits) for m in methods] for key, label, scale, digits in spec]
     save("judge", "Điểm giám khảo Gemini (thang 1–5) và các chỉ số kịch bản, Tiki n = 99 (RQ4)",
-         "Nguồn: tác giả tính; giám khảo Gemini 3.8 Flash chấm ẩn danh theo rubric G-Eval; chủ đề phản đối được đối chiếu bằng từ vựng của từng chủ đề; tỷ lệ không căn cứ là trung bình trên các mẫu có ít nhất một thuộc tính được nhắc",
+         "Nguồn: tác giả tính; giám khảo Gemini 3.8 Flash chấm ẩn danh theo rubric G-Eval. Chủ đề phản đối đối chiếu bằng từ vựng của từng chủ đề, tính trên 97 sản phẩm có phản đối trong bản tóm tắt; tỷ lệ không có căn cứ là trung bình theo sản phẩm, trên các sản phẩm có ít nhất một thuộc tính được nhắc",
          ["Chỉ số", "M0", "M1", "M2", "M3"], rows, [7.6, 2.1, 2.1, 2.1, 2.1])
 
 
@@ -237,10 +238,9 @@ def table_leakage_and_m4():
         rows.append([name, str(b["n"]), vn(b.get("pct_copied_tiki_boilerplate"), 1) if "pct_copied_tiki_boilerplate" in b else "–",
                      vn(b.get("pct_repetitive_output"), 1) if "pct_repetitive_output" in b else "–",
                      vn(b["pct_bullets_ge_best_seller_median"], 1),
-                     # M4 không sinh tiêu đề riêng (dòng đầu mô tả), nên không so sánh độ dài tên.
-                     "–" if key.startswith("M4") else vn(b["pct_title_ge_best_seller_median"], 1)])
+                     vn(b["pct_title_ge_best_seller_median"], 1)])
     save("m4_business", "Chẩn đoán mô hình nhỏ và mức đạt đặc trưng của nhóm bán chạy (%), Tiki",
-         "Nguồn: tác giả tính (src/business_metrics.py); ngưỡng là trung vị của nhóm bán chạy cùng danh mục",
+         "Nguồn: tác giả tính (src/business_metrics.py); ngưỡng là trung vị của nhóm bán chạy cùng danh mục. Với M4, tiêu đề là dòng đầu của mô tả do mô hình sinh",
          ["Cấu hình", "n", "Chép văn mẫu Tiki", "Sinh lặp", "Gạch đầu dòng ≥ trung vị", "Độ dài tên ≥ trung vị"], rows, [5.4, 1.2, 2.4, 2.0, 2.6, 2.6])
 
 

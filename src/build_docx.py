@@ -289,7 +289,7 @@ def render_markdown(doc, path):
             path = ROOT / 'figures' / match[1]
             if path.is_file():
                 with Image.open(path) as image:
-                    width_cm = min(13.2, 5.8 * image.width / image.height)  # rộng tối đa 13,2 cm, cao tối đa 5,8 cm
+                    width_cm = min(12.6, 5.4 * image.width / image.height)  # rộng tối đa 12,6 cm, cao tối đa 5,4 cm
                 p = doc.add_paragraph(); centered(p); p.add_run().add_picture(str(path), width=Cm(width_cm))
                 caption(doc, 'Hình', match[2]); source(doc, match[3])
             else:
