@@ -366,10 +366,10 @@ def build(out, skip_com=False):
                 p.alignment = WD_ALIGN_PARAGRAPH.LEFT
                 p.paragraph_format.left_indent = Cm(1.27)
                 p.paragraph_format.first_line_indent = Cm(-1.27)
-                p.paragraph_format.line_spacing = 1.0
+                p.paragraph_format.line_spacing = 0.92
                 p.paragraph_format.space_after = Pt(1)
                 for run in p.runs:
-                    run.font.size = Pt(10)
+                    run.font.size = Pt(9.5)
     else:
         warn('Thiếu tài liệu tham khảo: ' + str(refs))
     out.parent.mkdir(parents=True, exist_ok=True)

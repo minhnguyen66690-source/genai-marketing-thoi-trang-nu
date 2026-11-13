@@ -58,29 +58,69 @@ def save(fig, ax, name):
     fig.savefig(OUT / (name + '.png'), dpi=300, facecolor='white')
     fig.savefig(OUT / (name + '.svg'), facecolor='white')
     plt.close(fig)
+    trim_white(OUT / (name + '.png'))
     with Image.open(OUT / (name + '.png')) as im: im.verify()
 
 
+def trim_white(path, margin=26):
+    """Cắt viền trắng thừa quanh nội dung.
+
+    matplotlib luôn vẽ trên khung đầy đủ nên ảnh hay thừa một dải trắng lớn; dải đó khiến
+    sơ đồ bị thu nhỏ khi chèn vào bài báo và slide.
+    """
+    from PIL import ImageChops
+    with Image.open(path) as im:
+        rgb = im.convert('RGB')
+        background = Image.new('RGB', rgb.size, (255, 255, 255))
+        box = ImageChops.difference(rgb, background).getbbox()
+        if not box:
+            return
+        left = max(box[0] - margin, 0)
+        top = max(box[1] - margin, 0)
+        right = min(box[2] + margin, rgb.width)
+        bottom = min(box[3] + margin, rgb.height)
+        rgb.crop((left, top, right, bottom)).save(path)
+
+
+def stage(ax, x, y, w, h, number, title, lines, color=TEAL):
+    """Một bước của luồng: số thứ tự, tên bước, vài dòng nội dung ngắn."""
+    ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle='round,pad=0.3,rounding_size=1.4',
+                                facecolor='white', edgecolor=color, linewidth=2.2))
+    ax.add_patch(FancyBboxPatch((x, y + h - 7.2), w, 7.2, boxstyle='round,pad=0.3,rounding_size=1.4',
+                                facecolor=color, edgecolor=color, linewidth=0))
+    ax.add_patch(plt.Circle((x + 3.4, y + h - 3.6), 2.1, facecolor='white', edgecolor=color, linewidth=1.6, zorder=3))
+    ax.text(x + 3.4, y + h - 3.6, str(number), ha='center', va='center', fontsize=12,
+            weight='bold', color=color, zorder=4)
+    ax.text(x + 6.0, y + h - 3.6, title, ha='left', va='center', fontsize=12, weight='bold', color='white')
+    for i, line in enumerate(lines):
+        ax.text(x + 1.8, y + h - 11.0 - i * 4.6, line, ha='left', va='center', fontsize=10.5, color='#1D2B36')
+
+
 def d1():
-    fig, ax = canvas('Kiến trúc hệ thống GenAI sinh nội dung marketing', 7.5)
-    rows = [
-        ('Nguồn dữ liệu', ['Tiki API – Thời trang nữ\n(tiếng Việt)', 'Amazon Reviews 2023 – Clothing\n(tiếng Anh)']),
-        ('Xử lý dữ liệu', ['Làm sạch HTML,\nchuẩn hóa Unicode', 'Tách từ tiếng Việt\n(underthesea)', 'Trích từ khóa đặc trưng\n(tần suất df, Thuật toán 1)', 'Trích phản đối từ\nđánh giá 1–3 sao']),
-        ('Kho tri thức', ['Tập huấn luyện mô tả\nbán chạy', 'Chỉ mục TF-IDF\nđể truy hồi ví dụ']),
-        ('Lớp sinh nội dung', ['M0\nMẫu cố định', 'M1\nZero-shot\n(GPT)', 'M2\nThiết kế\ncâu lệnh (GPT)', 'M3\nFew-shot có\ntruy hồi (GPT)', 'M4\nQwen2.5-0.5B\n+ LoRA']),
-        ('Lớp đánh giá', ['Tương đồng tham chiếu:\nROUGE, chrF++, BERTScore', 'Checklist tối ưu hóa\ntìm kiếm & email (có nguồn)', 'LLM-as-a-judge\n(Gemini)', 'Mô hình dự báo\nsản phẩm bán chạy']),
-        ('Ứng dụng TMĐT', ['Web demo Streamlit', 'Người duyệt nội dung\n(human-in-the-loop)', 'Đăng sản phẩm /\ngửi email'])]
-    for i, (title, items) in enumerate(rows):
-        x = 1 + i*16.55
-        box(ax, x, 84, 15, 9, title, BLUE, weight='bold')
-        h = 12
-        for j, item in enumerate(items):
-            box(ax, x, 70-j*12.5, 15, h, item.replace('\n', ' ') if i != 3 else item, TEAL if i != 5 else ORANGE)
-        if i < 5: arrow(ax, (x+15.2, 88.5), (x+16.2, 88.5))
-    arrow(ax, (74, 32), (74, 10), True)
-    arrow(ax, (74, 10), (58, 10), True)
-    arrow(ax, (58, 10), (58, 19), True)
-    ax.text(66, 5, 'phản hồi để chỉnh prompt', fontsize=13, ha='center', color=BLUE)
+    fig, ax = canvas('Hệ thống chạy như thế nào: từ dữ liệu đến nội dung người bán đăng', 5.2)
+    w, gap, y, h = 17.4, 2.3, 46, 38
+    steps = [
+        ('Dữ liệu thật', ['Tiki: 1.941 sản phẩm', 'thời trang nữ', '2.924 đánh giá khách', 'Amazon: 674 sản phẩm'], BLUE),
+        ('Tóm tắt hàng', ['Từ khóa khách hay tìm', 'Chất liệu, màu, size', 'Giá bán', 'Lo ngại từ đánh giá thật'], TEAL),
+        ('Viết nội dung', ['Mô hình ngôn ngữ viết', 'tên, mô tả, kịch bản', 'nhắn tin và email', 'So sánh 5 cách viết'], TEAL),
+        ('Chấm tự động', ['Đối chiếu tiêu chí có', 'nguồn công bố', 'Cảnh báo chi tiết bịa', 'Giám khảo chấm 1–5'], TEAL),
+        ('Duyệt và đăng', ['Xem bản nháp và điểm', 'Sửa chỗ chưa đạt', 'Đăng lên sàn, gửi email', 'Làm trên website demo'], ORANGE),
+    ]
+    for i, (title, lines, color) in enumerate(steps):
+        x = 1.9 + i * (w + gap)
+        stage(ax, x, y, w, h, i + 1, title, lines, color)
+        if i < len(steps) - 1:
+            arrow(ax, (x + w + 0.4, y + h / 2), (x + w + gap - 0.6, y + h / 2))
+    # Vòng lặp cải tiến: kết quả chấm quay lại bước viết để sửa câu lệnh.
+    x3 = 1.9 + 2 * (w + gap)
+    x4 = 1.9 + 3 * (w + gap)
+    arrow(ax, (x4 + w / 2, y - 0.6), (x4 + w / 2, y - 9), True)
+    arrow(ax, (x4 + w / 2, y - 9), (x3 + w / 2, y - 9), True)
+    arrow(ax, (x3 + w / 2, y - 9), (x3 + w / 2, y - 0.6), True)
+    ax.text((x3 + x4) / 2 + w / 2, y - 13.5, 'Chấm xong thấy lỗi thì sửa cách viết rồi chạy lại',
+            fontsize=12, ha='center', color=BLUE)
+    ax.text(1.9, 90, 'Mỗi bước đều để lại số liệu kiểm chứng được; người bán vẫn là người quyết định cuối cùng',
+            fontsize=12.5, ha='left', color=GREY, style='italic')
     save(fig, ax, 'diag_01_kien_truc_he_thong')
 
 
@@ -103,70 +143,118 @@ def d2():
 
 
 def d3():
-    fig, ax = canvas('Quy trình thu thập và kiểm soát dữ liệu Tiki', 6)
-    items = ['Danh mục Thời trang nữ (mã 931)', 'Duyệt danh mục lá',
-             'Danh sách sản phẩm\n(sắp xếp bán chạy, mặc định)', 'API chi tiết sản phẩm',
-             'API đánh giá\n(600 SP bán chạy nhất, 2 trang)',
-             'Lọc: ngày tạo ≥ 20/11/2019;\nmô tả ≥ 50 ký tự; bỏ trùng',
-             'Ẩn danh: bỏ tên, ID, ảnh khách hàng', 'Khóa dữ liệu SHA-256 (chỉ đọc)']
-    positions = [(2,65),(21,65),(40,65),(59,65),(59,22),(40,22),(21,22),(2,22)]
-    for i, (item, (x,y)) in enumerate(zip(items, positions)):
-        box(ax, x, y, 17, 20, item, ORANGE if i == 7 else BLUE)
-    for a,b in [((19,75),(21,75)),((38,75),(40,75)),((57,75),(59,75)),((67.5,65),(67.5,42)),((59,32),(57,32)),((40,32),(38,32)),((21,32),(19,32))]: arrow(ax,a,b)
-    box(ax, 79, 30, 20, 48, 'Giới hạn 1 request/giây\nTôn trọng robots.txt\nDừng khi gặp lỗi\n429/CAPTCHA', YELLOW, 13, BLUE)
+    fig, ax = canvas('Từ dữ liệu thô đến bộ dữ liệu dùng được: mỗi bước lọc bỏ bao nhiêu sản phẩm', 6.2)
+    ax.text(2, 95, 'Tiki (thời trang nữ)', fontsize=13, weight='bold', color=BLUE, va='center')
+    ax.text(72, 95, 'Amazon (dữ liệu đối chứng)', fontsize=13, weight='bold', color=BLUE, va='center')
+    # Phễu Tiki: độ rộng thanh tỷ lệ với số sản phẩm.
+    levels = [(2181, 'Thu về từ Tiki', BLUE), (2021, 'Sản phẩm còn mới', TEAL),
+              (1979, 'Có mô tả đủ dài', TEAL), (1941, 'Không trùng lặp', ORANGE)]
+    cuts = ['Loại 160: tạo trước 20/11/2019 (quá cũ)',
+            'Loại 42: mô tả dưới 50 ký tự (quá ngắn)',
+            'Loại 38: trùng cả tên và thương hiệu']
+    cx, bh, step, top = 33.0, 12.5, 22.0, 85.0
+    for i, (n, label, color) in enumerate(levels):
+        w = 62 * n / 2181
+        y = top - i * step
+        ax.add_patch(FancyBboxPatch((cx - w / 2, y - bh), w, bh, boxstyle='round,pad=0.3,rounding_size=1.4',
+                                    facecolor=color, edgecolor=color))
+        ax.text(cx, y - bh / 2, f'{n:,} sản phẩm'.replace(',', '.') + chr(10) + f'{label}', ha='center', va='center',
+                fontsize=12, weight='bold', color='white', linespacing=1.3)
+        if i < 3:
+            ym = y - bh - (step - bh) / 2
+            arrow(ax, (cx, y - bh - 0.5), (cx, y - step + 0.5))
+            ax.text(cx + 3, ym, cuts[i], ha='left', va='center', fontsize=10.5, color=ORANGE, weight='bold')
+    ax.text(cx, 1.5, 'Còn lại 1.941 sản phẩm: khóa dữ liệu, ẩn danh khách hàng', ha='center', va='center',
+            fontsize=10.5, color=GREY, style='italic')
+    # Nhánh Amazon.
+    ax.plot([68, 68], [3, 90], color=GREY, linewidth=1, linestyle=':')
+    az = [(5000, 'bản ghi ban đầu', BLUE), (2872, 'thuộc nhóm quần áo nữ', TEAL),
+          (674, 'có mô tả từ 50 ký tự', ORANGE)]
+    for i, (n, label, color) in enumerate(az):
+        y = 85 - i * 28
+        stage_w = 27
+        ax.add_patch(FancyBboxPatch((72, y - 17), stage_w - 0.5, 17, boxstyle='round,pad=0.3,rounding_size=1.4',
+                                    facecolor='white', edgecolor=color, linewidth=2.2))
+        ax.text(72 + (stage_w - 0.5) / 2, y - 6.5, f'{n:,}'.replace(',', '.'), ha='center', va='center',
+                fontsize=18, weight='bold', color=color)
+        ax.text(72 + (stage_w - 0.5) / 2, y - 13, label, ha='center', va='center', fontsize=10.5, color='#1D2B36')
+        if i < 2:
+            arrow(ax, (72 + (stage_w - 0.5) / 2, y - 17.6), (72 + (stage_w - 0.5) / 2, y - 28 + 0.6))
     save(fig, ax, 'diag_03_thu_thap_du_lieu')
 
 
 def d4():
-    fig, ax = canvas('Khung đánh giá nội dung đa tầng', 7.5)
-    cols = ['Mô tả sản phẩm', 'Tiêu đề email', 'Kịch bản chốt sale']
-    for i, c in enumerate(cols): box(ax, 17+i*27.5, 88, 26, 8, c, BLUE, weight='bold')
-    labels = [('Chỉ số tự động\ncó nguồn', 38, 48), ('LLM-as-a-judge', 20, 16), ('Chỉ số\nkinh doanh', 2, 16)]
-    for label,y,h in labels: box(ax, 1, y, 14, h, label, BLUE, weight='bold')
-    texts = [
-        ['Tiêu đề 50–60 ký tự\n(Ahrefs)\n\nMeta 120–156 ký tự\n(Yoast)\n\n≥ 200 từ (Yoast, Tiki)\n\nTừ khóa ở tiêu đề,\nđoạn đầu (Yoast)\n\nMật độ 0,5–3% (Yoast)\n\nROUGE-L, chrF++,\nBERTScore',
-         '≤ 9 từ, ≤ 60 ký tự\n(Mailchimp)\n\n4–6 từ hoặc 21–40\nký tự (Omnisend)\n\n≤ 3 dấu câu, ≤ 1 emoji\n(Mailchimp)\n\nKhông giả Re:/Fwd:\n(Gmail)',
-         'Có lời kêu gọi\nhành động (AIDA)\n\nBao phủ phản đối từ\nđánh giá thật\n\nTỷ lệ thuộc tính\nkhông có căn cứ'],
-        ['Tự nhiên, liên quan,\nthuyết phục, nhất quán', 'Rõ ràng, gây tò mò,\nliên quan', 'CTA, nhu cầu–lợi ích\n(SPIN), xử lý phản đối,\nđúng sự thật'],
-        ['Đặc trưng của nhóm bán chạy\n(gạch đầu dòng, độ dài tên)', 'Độ trễ sinh\n(giây/sản phẩm)', 'Thời gian duyệt so với\nviết mới (đề xuất đo\nkhi triển khai)']]
-    for r, (_,y,h) in enumerate(labels):
-        for c in range(3):
-            text = '• ' + texts[r][c].replace('\n\n', '\n• ')
-            box(ax, 17+c*27.5, y, 26, h, text, ['#EAF4F2','#FFF1EC','#F4F5F7'][r], 13, BLUE, align='left')
+    fig, ax = canvas('Ba tầng chấm điểm nội dung: từ thước đo cứng đến hiệu quả công việc', 5.3)
+    w, gap, y, h = 30.0, 4.0, 20, 62
+    tiers = [
+        ('Chấm bằng quy tắc', BLUE, ['Chấm: cả 3 loại nội dung', '(mô tả, tiêu đề email, kịch bản)', 'Độ dài, từ khóa, dấu câu theo', 'chuẩn Ahrefs, Yoast, Mailchimp', 'So với bản gốc: ROUGE-L,', 'chrF++, BERTScore'],
+         'Ra: tỷ lệ đạt từng tiêu chí'),
+        ('Giám khảo AI chấm', TEAL, ['Chấm: chất lượng câu chữ', 'Mô tả: tự nhiên, thuyết phục', 'Email: rõ ràng, gây tò mò', 'Kịch bản: lời kêu gọi, xử lý', 'phản đối, đúng sự thật'],
+         'Ra: điểm 1–5 cho mỗi tiêu chí'),
+        ('Đo giá trị kinh doanh', ORANGE, ['Chấm: tác động thực tế', 'Đặc trưng của nhóm bán chạy', 'Độ trễ sinh (giây/sản phẩm)', 'Thời gian duyệt so với viết', 'mới (đề xuất đo khi triển khai)'],
+         'Ra: số liệu vận hành'),
+    ]
+    for i, (title, color, lines, out) in enumerate(tiers):
+        x = 1.0 + i * (w + gap)
+        stage(ax, x, y, w, h, i + 1, title, lines, color)
+        ax.add_patch(FancyBboxPatch((x + 1.2, y + 2.2), w - 2.4, 8.5, boxstyle='round,pad=0.2,rounding_size=1.0',
+                                    facecolor=color, edgecolor=color, alpha=.15))
+        ax.text(x + w / 2, y + 6.5, out, ha='center', va='center', fontsize=11, weight='bold', color=color)
+        if i < 2:
+            arrow(ax, (x + w + 0.4, y + h / 2), (x + w + gap - 0.6, y + h / 2))
+    ax.text(50, 9, 'Cùng một bài viết đi qua cả ba tầng, từ dễ kiểm chứng nhất đến sát thực tế nhất',
+            ha='center', va='center', fontsize=12.5, color=GREY, style='italic')
     save(fig, ax, 'diag_04_khung_danh_gia')
 
 
 def d5():
-    fig, ax = canvas('Cấu trúc prompt của ba cấu hình M1–M3', 6)
-    base = ['Vai trò','Nhiệm vụ','Định dạng JSON','Brief']
-    extra = ['Quy tắc dữ kiện:\nkhông bịa','Ràng buộc chuẩn\ncó nguồn','Khung AIDA + SPIN']
-    for i, (title, items) in enumerate([('M1',base),('M2',base+extra),('M3',base+extra+['3 ví dụ truy hồi từ SP\nbán chạy (TF-IDF cosine)'])]):
-        x=3+i*32.5
-        box(ax,x,86,29,8,title,BLUE,weight='bold')
-        for j,item in enumerate(items):
-            inherited = i > 0 and (j < 4 or (i == 2 and j < 7))
-            color = '#BFD7EA' if inherited else ORANGE
-            box(ax,x,76-j*9,29,8.25,item,color,13,'black' if inherited else 'white')
-    box(ax, 17, 1, 3, 4, '', ORANGE)
-    ax.text(21, 3, 'Khối mới so với cấu hình trước', va='center', fontsize=13, color=BLUE)
-    box(ax, 59, 1, 3, 4, '', '#BFD7EA')
-    ax.text(63, 3, 'Khối kế thừa', va='center', fontsize=13, color=BLUE)
+    fig, ax = canvas('Mỗi cấu hình thêm một lớp hướng dẫn vào câu lệnh (prompt)', 6.2)
+    base = ['Vai trò', 'Nhiệm vụ', 'Định dạng JSON', 'Bản tóm tắt']
+    extra = ['Quy tắc dữ kiện: không bịa', 'Ràng buộc chuẩn có nguồn', 'Khung AIDA + SPIN']
+    shot = ['Ví dụ: 3 SP bán chạy (TF-IDF)']
+    cols = [('M1', 'Câu lệnh cơ bản', BLUE, base, 0),
+            ('M2', 'Thêm quy tắc', TEAL, base + extra, 4),
+            ('M3', 'Thêm ví dụ mẫu', ORANGE, base + extra + shot, 7)]
+    w, gap, rh, step = 28.0, 5.0, 7.2, 8.6
+    for i, (name, sub, color, rows, n_old) in enumerate(cols):
+        x = 2.0 + i * (w + gap)
+        ax.add_patch(FancyBboxPatch((x, 86), w, 10, boxstyle='round,pad=0.3,rounding_size=1.4',
+                                    facecolor=color, edgecolor=color))
+        ax.text(x + 2, 91, name, ha='left', va='center', fontsize=15, weight='bold', color='white')
+        ax.text(x + 9, 91, sub, ha='left', va='center', fontsize=12, weight='bold', color='white')
+        for j, label in enumerate(rows):
+            y = 77 - j * step
+            old = j < n_old
+            ax.add_patch(FancyBboxPatch((x, y), w, rh, boxstyle='round,pad=0.2,rounding_size=1.0',
+                                        facecolor='#DCE8F2' if old else color,
+                                        edgecolor='#DCE8F2' if old else color))
+            ax.text(x + 1.5, y + rh / 2, label if old else '+ ' + label, ha='left', va='center',
+                    fontsize=11, color='#1D2B36' if old else 'white', weight='normal' if old else 'bold')
+        if i < 2:
+            arrow(ax, (x + w + 0.8, 91), (x + w + gap - 0.8, 91))
+    ax.add_patch(FancyBboxPatch((2, 1.5), 3, 4.5, boxstyle='round,pad=0.2,rounding_size=0.8', facecolor='#DCE8F2', edgecolor='#DCE8F2'))
+    ax.text(6.5, 3.8, 'Giữ nguyên từ cấu hình trước', va='center', fontsize=11.5, color=BLUE)
+    ax.add_patch(FancyBboxPatch((36, 1.5), 3, 4.5, boxstyle='round,pad=0.2,rounding_size=0.8', facecolor=BLUE, edgecolor=BLUE))
+    ax.text(40.5, 3.8, 'Phần thêm mới (chữ đậm, có dấu +, màu của cột)', va='center', fontsize=11.5, color=BLUE)
     save(fig, ax, 'diag_05_cau_truc_prompt')
 
 
 def d6():
-    fig, ax = canvas('Tinh chỉnh LoRA trên Qwen2.5-0.5B-Instruct', 5.5)
+    fig, ax = canvas('Tinh chỉnh LoRA trên Qwen2.5-0.5B-Instruct', 6.4)
     box(ax,40,86,20,8,'Đầu vào x',BLUE,9)
-    box(ax,4,57,37,12,'Trọng số gốc W\n(đóng băng)',BLUE,8)
-    box(ax,59,67,30,9,'A (r×d)',TEAL,9)
-    box(ax,59,48,30,9,'B (d×r)',TEAL,9)
-    ax.text(74, 61.5, 'r = 16, α = 32', ha='center', va='center', fontsize=13, color=BLUE)
-    box(ax,43,30,14,9,'+',ORANGE,14,weight='bold')
-    box(ax,30,10,40,10,'Đầu ra h = Wx + BAx',BLUE,9)
-    for a,b in [((43,86),(23,69)),((57,86),(74,76)),((74,67),(74,57)),((23,57),(43,35)),((74,48),(57,35)),((50,30),(50,20))]: arrow(ax,a,b)
-    ax.text(50,6,'q_proj, k_proj, v_proj, o_proj',ha='center',va='center',fontsize=13,color=BLUE)
+    box(ax,4,60,37,12,'Trọng số gốc W\n(đóng băng)',BLUE,8)
+    box(ax,59,69,30,9,'A (r×d)',TEAL,9)
+    box(ax,59,51,30,9,'B (d×r)',TEAL,9)
+    ax.text(77, 64.5, 'r = 16, α = 32', ha='left', va='center', fontsize=13, color=BLUE)
+    box(ax,43,36,14,9,'+',ORANGE,14,weight='bold')
+    box(ax,30,21,40,10,'Đầu ra h = Wx + BAx',BLUE,9)
+    for a_,b_ in [((43,86),(23,72)),((57,86),(74,78)),((74,69),(74,60)),((23,60),(43,40)),((74,51),(57,40)),((50,36),(50,31))]: arrow(ax,a_,b_)
+    ax.text(50,16.5,'Áp dụng cho q_proj, k_proj, v_proj, o_proj',ha='center',va='center',fontsize=13,color=BLUE)
     ratio=2162688/496195456*100
-    ax.text(50,2,f'Tham số huấn luyện: ~{2162688/1e6:.2f} triệu / {496195456/1e6:.0f} triệu ({ratio:.2f}%)'.replace('.',','),ha='center',va='center',fontsize=13,color=BLUE)
+    ax.text(50,12,f'Tham số huấn luyện: ~{2162688/1e6:.2f} triệu / {496195456/1e6:.0f} triệu ({ratio:.2f}%)'.replace('.',','),ha='center',va='center',fontsize=13,color=BLUE)
+    ax.add_patch(FancyBboxPatch((3, 0.5), 94, 7.5, boxstyle='round,pad=0.3,rounding_size=1.2', facecolor='#FBF3D5', edgecolor=YELLOW, linewidth=1.5))
+    ax.text(50, 4.2, 'Nói đơn giản: giữ nguyên mô hình gốc, chỉ học thêm một "miếng vá" nhỏ (A và B) rồi cộng vào kết quả.',
+            ha='center', va='center', fontsize=12, color='#1D2B36', weight='bold')
     save(fig, ax, 'diag_06_lora')
 
 

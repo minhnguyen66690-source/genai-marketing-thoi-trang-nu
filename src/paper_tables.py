@@ -51,7 +51,7 @@ def table_data_description():
          f"Phổ biến: {vn(100 * funnel_a['amazon_popular_rate'], 1)}% (top 25% số lượt đánh giá)"],
     ]
     save("data_description", "Mô tả hai bộ dữ liệu sau các bước lọc",
-         "Nguồn: tác giả tổng hợp từ dữ liệu thu thập", ["Thuộc tính", "Tiki (tiếng Việt)", "Amazon (tiếng Anh)"], rows, [4.2, 6.3, 5.5])
+         "Nguồn: tổng hợp từ dữ liệu Tiki thu thập ngày 13/11/2026 và Amazon Reviews 2023 (src/preprocess.py)", ["Thuộc tính", "Tiki (tiếng Việt)", "Amazon (tiếng Anh)"], rows, [4.2, 6.3, 5.5])
 
 
 def table_descriptive():
@@ -66,7 +66,7 @@ def table_descriptive():
         s = pd.to_numeric(d[col], errors="coerce")
         rows.append([label, vn(s.mean(), digits), vn(s.median(), digits), vn(s.std(), digits), vn(s.min(), 0), vn(s.max(), 0)])
     save("descriptive", f"Thống kê mô tả các biến chính của dữ liệu Tiki (n = {vn(len(d), 0)})",
-         "Nguồn: tác giả tính từ dữ liệu Tiki thu thập ngày 13/11/2026",
+         "Nguồn: tính trên 1.941 sản phẩm Tiki thu thập ngày 13/11/2026 (src/eda.py)",
          ["Biến", "Trung bình", "Trung vị", "Độ lệch chuẩn", "Nhỏ nhất", "Lớn nhất"], rows, [4.6, 2.4, 2.2, 2.6, 2.0, 2.2])
 
 
@@ -84,7 +84,7 @@ def table_predictive():
     rows.append([f"{best_label}, chỉ biến kiểm soát", f"{vn(ab['control_cv_mean'], 3)} ± {vn(ab['control_cv_std'], 3)}",
                  vn(ab["control_roc_auc"], 3), "–", "–", "–", "–"])
     save("predictive", f"Kết quả phân lớp sản phẩm bán chạy (huấn luyện {vn(p['n_train'], 0)}, kiểm tra {vn(p['n_test'], 0)} sản phẩm)",
-         "Nguồn: tác giả chạy thực nghiệm; AUC CV là trung bình ± độ lệch chuẩn của 5 phần kiểm định chéo trên tập huấn luyện",
+         "Nguồn: huấn luyện trên 1.552 sản phẩm và đánh giá trên 389 sản phẩm Tiki (src/predictive.py); AUC CV là trung bình ± độ lệch chuẩn của 5 phần kiểm định chéo",
          ["Mô hình", "ROC-AUC CV", "ROC-AUC kiểm tra", "PR-AUC", "F1", "Precision", "Recall"], rows, [4.4, 2.6, 2.0, 1.7, 1.6, 1.9, 1.6])
 
 
@@ -100,8 +100,32 @@ def table_odds():
         rows.append([r["label"], "Nội dung" if r["group"] == "content" else "Kiểm soát", vn(r["odds_ratio"], 2),
                      f"[{vn(r['ci_low'], 2)}; {vn(r['ci_high'], 2)}]", p_text, ph_text])
     save("odds_ratios", f"Tỷ số chênh (OR) của mô hình Logit có kiểm soát danh mục (n = {vn(o['n'], 0)}, pseudo R² McFadden = {vn(o['pseudo_r2_mcfadden'], 3)})",
-         "Nguồn: tác giả ước lượng bằng statsmodels; biến nội dung liên tục chuẩn hóa z-score (biến đếm lấy log1p trước), OR ứng với tăng 1 độ lệch chuẩn; p Holm hiệu chỉnh cho 9 đặc trưng nội dung",
+         "Nguồn: ước lượng trên 1.941 sản phẩm Tiki bằng statsmodels (src/rq1_inference.py); biến liên tục chuẩn hóa z-score, biến đếm lấy log1p trước, OR ứng với tăng 1 độ lệch chuẩn; p Holm hiệu chỉnh cho 9 đặc trưng nội dung",
          ["Biến", "Nhóm", "OR", "KTC 95%", "p", "p Holm"], rows, [5.6, 2.0, 1.6, 3.2, 1.8, 1.8])
+
+
+def table_configs():
+    """Bảng tra cứu năm cấu hình sinh nội dung, đặt ngay ở mục phương pháp.
+
+    Người đọc gặp các ký hiệu M0 đến M4b suốt phần kết quả, nên cần một chỗ tra lại
+    bằng lời thường thay vì phải nhớ.
+    """
+    rows = [
+        ["M0", "Mẫu cố định", "Ghép từ khóa và thuộc tính vào câu mẫu soạn sẵn, không gọi mô hình ngôn ngữ",
+         "Không cần gì thêm", "Mốc so sánh cho cách làm thủ công"],
+        ["M1", "Câu lệnh tối giản (Zero-shot)", "Chỉ nêu vai trò và bản tóm tắt sản phẩm, không ràng buộc chuẩn nào",
+         "Khóa API", "Đo xem riêng việc gọi mô hình đã đủ chưa"],
+        ["M2", "Câu lệnh có ràng buộc", "M1 cộng các ngưỡng có nguồn công bố, khung AIDA và SPIN, quy tắc chỉ dùng dữ kiện đã nhập",
+         "Khóa API", "Cấu hình được khuyến nghị dùng"],
+        ["M3", "Câu lệnh kèm ví dụ (Few-shot)", "M2 cộng ba mô tả thật của sản phẩm bán chạy tương tự, lấy bằng truy hồi",
+         "Khóa API và kho mô tả cũ", "Thử xem ví dụ thật có giúp thêm không"],
+        ["M4a / M4b", "Mô hình nhỏ chạy tại máy", "Qwen2.5-0.5B chưa tinh chỉnh (M4a) và sau khi tinh chỉnh LoRA (M4b)",
+         "Máy tính cá nhân, không cần khóa API", "Thử phương án không phụ thuộc dịch vụ trả tiền"],
+    ]
+    save("configs", "Năm cấu hình sinh nội dung được so sánh trong nghiên cứu",
+         "Nguồn: tác giả thiết kế; mã nguồn của từng cấu hình trong src/prompts.py và src/finetune_lora.py",
+         ["Ký hiệu", "Tên gọi", "Cách làm", "Cần gì để chạy", "Vì sao đưa vào so sánh"], rows,
+         [1.5, 3.3, 5.4, 2.6, 3.4])
 
 
 def table_related():
@@ -115,7 +139,7 @@ def table_related():
         ["Durmus và cộng sự (2024); Salvi và cộng sự (2025)", "Văn bản thuyết phục", "Đo thay đổi quan điểm, thử nghiệm ngẫu nhiên", "Ngang người viết; GPT-4 cá nhân hóa tăng 81,2% odds đồng thuận", "Đo thái độ, chưa đo đơn hàng"],
         ["Nghiên cứu này", "Thời trang nữ Tiki + Amazon", "So sánh M0–M4 trên cùng tập; danh sách kiểm tra có nguồn; dự báo bán chạy", "Xem mục 7", "Chưa thử nghiệm A/B thực tế"],
     ]
-    save("related_works", "Tóm tắt các nghiên cứu liên quan", "Nguồn: tác giả tổng hợp",
+    save("related_works", "Tóm tắt các nghiên cứu liên quan", "Nguồn: tổng hợp từ bản gốc của các công trình được dẫn; kết quả ghi theo đúng con số tác giả công bố",
          ["Nghiên cứu", "Bài toán", "Phương pháp", "Kết quả chính", "Hạn chế"], rows, [3.3, 2.7, 3.8, 3.6, 2.8])
 
 
@@ -150,7 +174,7 @@ def table_similarity():
             rows.append([label, METHOD_NAMES[m], str(n), "–" if bleu is None else vn(bleu, 2), mean_of(s, m, "rougeL", 1, 3),
                          mean_of(s, m, "chrf_plus_plus", 1, 1), mean_of(s, m, "bertscore_f1", 1, 3)])
     save("similarity", "Mức tương đồng giữa mô tả sinh ra và mô tả thật của người bán (RQ2)",
-         "Nguồn: tác giả tính bằng sacreBLEU (BLEU cấp kho, tokenizer 13a; chrF++), rouge-score (tách từ Unicode) và BERTScore (bert-base-multilingual-cased, lớp 9)",
+         "Nguồn: tính trên 99 sản phẩm kiểm tra Tiki và 50 sản phẩm Amazon bằng sacreBLEU (BLEU cấp kho, tokenizer 13a; chrF++), rouge-score (tách từ Unicode) và BERTScore (bert-base-multilingual-cased, lớp 9); mã nguồn src/evaluate.py",
          ["Dữ liệu", "Cấu hình", "n", "BLEU", "ROUGE-L", "chrF++", "BERTScore F1"], rows, [1.8, 4.4, 1.0, 1.7, 2.1, 1.9, 2.5])
 
 
@@ -191,7 +215,7 @@ def table_checklist():
     rows.append(["Tuân thủ gộp, Amazon (n = 50)"] + [mean_of(a, m, "seo_compliance_rate", 100, 1) if not m.startswith("M4") else "–" for m in methods])
     n_m4 = s["metrics"].get("M4a", {}).get("seo_compliance_rate", {}).get("n", "–")
     save("checklist", f"Tỷ lệ đạt (%) từng tiêu chí tối ưu hóa tìm kiếm và tiêu đề email (RQ3), Tiki n = 99 (M4 n = {n_m4})",
-         "Nguồn: tác giả tính; ngưỡng và nguồn của từng tiêu chí ở mục 4.5. (*) Báo cáo riêng, không tính vào tỷ lệ gộp. "
+         "Nguồn: tính trên 99 sản phẩm kiểm tra Tiki bằng src/evaluate.py; ngưỡng và nguồn công bố của từng tiêu chí ở mục 4.5. (*) Báo cáo riêng, không tính vào tỷ lệ gộp. "
          "Tỷ lệ gộp tính trên 7 tiêu chí với M0–M3 và trên 5 tiêu chí với M4 cùng nội dung người bán, vì hai nhóm sau không có meta description; "
          "dòng kế tiếp đưa mọi cấu hình về cùng 5 tiêu chí để so sánh trực tiếp. Với M4, tiêu đề là dòng đầu của mô tả do mô hình sinh. "
          "'–': không áp dụng",
@@ -212,7 +236,7 @@ def table_judge():
             ("latency_s", "Độ trễ sinh (giây/sản phẩm)", 1, 1)]
     rows = [[label] + [mean_of(s, m, key, scale, digits) for m in methods] for key, label, scale, digits in spec]
     save("judge", "Điểm giám khảo Gemini (thang 1–5) và các chỉ số kịch bản, Tiki n = 99 (RQ4)",
-         "Nguồn: tác giả tính; giám khảo Gemini 3.8 Flash chấm ẩn danh theo rubric G-Eval. Chủ đề phản đối đối chiếu bằng từ vựng của từng chủ đề, tính trên 97 sản phẩm có phản đối trong bản tóm tắt; tỷ lệ không có căn cứ là trung bình theo sản phẩm, trên các sản phẩm có ít nhất một thuộc tính được nhắc",
+         "Nguồn: tính trên 99 sản phẩm kiểm tra Tiki; giám khảo Gemini 3.8 Flash chấm ẩn danh theo rubric G-Eval (src/judge.py). Chủ đề phản đối đối chiếu bằng từ vựng của từng chủ đề, tính trên 97 sản phẩm có phản đối trong bản tóm tắt; tỷ lệ không có căn cứ là trung bình theo sản phẩm, trên các sản phẩm có ít nhất một thuộc tính được nhắc",
          ["Chỉ số", "M0", "M1", "M2", "M3"], rows, [7.6, 2.1, 2.1, 2.1, 2.1])
 
 
@@ -227,7 +251,7 @@ def table_leakage_and_m4():
                 r = leak[dataset][key]
                 rows.append([label, name, str(r["n"]), vn(100 * r["rate"], 1) + "%"])
     save("leakage", "Tỷ lệ đầu ra bị rò rỉ chỉ dẫn qua hai vòng thiết kế prompt",
-         "Nguồn: tác giả đo bằng biểu thức chính quy trên mọi trường đầu ra (src/prompt_leakage.py)",
+         "Nguồn: đo bằng biểu thức chính quy trên mọi trường đầu ra của từng cấu hình (src/prompt_leakage.py)",
          ["Dữ liệu", "Cấu hình", "n", "Tỷ lệ rò rỉ"], rows, [2.6, 5.0, 1.6, 3.0])
     rows = []
     for key, name in (("M4a", "M4a Qwen gốc"), ("M4b (LoRA v1)", "M4b LoRA, dữ liệu chưa làm sạch"), ("M4b", "M4b LoRA, dữ liệu đã làm sạch"),
@@ -240,13 +264,14 @@ def table_leakage_and_m4():
                      vn(b["pct_bullets_ge_best_seller_median"], 1),
                      vn(b["pct_title_ge_best_seller_median"], 1)])
     save("m4_business", "Chẩn đoán mô hình nhỏ và mức đạt đặc trưng của nhóm bán chạy (%), Tiki",
-         "Nguồn: tác giả tính (src/business_metrics.py); ngưỡng là trung vị của nhóm bán chạy cùng danh mục. Với M4, tiêu đề là dòng đầu của mô tả do mô hình sinh",
+         "Nguồn: tính trên các sản phẩm kiểm tra Tiki (src/business_metrics.py); ngưỡng là trung vị của nhóm bán chạy cùng danh mục. Với M4, tiêu đề là dòng đầu của mô tả do mô hình sinh",
          ["Cấu hình", "n", "Chép văn mẫu Tiki", "Sinh lặp", "Gạch đầu dòng ≥ trung vị", "Độ dài tên ≥ trung vị"], rows, [5.4, 1.2, 2.4, 2.0, 2.6, 2.6])
 
 
 def main():
     """Tạo tất cả bảng hiện có dữ liệu."""
     table_related()
+    table_configs()
     table_data_description()
     table_descriptive()
     table_predictive()
