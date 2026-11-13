@@ -14,7 +14,7 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from llm_api import generate_via_api
-from metrics_content import email_checks, factual_support, script_rule_checks, seo_checks
+from metrics_content import detect_lang, email_checks, factual_support, script_rule_checks, seo_checks
 from prompts import engineered, template_output, zero_shot
 
 DATA = ROOT / "webapp" / "data"
@@ -106,9 +106,14 @@ def collect_checks(content, brief, lang):
     keywords = brief.get("keywords", [])
     seo = seo_checks(content.get("title", ""), content.get("meta_description", ""), content.get("description", ""),
                      keywords[0] if keywords else "", keywords, lang)
+    # Từ khóa viết một thứ tiếng còn nội dung viết thứ tiếng khác thì phép so khớp nguyên cụm
+    # không còn ý nghĩa, nên các tiêu chí dựa trên từ khóa được đánh dấu là không áp dụng.
+    mixed = bool(keywords) and detect_lang(" ".join(keywords)) != lang
     rows, passed, failed = [], [], []
     for key, (threshold, ref, measure, friendly) in SEO.items():
         flag = None if key == "density_proxy_0_5_3" else seo["checks"][key]
+        if mixed and "keyphrase" in key:
+            flag = None
         value = seo.get(measure) if measure else flag
         if isinstance(value, float):
             value = round(value, 2)
@@ -125,7 +130,7 @@ def collect_checks(content, brief, lang):
                   "omnisend_4_6w_or_21_40c": f"{email['words_space']} từ, {email['chars']} ký tự",
                   "punct_le3": email["punctuation"], "emoji_le1": email["emoji"]}
         for key, (threshold, ref, friendly) in EMAIL.items():
-            flag = email["checks"][key]
+            flag = None if (mixed and key == "keyword_relevance") else email["checks"][key]
             rows.append({"Tiêu chí": f"Email {index}: {friendly}",
                          "Đo được": str(values.get(key, flag)) if flag is not None else "—",
                          "Khuyến nghị": threshold, "Đạt?": "✅" if flag is True else "❌" if flag is False else "—",
@@ -145,9 +150,9 @@ def collect_checks(content, brief, lang):
         (passed if ok else failed).append("Kịch bản trả lời các lo ngại bạn đã chọn")
     all_text = " ".join([content.get("title", ""), content.get("meta_description", ""), content.get("description", ""),
                          content.get("sales_script", "")] + content.get("email_subjects", []))
-    unsupported = factual_support(all_text, brief)["unsupported_list"]
+    unsupported = [] if mixed else factual_support(all_text, brief)["unsupported_list"]
     return rows, {"passed": passed, "failed": failed, "email_passed": email_pass, "email_failed": email_fail,
-                  "unsupported": unsupported}, seo
+                  "unsupported": unsupported, "mixed": mixed}, seo
 
 
 def show_review(content, brief, lang, detailed=False):
@@ -168,6 +173,9 @@ def show_review(content, brief, lang, detailed=False):
     if summary["unsupported"]:
         st.warning("Các chi tiết sau có trong bài nhưng bạn chưa nhập, hãy kiểm tra lại cho đúng sản phẩm: "
                    + ", ".join(summary["unsupported"]))
+    if summary.get("mixed"):
+        st.info("Từ khóa bạn nhập khác ngôn ngữ với nội dung được viết, nên phần kiểm tra từ khóa và kiểm tra "
+                "chi tiết sản phẩm được bỏ qua. Nhập từ khóa cùng ngôn ngữ với nội dung để chấm được đầy đủ.")
     with st.expander("Xem từng tiêu chí và nguồn khuyến nghị", expanded=detailed):
         st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
         st.caption("Các ngưỡng là khuyến nghị đã công bố của Ahrefs, Yoast, Tiki Academy, Mailchimp, Omnisend và "
@@ -276,6 +284,9 @@ with viet:
                                   placeholder="váy dự tiệc, vải lụa, dáng suông", key="free_keywords")
     language = st.radio("Viết bằng", ["Tiếng Việt", "English"], horizontal=True, key="language")
     lang = "vi" if language == "Tiếng Việt" else "en"
+    if lang == "en":
+        st.caption("Chọn English thì nên nhập từ khóa và chi tiết sản phẩm bằng tiếng Anh, "
+                   "vì phần kiểm tra so khớp đúng chữ bạn nhập.")
 
     with st.expander("Thêm chi tiết sản phẩm (không bắt buộc, nhập càng đúng bài càng sát)"):
         cols = st.columns(4)
