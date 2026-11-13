@@ -4,6 +4,27 @@ import re
 import time
 
 
+SKIP_OPENAI = ("audio", "realtime", "image", "tts", "transcribe", "search", "embedding", "moderation", "instruct", "codex")
+
+
+def pick_openai_model(client):
+    """Chọn mô hình GPT sinh văn bản mới nhất mà khóa này truy cập được, ưu tiên bản mini cho rẻ.
+
+    Người dùng cuối không biết tên mô hình, nên khi không chỉ định thì tự chọn thay vì báo lỗi.
+    """
+    ids = [getattr(item, "id", "") for item in client.models.list()]
+    candidates = [name for name in ids
+                  if name.startswith("gpt-")
+                  and not any(word in name for word in SKIP_OPENAI)
+                  and not re.search(r"\d{4}-\d{2}-\d{2}", name)]
+    if not candidates:
+        raise ValueError("Khóa này chưa truy cập được mô hình GPT nào để sinh văn bản.")
+    # Bản "mini" cân bằng giữa chất lượng và chi phí; "nano" rẻ hơn nhưng viết kém hơn rõ rệt.
+    mini = [name for name in candidates if "mini" in name]
+    nano = [name for name in candidates if "nano" in name]
+    return sorted(mini or nano or candidates)[-1]
+
+
 def generate_via_api(prompt, provider, api_key, model=None):
     """Trả văn bản, tên mô hình và thời gian gọi theo giây."""
     if not api_key:
@@ -29,10 +50,9 @@ def generate_via_api(prompt, provider, api_key, model=None):
             text = response.text
         elif provider == "openai":
             from openai import OpenAI
-            model = model or os.environ.get("OPENAI_MODEL")
-            if not model:
-                raise ValueError("Vui lòng nhập tên mô hình OpenAI hoặc đặt OPENAI_MODEL.")
-            response = OpenAI(api_key=api_key).responses.create(model=model, input=prompt)
+            client = OpenAI(api_key=api_key)
+            model = model or os.environ.get("OPENAI_MODEL") or pick_openai_model(client)
+            response = client.responses.create(model=model, input=prompt)
             text = response.output_text
         else:
             raise ValueError("Nhà cung cấp API không hợp lệ.")

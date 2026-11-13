@@ -69,18 +69,23 @@ EMAIL = {
 }
 
 HUONG_DAN_KHOA = """
-**Khóa API là gì?** Là một dãy chữ số để trang này gọi sang mô hình ngôn ngữ (Gemini của Google hoặc
-ChatGPT của OpenAI) nhờ viết nội dung. Không có khóa thì trang vẫn chạy được nhưng chỉ ghép câu mẫu,
-chữ sẽ khô và ít thuyết phục hơn.
+**Khóa API là gì?** Là một dãy ký tự để trang này gọi sang mô hình ngôn ngữ nhờ viết nội dung.
+Không có khóa thì trang vẫn chạy nhưng chỉ ghép câu mẫu, chữ khô và ít thuyết phục hơn.
 
-**Cách lấy khóa miễn phí của Google (khuyến nghị, khoảng 2 phút):**
-1. Mở [aistudio.google.com/apikey](https://aistudio.google.com/apikey) và đăng nhập bằng tài khoản Google.
-2. Bấm **Create API key** rồi chọn một dự án bất kỳ (hoặc để Google tạo giúp).
-3. Bấm biểu tượng sao chép, rồi dán khóa vào ô bên dưới.
+**Cách lấy khóa của OpenAI (dùng cho ChatGPT):**
+1. Mở [platform.openai.com/api-keys](https://platform.openai.com/api-keys), đăng nhập bằng chính
+   tài khoản ChatGPT của bạn.
+2. Vào [Billing](https://platform.openai.com/settings/organization/billing/overview) nạp tiền trước,
+   tối thiểu 5 USD. Gói ChatGPT Plus hay Business **không** bao gồm khóa API, đây là hai khoản tính
+   tiền tách rời nhau.
+3. Quay lại trang API keys, bấm **Create new secret key**, đặt tên bất kỳ rồi sao chép khóa
+   (bắt đầu bằng `sk-`). Khóa chỉ hiện một lần, đóng cửa sổ là không xem lại được.
+4. Dán vào ô bên dưới. Trang tự chọn mô hình phù hợp nên bạn không cần điền tên mô hình.
 
-**Nếu bạn muốn dùng ChatGPT:** tài khoản ChatGPT Plus hay Business **không** kèm khóa API. Khóa API
-tính tiền riêng tại [platform.openai.com/api-keys](https://platform.openai.com/api-keys), phải nạp
-tiền vào mục Billing trước thì khóa mới gọi được.
+**Cách lấy khóa miễn phí của Google (nếu không muốn trả tiền, khoảng 2 phút):**
+1. Mở [aistudio.google.com/apikey](https://aistudio.google.com/apikey), đăng nhập tài khoản Google.
+2. Bấm **Create API key**, chọn một dự án bất kỳ.
+3. Sao chép khóa (bắt đầu bằng `AIza`) rồi dán vào ô bên dưới, nhớ chọn dịch vụ Gemini.
 
 Khóa bạn dán ở đây chỉ nằm trong phiên làm việc của trình duyệt, đóng tab là mất, không được lưu lại.
 """
@@ -257,7 +262,8 @@ with st.sidebar:
         provider = "gemini" if provider_label.startswith("Gemini") else "openai"
         user_key = st.text_input("Dán khóa API vào đây", type="password",
                                  placeholder="AIza… hoặc sk-…", help="Chỉ giữ trong phiên này, không lưu lại.")
-        model = st.text_input("Tên mô hình (để trống là được)", help="Chỉ cần khi bạn muốn chỉ định mô hình riêng.")
+        model = st.text_input("Tên mô hình (để trống là được)",
+                              help="Để trống thì trang tự chọn mô hình mới nhất mà khóa của bạn truy cập được.")
     owner_key = owner_gemini if provider == "gemini" else owner_openai
     api_key = (user_key or "").strip() or owner_key
     language = st.selectbox("Ngôn ngữ nội dung", ["Tiếng Việt", "English"])
@@ -337,8 +343,9 @@ with generation:
                 st.session_state["generated_result"] = (content, brief, lang)
             except (ValueError, RuntimeError, json.JSONDecodeError) as exc:
                 st.error(f"Chưa viết được: {exc}")
-                st.caption("Thường gặp khi khóa API sai, hết hạn mức, hoặc tài khoản chưa nạp tiền. "
-                           "Bạn có thể chọn cách viết 'Ghép câu mẫu' ở phần nâng cao để xem thử giao diện.")
+                st.caption("Hay gặp nhất là khóa sai, khóa đã bị xóa, hoặc tài khoản OpenAI chưa nạp tiền "
+                           "(gói ChatGPT trả phí không bao gồm khóa API). Trong lúc chờ, bạn chọn cách viết "
+                           "'Ghép câu mẫu' ở phần nâng cao để xem thử giao diện.")
     if "generated_result" in st.session_state:
         st.divider()
         show_content(*st.session_state["generated_result"])
