@@ -1,0 +1,118 @@
+{
+ "caption": "Tỷ số chênh (OR) của mô hình Logit có kiểm soát danh mục (n = 1.941, pseudo R² McFadden = 0,221)",
+ "source": "Nguồn: tác giả ước lượng bằng statsmodels; biến nội dung liên tục chuẩn hóa z-score, OR ứng với tăng 1 độ lệch chuẩn",
+ "columns": [
+  "Biến",
+  "Nhóm",
+  "OR",
+  "KTC 95%",
+  "p"
+ ],
+ "rows": [
+  [
+   "Số từ mô tả (log)",
+   "Nội dung",
+   "1,09",
+   "[0,86; 1,39]",
+   "0,481"
+  ],
+  [
+   "Số gạch đầu dòng (log)",
+   "Nội dung",
+   "1,22",
+   "[1,04; 1,42]",
+   "0,013"
+  ],
+  [
+   "Số đoạn (log)",
+   "Nội dung",
+   "1,03",
+   "[0,82; 1,29]",
+   "0,793"
+  ],
+  [
+   "Độ dài tên sản phẩm",
+   "Nội dung",
+   "1,29",
+   "[1,12; 1,48]",
+   "< 0,001"
+  ],
+  [
+   "Tỷ lệ chữ hoa",
+   "Nội dung",
+   "1,04",
+   "[0,91; 1,19]",
+   "0,568"
+  ],
+  [
+   "Có thông tin size",
+   "Nội dung",
+   "0,98",
+   "[0,70; 1,38]",
+   "0,912"
+  ],
+  [
+   "Có thông tin chất liệu",
+   "Nội dung",
+   "1,26",
+   "[0,80; 1,99]",
+   "0,314"
+  ],
+  [
+   "Có hướng dẫn bảo quản",
+   "Nội dung",
+   "0,91",
+   "[0,67; 1,24]",
+   "0,558"
+  ],
+  [
+   "Có lời kêu gọi hành động",
+   "Nội dung",
+   "0,75",
+   "[0,53; 1,05]",
+   "0,097"
+  ],
+  [
+   "Log giá",
+   "Kiểm soát",
+   "0,36",
+   "[0,29; 0,44]",
+   "< 0,001"
+  ],
+  [
+   "Tỷ lệ giảm giá",
+   "Kiểm soát",
+   "6,31",
+   "[1,56; 25,59]",
+   "0,010"
+  ],
+  [
+   "Log tuổi sản phẩm (ngày)",
+   "Kiểm soát",
+   "7,88",
+   "[5,81; 10,69]",
+   "< 0,001"
+  ],
+  [
+   "Số ảnh",
+   "Kiểm soát",
+   "0,98",
+   "[0,94; 1,01]",
+   "0,208"
+  ],
+  [
+   "Số tùy chọn biến thể",
+   "Kiểm soát",
+   "1,56",
+   "[1,28; 1,89]",
+   "< 0,001"
+  ]
+ ],
+ "col_widths_cm": [
+  6.2,
+  2.4,
+  1.8,
+  3.4,
+  2.2
+ ]
+}

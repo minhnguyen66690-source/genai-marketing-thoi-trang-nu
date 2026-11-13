@@ -1,0 +1,368 @@
+{
+  "Chân váy": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 3,
+      "share": 0.188
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 3,
+      "share": 0.188
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 2,
+      "share": 0.125
+    },
+    {
+      "phrase": "Đường may, lỗi sản phẩm",
+      "count": 1,
+      "share": 0.062
+    }
+  ],
+  "Quần nữ": [
+    {
+      "phrase": "Đường may, lỗi sản phẩm",
+      "count": 4,
+      "share": 0.154
+    },
+    {
+      "phrase": "Size không vừa",
+      "count": 3,
+      "share": 0.115
+    },
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 2,
+      "share": 0.077
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 2,
+      "share": 0.077
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 1,
+      "share": 0.038
+    }
+  ],
+  "Trang phục bơi nữ": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 5,
+      "share": 0.152
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 5,
+      "share": 0.152
+    },
+    {
+      "phrase": "Size không vừa",
+      "count": 4,
+      "share": 0.121
+    },
+    {
+      "phrase": "Màu sắc khác",
+      "count": 4,
+      "share": 0.121
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 2,
+      "share": 0.061
+    }
+  ],
+  "Áo sơ mi nữ": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 4,
+      "share": 0.25
+    },
+    {
+      "phrase": "Size không vừa",
+      "count": 2,
+      "share": 0.125
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 2,
+      "share": 0.125
+    },
+    {
+      "phrase": "Màu sắc khác",
+      "count": 1,
+      "share": 0.062
+    },
+    {
+      "phrase": "Đường may, lỗi sản phẩm",
+      "count": 1,
+      "share": 0.062
+    }
+  ],
+  "Áo vest - Áo khoác nữ": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 18,
+      "share": 0.321
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 7,
+      "share": 0.125
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 5,
+      "share": 0.089
+    },
+    {
+      "phrase": "Màu sắc khác",
+      "count": 2,
+      "share": 0.036
+    },
+    {
+      "phrase": "Size không vừa",
+      "count": 1,
+      "share": 0.018
+    }
+  ],
+  "Đầm nữ": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 4,
+      "share": 0.211
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 1,
+      "share": 0.053
+    },
+    {
+      "phrase": "Đường may, lỗi sản phẩm",
+      "count": 1,
+      "share": 0.053
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 1,
+      "share": 0.053
+    }
+  ],
+  "Đồ lót nữ": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 16,
+      "share": 0.211
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 6,
+      "share": 0.079
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 5,
+      "share": 0.066
+    },
+    {
+      "phrase": "Màu sắc khác",
+      "count": 5,
+      "share": 0.066
+    },
+    {
+      "phrase": "Size không vừa",
+      "count": 2,
+      "share": 0.026
+    }
+  ],
+  "Đồ ngủ - Đồ mặc nhà nữ": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 9,
+      "share": 0.231
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 7,
+      "share": 0.179
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 4,
+      "share": 0.103
+    },
+    {
+      "phrase": "Đường may, lỗi sản phẩm",
+      "count": 4,
+      "share": 0.103
+    },
+    {
+      "phrase": "Màu sắc khác",
+      "count": 2,
+      "share": 0.051
+    }
+  ],
+  "Thời trang nữ trung niên": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 63,
+      "share": 0.212,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 33,
+      "share": 0.111,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 28,
+      "share": 0.094,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Size không vừa",
+      "count": 15,
+      "share": 0.051,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Màu sắc khác",
+      "count": 15,
+      "share": 0.051,
+      "fallback": "toàn bộ dữ liệu"
+    }
+  ],
+  "Áo kiểu nữ": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 63,
+      "share": 0.212,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 33,
+      "share": 0.111,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 28,
+      "share": 0.094,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Size không vừa",
+      "count": 15,
+      "share": 0.051,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Màu sắc khác",
+      "count": 15,
+      "share": 0.051,
+      "fallback": "toàn bộ dữ liệu"
+    }
+  ],
+  "Áo liền quần - Bộ trang phục": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 63,
+      "share": 0.212,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 33,
+      "share": 0.111,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 28,
+      "share": 0.094,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Size không vừa",
+      "count": 15,
+      "share": 0.051,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Màu sắc khác",
+      "count": 15,
+      "share": 0.051,
+      "fallback": "toàn bộ dữ liệu"
+    }
+  ],
+  "Áo thun nữ": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 63,
+      "share": 0.212,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 33,
+      "share": 0.111,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 28,
+      "share": 0.094,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Size không vừa",
+      "count": 15,
+      "share": 0.051,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Màu sắc khác",
+      "count": 15,
+      "share": 0.051,
+      "fallback": "toàn bộ dữ liệu"
+    }
+  ],
+  "Đồ đôi - Đồ gia đình": [
+    {
+      "phrase": "Không giống hình/mô tả",
+      "count": 63,
+      "share": 0.212,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Chất liệu kém",
+      "count": 33,
+      "share": 0.111,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Giao hàng, đóng gói",
+      "count": 28,
+      "share": 0.094,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Size không vừa",
+      "count": 15,
+      "share": 0.051,
+      "fallback": "toàn bộ dữ liệu"
+    },
+    {
+      "phrase": "Màu sắc khác",
+      "count": 15,
+      "share": 0.051,
+      "fallback": "toàn bộ dữ liệu"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "Chân váy": {
+    "0": {
+      "desc_len_words": 116.0,
+      "n_bullets": 0.0,
+      "title_len_chars": 48.0,
+      "n": 58
+    },
+    "1": {
+      "desc_len_words": 165.0,
+      "n_bullets": 2.0,
+      "title_len_chars": 30.0,
+      "n": 23
+    }
+  },
+  "Khác": {
+    "0": {
+      "desc_len_words": 145.5,
+      "n_bullets": 0.0,
+      "title_len_chars": 50.0,
+      "n": 36
+    },
+    "1": {
+      "desc_len_words": 206.0,
+      "n_bullets": 2.0,
+      "title_len_chars": 67.0,
+      "n": 13
+    }
+  },
+  "Quần nữ": {
+    "0": {
+      "desc_len_words": 226.0,
+      "n_bullets": 4.0,
+      "title_len_chars": 63.0,
+      "n": 147
+    },
+    "1": {
+      "desc_len_words": 260.0,
+      "n_bullets": 5.0,
+      "title_len_chars": 56.0,
+      "n": 49
+    }
+  },
+  "Thời trang nữ trung niên": {
+    "0": {
+      "desc_len_words": 267.0,
+      "n_bullets": 7.5,
+      "title_len_chars": 93.0,
+      "n": 26
+    },
+    "1": {
+      "desc_len_words": 253.0,
+      "n_bullets": 7.0,
+      "title_len_chars": 106.0,
+      "n": 9
+    }
+  },
+  "Trang phục bơi nữ": {
+    "0": {
+      "desc_len_words": 201.0,
+      "n_bullets": 3.0,
+      "title_len_chars": 74.0,
+      "n": 87
+    },
+    "1": {
+      "desc_len_words": 367.0,
+      "n_bullets": 13.0,
+      "title_len_chars": 90.0,
+      "n": 29
+    }
+  },
+  "Áo kiểu nữ": {
+    "0": {
+      "desc_len_words": 199.0,
+      "n_bullets": 2.0,
+      "title_len_chars": 48.5,
+      "n": 28
+    },
+    "1": {
+      "desc_len_words": 157.5,
+      "n_bullets": 1.5,
+      "title_len_chars": 32.5,
+      "n": 10
+    }
+  },
+  "Áo liền quần - Bộ trang phục": {
+    "0": {
+      "desc_len_words": 112.0,
+      "n_bullets": 0.0,
+      "title_len_chars": 58.0,
+      "n": 105
+    },
+    "1": {
+      "desc_len_words": 137.0,
+      "n_bullets": 12.0,
+      "title_len_chars": 79.0,
+      "n": 17
+    }
+  },
+  "Áo sơ mi nữ": {
+    "0": {
+      "desc_len_words": 166.0,
+      "n_bullets": 5.0,
+      "title_len_chars": 56.0,
+      "n": 73
+    },
+    "1": {
+      "desc_len_words": 325.5,
+      "n_bullets": 10.5,
+      "title_len_chars": 76.5,
+      "n": 28
+    }
+  },
+  "Áo thun nữ": {
+    "0": {
+      "desc_len_words": 133.0,
+      "n_bullets": 0.0,
+      "title_len_chars": 58.0,
+      "n": 87
+    },
+    "1": {
+      "desc_len_words": 154.5,
+      "n_bullets": 0.0,
+      "title_len_chars": 55.0,
+      "n": 42
+    }
+  },
+  "Áo vest - Áo khoác nữ": {
+    "0": {
+      "desc_len_words": 183.0,
+      "n_bullets": 0.0,
+      "title_len_chars": 58.0,
+      "n": 229
+    },
+    "1": {
+      "desc_len_words": 165.0,
+      "n_bullets": 4.0,
+      "title_len_chars": 64.0,
+      "n": 85
+    }
+  },
+  "Đầm nữ": {
+    "0": {
+      "desc_len_words": 134.0,
+      "n_bullets": 0.0,
+      "title_len_chars": 55.0,
+      "n": 131
+    },
+    "1": {
+      "desc_len_words": 154.0,
+      "n_bullets": 5.0,
+      "title_len_chars": 61.0,
+      "n": 51
+    }
+  },
+  "Đồ lót nữ": {
+    "0": {
+      "desc_len_words": 201.0,
+      "n_bullets": 2.5,
+      "title_len_chars": 67.5,
+      "n": 234
+    },
+    "1": {
+      "desc_len_words": 144.0,
+      "n_bullets": 3.0,
+      "title_len_chars": 60.5,
+      "n": 82
+    }
+  },
+  "Đồ ngủ - Đồ mặc nhà nữ": {
+    "0": {
+      "desc_len_words": 99.0,
+      "n_bullets": 0.0,
+      "title_len_chars": 75.0,
+      "n": 154
+    },
+    "1": {
+      "desc_len_words": 147.5,
+      "n_bullets": 0.0,
+      "title_len_chars": 87.5,
+      "n": 66
+    }
+  },
+  "Đồ đôi - Đồ gia đình": {
+    "0": {
+      "desc_len_words": 475.0,
+      "n_bullets": 18.0,
+      "title_len_chars": 66.5,
+      "n": 40
+    },
+    "1": {
+      "desc_len_words": 406.0,
+      "n_bullets": 8.5,
+      "title_len_chars": 73.0,
+      "n": 2
+    }
+  }
+}

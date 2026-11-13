@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="959.76pt" height="540pt" viewBox="0 0 959.76 540" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-13T12:06:35.698434</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 540 
+L 959.76 540 
+L 959.76 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 192.916559 95.7879 
+L 409.812721 95.7879 
+Q 420.523643 95.7879 420.523643 89.8911 
+L 420.523643 58.9329 
+Q 420.523643 53.0361 409.812721 53.0361 
+L 192.916559 53.0361 
+Q 182.205637 53.0361 182.205637 58.9329 
+L 182.205637 89.8911 
+Q 182.205637 95.7879 192.916559 95.7879 
+z
+" clip-path="url(#p347373ada7)" style="fill: #1f4e79; stroke: #1f4e79; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 438.375179 95.7879 
+L 655.271341 95.7879 
+Q 665.982263 95.7879 665.982263 89.8911 
+L 665.982263 58.9329 
+Q 665.982263 53.0361 655.271341 53.0361 
+L 438.375179 53.0361 
+Q 427.664257 53.0361 427.664257 58.9329 
+L 427.664257 89.8911 
+Q 427.664257 95.7879 438.375179 95.7879 
+z
+" clip-path="url(#p347373ada7)" style="fill: #1f4e79; stroke: #1f4e79; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 683.833799 95.7879 
+L 900.729961 95.7879 
+Q 911.440883 95.7879 911.440883 89.8911 
+L 911.440883 58.9329 
+Q 911.440883 53.0361 900.729961 53.0361 
+L 683.833799 53.0361 
+Q 673.122877 53.0361 673.122877 58.9329 
+L 673.122877 89.8911 
+Q 673.122877 95.7879 683.833799 95.7879 
+z
+" clip-path="url(#p347373ada7)" style="fill: #1f4e79; stroke: #1f4e79; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 50.104271 341.4879 
+L 159.891217 341.4879 
+Q 170.602139 341.4879 170.602139 335.5911 
+L 170.602139 108.0729 
+Q 170.602139 102.1761 159.891217 102.1761 
+L 50.104271 102.1761 
+Q 39.393349 102.1761 39.393349 108.0729 
+L 39.393349 335.5911 
+Q 39.393349 341.4879 50.104271 341.4879 
+z
+" clip-path="url(#p347373ada7)" style="fill: #1f4e79; stroke: #1f4e79; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 50.104271 429.9399 
+L 159.891217 429.9399 
+Q 170.602139 429.9399 170.602139 424.0431 
+L 170.602139 353.7729 
+Q 170.602139 347.8761 159.891217 347.8761 
+L 50.104271 347.8761 
+Q 39.393349 347.8761 39.393349 353.7729 
+L 39.393349 424.0431 
+Q 39.393349 429.9399 50.104271 429.9399 
+z
+" clip-path="url(#p347373ada7)" style="fill: #1f4e79; stroke: #1f4e79; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 50.104271 518.3919 
+L 159.891217 518.3919 
+Q 170.602139 518.3919 170.602139 512.4951 
+L 170.602139 442.2249 
+Q 170.602139 436.3281 159.891217 436.3281 
+L 50.104271 436.3281 
+Q 39.393349 436.3281 39.393349 442.2249 
+L 39.393349 512.4951 
+Q 39.393349 518.3919 50.104271 518.3919 
+z
+" clip-path="url(#p347373ada7)" style="fill: #1f4e79; stroke: #1f4e79; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 192.916559 341.4879 
+L 409.812721 341.4879 
+Q 420.523643 341.4879 420.523643 335.5911 
+L 420.523643 108.0729 
+Q 420.523643 102.1761 409.812721 102.1761 
+L 192.916559 102.1761 
+Q 182.205637 102.1761 182.205637 108.0729 
+L 182.205637 335.5911 
+Q 182.205637 341.4879 192.916559 341.4879 
+z
+" clip-path="url(#p347373ada7)" style="fill: #eaf4f2; stroke: #eaf4f2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 438.375179 341.4879 
+L 655.271341 341.4879 
+Q 665.982263 341.4879 665.982263 335.5911 
+L 665.982263 108.0729 
+Q 665.982263 102.1761 655.271341 102.1761 
+L 438.375179 102.1761 
+Q 427.664257 102.1761 427.664257 108.0729 
+L 427.664257 335.5911 
+Q 427.664257 341.4879 438.375179 341.4879 
+z
+" clip-path="url(#p347373ada7)" style="fill: #eaf4f2; stroke: #eaf4f2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 683.833799 341.4879 
+L 900.729961 341.4879 
+Q 911.440883 341.4879 911.440883 335.5911 
+L 911.440883 108.0729 
+Q 911.440883 102.1761 900.729961 102.1761 
+L 683.833799 102.1761 
+Q 673.122877 102.1761 673.122877 108.0729 
+L 673.122877 335.5911 
+Q 673.122877 341.4879 683.833799 341.4879 
+z
+" clip-path="url(#p347373ada7)" style="fill: #eaf4f2; stroke: #eaf4f2; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 192.916559 429.9399 
+L 409.812721 429.9399 
+Q 420.523643 429.9399 420.523643 424.0431 
+L 420.523643 353.7729 
+Q 420.523643 347.8761 409.812721 347.8761 
+L 192.916559 347.8761 
+Q 182.205637 347.8761 182.205637 353.7729 
+L 182.205637 424.0431 
+Q 182.205637 429.9399 192.916559 429.9399 
+z
+" clip-path="url(#p347373ada7)" style="fill: #fff1ec; stroke: #fff1ec; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 438.375179 429.9399 
+L 655.271341 429.9399 
+Q 665.982263 429.9399 665.982263 424.0431 
+L 665.982263 353.7729 
+Q 665.982263 347.8761 655.271341 347.8761 
+L 438.375179 347.8761 
+Q 427.664257 347.8761 427.664257 353.7729 
+L 427.664257 424.0431 
+Q 427.664257 429.9399 438.375179 429.9399 
+z
+" clip-path="url(#p347373ada7)" style="fill: #fff1ec; stroke: #fff1ec; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 683.833799 429.9399 
+L 900.729961 429.9399 
+Q 911.440883 429.9399 911.440883 424.0431 
+L 911.440883 353.7729 
+Q 911.440883 347.8761 900.729961 347.8761 
+L 683.833799 347.8761 
+Q 673.122877 347.8761 673.122877 353.7729 
+L 673.122877 424.0431 
+Q 673.122877 429.9399 683.833799 429.9399 
+z
+" clip-path="url(#p347373ada7)" style="fill: #fff1ec; stroke: #fff1ec; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 192.916559 518.3919 
+L 409.812721 518.3919 
+Q 420.523643 518.3919 420.523643 512.4951 
+L 420.523643 442.2249 
+Q 420.523643 436.3281 409.812721 436.3281 
+L 192.916559 436.3281 
+Q 182.205637 436.3281 182.205637 442.2249 
+L 182.205637 512.4951 
+Q 182.205637 518.3919 192.916559 518.3919 
+z
+" clip-path="url(#p347373ada7)" style="fill: #f4f5f7; stroke: #f4f5f7; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 438.375179 518.3919 
+L 655.271341 518.3919 
+Q 665.982263 518.3919 665.982263 512.4951 
+L 665.982263 442.2249 
+Q 665.982263 436.3281 655.271341 436.3281 
+L 438.375179 436.3281 
+Q 427.664257 436.3281 427.664257 442.2249 
+L 427.664257 512.4951 
+Q 427.664257 518.3919 438.375179 518.3919 
+z
+" clip-path="url(#p347373ada7)" style="fill: #f4f5f7; stroke: #f4f5f7; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 683.833799 518.3919 
+L 900.729961 518.3919 
+Q 911.440883 518.3919 911.440883 512.4951 
+L 911.440883 442.2249 
+Q 911.440883 436.3281 900.729961 436.3281 
+L 683.833799 436.3281 
+Q 673.122877 436.3281 673.122877 442.2249 
+L 673.122877 512.4951 
+Q 673.122877 518.3919 683.833799 518.3919 
+z
+" clip-path="url(#p347373ada7)" style="fill: #f4f5f7; stroke: #f4f5f7; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="301.36464" y="78.985359" transform="rotate(-0 301.36464 78.985359)">Mô tả sản phẩm</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="546.82326" y="79.997937" transform="rotate(-0 546.82326 79.997937)">Tiêu đề email</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="792.28188" y="78.703016" transform="rotate(-0 792.28188 78.703016)">Kịch bản chốt sale</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(52.117197 219.600672)">Chỉ số tự động</text>
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(71.416103 232.607781)">có nguồn</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="104.997744" y="392.444406" transform="rotate(-0 104.997744 392.444406)">LLM-as-a-judge</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(82.774853 476.438828)">Chỉ số</text>
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; fill: #ffffff" transform="translate(64.170635 488.706563)">kinh doanh</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 167.483875)">• Tiêu đề 50–60 ký tự</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 180.413797)">(Ahrefs)</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 193.179187)">• Meta 120–156 ký tự</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 206.406687)">(Yoast)</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 219.673797)">• ≥ 200 từ (Yoast, Tiki)</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 233.080047)">• Từ khóa ở tiêu đề,</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 245.645359)">đoạn đầu (Yoast)</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 258.340672)">• Mật độ 0,5–3% (Yoast)</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 271.515359)">• ROUGE-L, chrF++,</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 285.063797)">BERTScore</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 180.179187)">• ≤ 9 từ, ≤ 60 ký tự</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 192.919187)">(Mailchimp)</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 206.340672)">• 4–6 từ hoặc 21–40</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 219.179187)">ký tự (Omnisend)</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 232.480828)">• ≤ 3 dấu câu, ≤ 1 emoji</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 244.919187)">(Mailchimp)</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 258.245203)">• Không giả Re:/Fwd:</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 271.413797)">(Gmail)</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 193.179187)">• Có lời kêu gọi</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 206.179187)">hành động (AIDA)</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 219.480828)">• Bao phủ phản đối từ</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 232.179187)">đánh giá thật</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 245.267547)">• Tỷ lệ thuộc tính</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 258.179187)">không có căn cứ</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 386.255187)">• Tự nhiên, liên quan,</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 399.556828)">thuyết phục, nhất quán</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 386.255187)">• Rõ ràng, gây tò mò,</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 399.255187)">liên quan</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 380.221359)">• CTA, nhu cầu–lợi ích</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 393.056828)">(SPIN), xử lý phản đối,</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 405.755187)">đúng sự thật</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 474.773203)">• Đặc trưng của nhóm bán chạy</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(194.255424 488.011875)">(gạch đầu dòng, độ dài tên)</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 475.357188)">• Độ trễ sinh</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(439.714044 488.112422)">(giây/sản phẩm)</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 468.207187)">• Thời gian duyệt so với</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 482.006484)">viết mới (đề xuất đo</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #1f4e79" transform="translate(685.172664 495.107031)">khi triển khai)</text>
+   </g>
+  </g>
+  <g id="text_16">
+   <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle" x="479.88" y="23.824687" transform="rotate(-0 479.88 23.824687)">Khung đánh giá nội dung đa tầng</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p347373ada7">
+   <rect x="33.5916" y="35.1" width="892.5768" height="491.4"/>
+  </clipPath>
+ </defs>
+</svg>

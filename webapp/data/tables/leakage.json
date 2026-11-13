@@ -1,0 +1,72 @@
+{
+ "caption": "Tỷ lệ đầu ra bị rò rỉ chỉ dẫn qua hai vòng thiết kế prompt",
+ "source": "Nguồn: tác giả đo bằng biểu thức chính quy trên mọi trường đầu ra (src/prompt_leakage.py)",
+ "columns": [
+  "Dữ liệu",
+  "Cấu hình",
+  "n",
+  "Tỷ lệ rò rỉ"
+ ],
+ "rows": [
+  [
+   "Tiki",
+   "M1 Zero-shot",
+   "99",
+   "6,1%"
+  ],
+  [
+   "Tiki",
+   "M2 prompt v1",
+   "70",
+   "90,0%"
+  ],
+  [
+   "Tiki",
+   "M2 prompt v2",
+   "99",
+   "0,0%"
+  ],
+  [
+   "Tiki",
+   "M3 prompt v2",
+   "99",
+   "0,0%"
+  ],
+  [
+   "Amazon",
+   "M1 Zero-shot",
+   "50",
+   "0,0%"
+  ],
+  [
+   "Amazon",
+   "M2 prompt v1",
+   "50",
+   "34,0%"
+  ],
+  [
+   "Amazon",
+   "M2 prompt v2",
+   "50",
+   "0,0%"
+  ],
+  [
+   "Amazon",
+   "M3 prompt v1",
+   "50",
+   "30,0%"
+  ],
+  [
+   "Amazon",
+   "M3 prompt v2",
+   "50",
+   "0,0%"
+  ]
+ ],
+ "col_widths_cm": [
+  2.6,
+  5.0,
+  1.6,
+  3.0
+ ]
+}

@@ -1,0 +1,135 @@
+{
+  "n": 1983,
+  "n_positive": 519,
+  "pseudo_r2_mcfadden": 0.22332199438676692,
+  "llr_p_value": 2.0042016464087523e-90,
+  "note": "Biến liên tục của nội dung chuẩn hóa z-score (một số biến lấy log1p trước); OR là liên hệ có kiểm soát, không phải nhân quả.",
+  "coefficients": [
+    {
+      "feature": "desc_len_words",
+      "label": "Số từ mô tả (log)",
+      "odds_ratio": 0.9664207740711417,
+      "ci_low": 0.7575192948397953,
+      "ci_high": 1.2329311199311246,
+      "p_value": 0.7834168479178221,
+      "group": "content"
+    },
+    {
+      "feature": "n_bullets",
+      "label": "Số gạch đầu dòng (log)",
+      "odds_ratio": 1.2383250207510075,
+      "ci_low": 1.061588726970995,
+      "ci_high": 1.4444848725865194,
+      "p_value": 0.006515375217554529,
+      "group": "content"
+    },
+    {
+      "feature": "n_paragraphs",
+      "label": "Số đoạn (log)",
+      "odds_ratio": 1.1223901866818833,
+      "ci_low": 0.895327930528512,
+      "ci_high": 1.4070372298294733,
+      "p_value": 0.31672697842329856,
+      "group": "content"
+    },
+    {
+      "feature": "title_len_chars",
+      "label": "Độ dài tên sản phẩm",
+      "odds_ratio": 1.3086824255336993,
+      "ci_low": 1.1415650541087585,
+      "ci_high": 1.5002646452223996,
+      "p_value": 0.00011367478814375029,
+      "group": "content"
+    },
+    {
+      "feature": "uppercase_ratio",
+      "label": "Tỷ lệ chữ hoa",
+      "odds_ratio": 1.0180566867380398,
+      "ci_low": 0.8913092492826581,
+      "ci_high": 1.162828073697407,
+      "p_value": 0.7919338295279854,
+      "group": "content"
+    },
+    {
+      "feature": "has_size_info",
+      "label": "Có thông tin size",
+      "odds_ratio": 1.0311678437599896,
+      "ci_low": 0.7309916403750432,
+      "ci_high": 1.4546091408912487,
+      "p_value": 0.8612000530020137,
+      "group": "content"
+    },
+    {
+      "feature": "has_material_info",
+      "label": "Có thông tin chất liệu",
+      "odds_ratio": 1.4555088028642102,
+      "ci_low": 0.9479259091447072,
+      "ci_high": 2.2348855061116413,
+      "p_value": 0.08624599354077953,
+      "group": "content"
+    },
+    {
+      "feature": "has_care_info",
+      "label": "Có hướng dẫn bảo quản",
+      "odds_ratio": 0.9629324792831641,
+      "ci_low": 0.7048857604051998,
+      "ci_high": 1.315445724319077,
+      "p_value": 0.8124077077339009,
+      "group": "content"
+    },
+    {
+      "feature": "has_cta",
+      "label": "Có lời kêu gọi hành động",
+      "odds_ratio": 0.7662481524959271,
+      "ci_low": 0.5441398819601317,
+      "ci_high": 1.0790170885626063,
+      "p_value": 0.12738173075639359,
+      "group": "content"
+    },
+    {
+      "feature": "log_price",
+      "label": "Log giá",
+      "odds_ratio": 0.3555939992074689,
+      "ci_low": 0.29034966275155016,
+      "ci_high": 0.43549935988925575,
+      "p_value": 1.5625226244627185e-23,
+      "group": "control"
+    },
+    {
+      "feature": "discount_rate",
+      "label": "Tỷ lệ giảm giá",
+      "odds_ratio": 6.40200868856741,
+      "ci_low": 1.5854923438676045,
+      "ci_high": 25.850465571163358,
+      "p_value": 0.00912899615477395,
+      "group": "control"
+    },
+    {
+      "feature": "log_age",
+      "label": "Log tuổi sản phẩm (ngày)",
+      "odds_ratio": 7.678854806267745,
+      "ci_low": 5.6831467701472835,
+      "ci_high": 10.375380668589196,
+      "p_value": 3.230732680625912e-40,
+      "group": "control"
+    },
+    {
+      "feature": "n_images",
+      "label": "Số ảnh",
+      "odds_ratio": 0.9746781286682922,
+      "ci_low": 0.9390189265717725,
+      "ci_high": 1.0116914873831482,
+      "p_value": 0.1774260440530605,
+      "group": "control"
+    },
+    {
+      "feature": "n_options",
+      "label": "Số tùy chọn biến thể",
+      "odds_ratio": 1.5681213184369902,
+      "ci_low": 1.2949690343255356,
+      "ci_high": 1.8988905558018216,
+      "p_value": 4.084730839173035e-06,
+      "group": "control"
+    }
+  ]
+}

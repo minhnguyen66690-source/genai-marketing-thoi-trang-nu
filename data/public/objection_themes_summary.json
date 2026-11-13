@@ -1,0 +1,149 @@
+{
+  "n_low_reviews": 297,
+  "share_with_any_theme": 0.4175084175084175,
+  "overall": {
+    "Size không vừa": {
+      "count": 15,
+      "share": 0.050505050505050504
+    },
+    "Không giống hình/mô tả": {
+      "count": 63,
+      "share": 0.21212121212121213
+    },
+    "Chất liệu kém": {
+      "count": 33,
+      "share": 0.1111111111111111
+    },
+    "Màu sắc khác": {
+      "count": 15,
+      "share": 0.050505050505050504
+    },
+    "Đường may, lỗi sản phẩm": {
+      "count": 14,
+      "share": 0.04713804713804714
+    },
+    "Giao hàng, đóng gói": {
+      "count": 28,
+      "share": 0.09427609427609428
+    }
+  },
+  "by_category": {
+    "Chân váy": {
+      "n_low_reviews": 16,
+      "Size không vừa": 0,
+      "Không giống hình/mô tả": 3,
+      "Chất liệu kém": 3,
+      "Màu sắc khác": 0,
+      "Đường may, lỗi sản phẩm": 1,
+      "Giao hàng, đóng gói": 2
+    },
+    "Quần nữ": {
+      "n_low_reviews": 26,
+      "Size không vừa": 3,
+      "Không giống hình/mô tả": 2,
+      "Chất liệu kém": 2,
+      "Màu sắc khác": 0,
+      "Đường may, lỗi sản phẩm": 4,
+      "Giao hàng, đóng gói": 1
+    },
+    "Thời trang nữ trung niên": {
+      "n_low_reviews": 2,
+      "Size không vừa": 0,
+      "Không giống hình/mô tả": 1,
+      "Chất liệu kém": 0,
+      "Màu sắc khác": 1,
+      "Đường may, lỗi sản phẩm": 0,
+      "Giao hàng, đóng gói": 0
+    },
+    "Trang phục bơi nữ": {
+      "n_low_reviews": 33,
+      "Size không vừa": 4,
+      "Không giống hình/mô tả": 5,
+      "Chất liệu kém": 5,
+      "Màu sắc khác": 4,
+      "Đường may, lỗi sản phẩm": 0,
+      "Giao hàng, đóng gói": 2
+    },
+    "Áo kiểu nữ": {
+      "n_low_reviews": 6,
+      "Size không vừa": 1,
+      "Không giống hình/mô tả": 0,
+      "Chất liệu kém": 3,
+      "Màu sắc khác": 0,
+      "Đường may, lỗi sản phẩm": 1,
+      "Giao hàng, đóng gói": 0
+    },
+    "Áo liền quần - Bộ trang phục": {
+      "n_low_reviews": 3,
+      "Size không vừa": 0,
+      "Không giống hình/mô tả": 0,
+      "Chất liệu kém": 0,
+      "Màu sắc khác": 0,
+      "Đường may, lỗi sản phẩm": 1,
+      "Giao hàng, đóng gói": 1
+    },
+    "Áo sơ mi nữ": {
+      "n_low_reviews": 16,
+      "Size không vừa": 2,
+      "Không giống hình/mô tả": 4,
+      "Chất liệu kém": 2,
+      "Màu sắc khác": 1,
+      "Đường may, lỗi sản phẩm": 1,
+      "Giao hàng, đóng gói": 1
+    },
+    "Áo thun nữ": {
+      "n_low_reviews": 4,
+      "Size không vừa": 1,
+      "Không giống hình/mô tả": 1,
+      "Chất liệu kém": 0,
+      "Màu sắc khác": 0,
+      "Đường may, lỗi sản phẩm": 0,
+      "Giao hàng, đóng gói": 2
+    },
+    "Áo vest - Áo khoác nữ": {
+      "n_low_reviews": 56,
+      "Size không vừa": 1,
+      "Không giống hình/mô tả": 18,
+      "Chất liệu kém": 7,
+      "Màu sắc khác": 2,
+      "Đường may, lỗi sản phẩm": 1,
+      "Giao hàng, đóng gói": 5
+    },
+    "Đầm nữ": {
+      "n_low_reviews": 19,
+      "Size không vừa": 0,
+      "Không giống hình/mô tả": 4,
+      "Chất liệu kém": 1,
+      "Màu sắc khác": 0,
+      "Đường may, lỗi sản phẩm": 1,
+      "Giao hàng, đóng gói": 1
+    },
+    "Đồ lót nữ": {
+      "n_low_reviews": 76,
+      "Size không vừa": 2,
+      "Không giống hình/mô tả": 16,
+      "Chất liệu kém": 5,
+      "Màu sắc khác": 5,
+      "Đường may, lỗi sản phẩm": 0,
+      "Giao hàng, đóng gói": 6
+    },
+    "Đồ ngủ - Đồ mặc nhà nữ": {
+      "n_low_reviews": 39,
+      "Size không vừa": 1,
+      "Không giống hình/mô tả": 9,
+      "Chất liệu kém": 4,
+      "Màu sắc khác": 2,
+      "Đường may, lỗi sản phẩm": 4,
+      "Giao hàng, đóng gói": 7
+    },
+    "Đồ đôi - Đồ gia đình": {
+      "n_low_reviews": 1,
+      "Size không vừa": 0,
+      "Không giống hình/mô tả": 0,
+      "Chất liệu kém": 1,
+      "Màu sắc khác": 0,
+      "Đường may, lỗi sản phẩm": 0,
+      "Giao hàng, đóng gói": 0
+    }
+  }
+}

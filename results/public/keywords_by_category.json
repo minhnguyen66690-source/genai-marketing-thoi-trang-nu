@@ -1,0 +1,3475 @@
+{
+  "tiki": {
+    "stats": {
+      "n_products": 1983,
+      "keywords_per_product_mean": 4.7614725163893095,
+      "keywords_per_product_min": 1,
+      "keywords_per_product_max": 6,
+      "min_df": 3,
+      "split_counts": {
+        "train": 1586,
+        "test": 199,
+        "val": 198
+      }
+    },
+    "categories": {
+      "Chân váy": {
+        "n_products": 85,
+        "n_best_seller": 23,
+        "top_keywords": [
+          {
+            "keyword": "chân váy",
+            "count": 61,
+            "share": 0.7176,
+            "share_best_seller": 0.6957,
+            "lift_best_seller": 0.969
+          },
+          {
+            "keyword": "chữ",
+            "count": 10,
+            "share": 0.1176,
+            "share_best_seller": 0.1739,
+            "lift_best_seller": 1.478
+          },
+          {
+            "keyword": "xòe",
+            "count": 8,
+            "share": 0.0941,
+            "share_best_seller": 0.087,
+            "lift_best_seller": 0.924
+          },
+          {
+            "keyword": "ngắn",
+            "count": 8,
+            "share": 0.0941,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "chân",
+            "count": 7,
+            "share": 0.0824,
+            "share_best_seller": 0.1304,
+            "lift_best_seller": 1.584
+          },
+          {
+            "keyword": "đuôi cá",
+            "count": 6,
+            "share": 0.0706,
+            "share_best_seller": 0.087,
+            "lift_best_seller": 1.232
+          },
+          {
+            "keyword": "thể thao",
+            "count": 6,
+            "share": 0.0706,
+            "share_best_seller": 0.0435,
+            "lift_best_seller": 0.616
+          },
+          {
+            "keyword": "nút",
+            "count": 6,
+            "share": 0.0706,
+            "share_best_seller": 0.2174,
+            "lift_best_seller": 3.08
+          },
+          {
+            "keyword": "xếp ly",
+            "count": 5,
+            "share": 0.0588,
+            "share_best_seller": 0.0435,
+            "lift_best_seller": 0.739
+          },
+          {
+            "keyword": "sành điệu",
+            "count": 5,
+            "share": 0.0588,
+            "share_best_seller": 0.0435,
+            "lift_best_seller": 0.739
+          },
+          {
+            "keyword": "thiết kế",
+            "count": 5,
+            "share": 0.0588,
+            "share_best_seller": 0.087,
+            "lift_best_seller": 1.478
+          },
+          {
+            "keyword": "váy xòe",
+            "count": 5,
+            "share": 0.0588,
+            "share_best_seller": 0.1304,
+            "lift_best_seller": 2.217
+          },
+          {
+            "keyword": "công sở",
+            "count": 5,
+            "share": 0.0588,
+            "share_best_seller": 0.0435,
+            "lift_best_seller": 0.739
+          },
+          {
+            "keyword": "váy",
+            "count": 4,
+            "share": 0.0471,
+            "share_best_seller": 0.0435,
+            "lift_best_seller": 0.924
+          },
+          {
+            "keyword": "tennis",
+            "count": 4,
+            "share": 0.0471,
+            "share_best_seller": 0.087,
+            "lift_best_seller": 1.848
+          }
+        ]
+      },
+      "Khác": {
+        "n_products": 49,
+        "n_best_seller": 13,
+        "top_keywords": [
+          {
+            "keyword": "áo croptop",
+            "count": 15,
+            "share": 0.3061,
+            "share_best_seller": 0.4615,
+            "lift_best_seller": 1.508
+          },
+          {
+            "keyword": "công sở",
+            "count": 9,
+            "share": 0.1837,
+            "share_best_seller": 0.3077,
+            "lift_best_seller": 1.675
+          },
+          {
+            "keyword": "đầm bầu váy bầu",
+            "count": 8,
+            "share": 0.1633,
+            "share_best_seller": 0.0769,
+            "lift_best_seller": 0.471
+          },
+          {
+            "keyword": "co giãn",
+            "count": 7,
+            "share": 0.1429,
+            "share_best_seller": 0.3846,
+            "lift_best_seller": 2.692
+          },
+          {
+            "keyword": "hiền trần",
+            "count": 7,
+            "share": 0.1429,
+            "share_best_seller": 0.3846,
+            "lift_best_seller": 2.692
+          },
+          {
+            "keyword": "croptop",
+            "count": 7,
+            "share": 0.1429,
+            "share_best_seller": 0.0769,
+            "lift_best_seller": 0.538
+          },
+          {
+            "keyword": "thun",
+            "count": 6,
+            "share": 0.1224,
+            "share_best_seller": 0.3846,
+            "lift_best_seller": 3.141
+          },
+          {
+            "keyword": "áo thun",
+            "count": 6,
+            "share": 0.1224,
+            "share_best_seller": 0.2308,
+            "lift_best_seller": 1.885
+          },
+          {
+            "keyword": "ngắn",
+            "count": 6,
+            "share": 0.1224,
+            "share_best_seller": 0.0769,
+            "lift_best_seller": 0.628
+          },
+          {
+            "keyword": "áo",
+            "count": 5,
+            "share": 0.102,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "đầm bầu",
+            "count": 4,
+            "share": 0.0816,
+            "share_best_seller": 0.1538,
+            "lift_best_seller": 1.885
+          },
+          {
+            "keyword": "cổ tròn",
+            "count": 4,
+            "share": 0.0816,
+            "share_best_seller": 0.2308,
+            "lift_best_seller": 2.827
+          },
+          {
+            "keyword": "váy",
+            "count": 4,
+            "share": 0.0816,
+            "share_best_seller": 0.1538,
+            "lift_best_seller": 1.885
+          },
+          {
+            "keyword": "bầu",
+            "count": 3,
+            "share": 0.0612,
+            "share_best_seller": 0.1538,
+            "lift_best_seller": 2.513
+          },
+          {
+            "keyword": "ngực",
+            "count": 3,
+            "share": 0.0612,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      },
+      "Quần nữ": {
+        "n_products": 200,
+        "n_best_seller": 58,
+        "top_keywords": [
+          {
+            "keyword": "quần",
+            "count": 50,
+            "share": 0.25,
+            "share_best_seller": 0.1379,
+            "lift_best_seller": 0.552
+          },
+          {
+            "keyword": "rộng",
+            "count": 27,
+            "share": 0.135,
+            "share_best_seller": 0.2241,
+            "lift_best_seller": 1.66
+          },
+          {
+            "keyword": "thể thao",
+            "count": 23,
+            "share": 0.115,
+            "share_best_seller": 0.0862,
+            "lift_best_seller": 0.75
+          },
+          {
+            "keyword": "quần đùi",
+            "count": 21,
+            "share": 0.105,
+            "share_best_seller": 0.1207,
+            "lift_best_seller": 1.149
+          },
+          {
+            "keyword": "suông",
+            "count": 20,
+            "share": 0.1,
+            "share_best_seller": 0.1379,
+            "lift_best_seller": 1.379
+          },
+          {
+            "keyword": "đen",
+            "count": 18,
+            "share": 0.09,
+            "share_best_seller": 0.1207,
+            "lift_best_seller": 1.341
+          },
+          {
+            "keyword": "co giãn",
+            "count": 18,
+            "share": 0.09,
+            "share_best_seller": 0.0862,
+            "lift_best_seller": 0.958
+          },
+          {
+            "keyword": "quần short",
+            "count": 17,
+            "share": 0.085,
+            "share_best_seller": 0.1207,
+            "lift_best_seller": 1.42
+          },
+          {
+            "keyword": "quần baggy",
+            "count": 16,
+            "share": 0.08,
+            "share_best_seller": 0.069,
+            "lift_best_seller": 0.862
+          },
+          {
+            "keyword": "quần ống rộng",
+            "count": 15,
+            "share": 0.075,
+            "share_best_seller": 0.1724,
+            "lift_best_seller": 2.299
+          },
+          {
+            "keyword": "thoải mái",
+            "count": 15,
+            "share": 0.075,
+            "share_best_seller": 0.1207,
+            "lift_best_seller": 1.609
+          },
+          {
+            "keyword": "quần jean",
+            "count": 14,
+            "share": 0.07,
+            "share_best_seller": 0.0862,
+            "lift_best_seller": 1.232
+          },
+          {
+            "keyword": "aaa jeans",
+            "count": 13,
+            "share": 0.065,
+            "share_best_seller": 0.0345,
+            "lift_best_seller": 0.531
+          },
+          {
+            "keyword": "mát",
+            "count": 13,
+            "share": 0.065,
+            "share_best_seller": 0.1207,
+            "lift_best_seller": 1.857
+          },
+          {
+            "keyword": "quần tây",
+            "count": 12,
+            "share": 0.06,
+            "share_best_seller": 0.0862,
+            "lift_best_seller": 1.437
+          }
+        ]
+      },
+      "Thời trang nữ trung niên": {
+        "n_products": 35,
+        "n_best_seller": 9,
+        "top_keywords": [
+          {
+            "keyword": "trung niên",
+            "count": 22,
+            "share": 0.6286,
+            "share_best_seller": 0.7778,
+            "lift_best_seller": 1.237
+          },
+          {
+            "keyword": "tuấn tú store",
+            "count": 20,
+            "share": 0.5714,
+            "share_best_seller": 0.7778,
+            "lift_best_seller": 1.361
+          },
+          {
+            "keyword": "đũi",
+            "count": 12,
+            "share": 0.3429,
+            "share_best_seller": 0.6667,
+            "lift_best_seller": 1.944
+          },
+          {
+            "keyword": "đồ bộ",
+            "count": 12,
+            "share": 0.3429,
+            "share_best_seller": 0.4444,
+            "lift_best_seller": 1.296
+          },
+          {
+            "keyword": "hoa",
+            "count": 9,
+            "share": 0.2571,
+            "share_best_seller": 0.2222,
+            "lift_best_seller": 0.864
+          },
+          {
+            "keyword": "lụa",
+            "count": 7,
+            "share": 0.2,
+            "share_best_seller": 0.2222,
+            "lift_best_seller": 1.111
+          },
+          {
+            "keyword": "mát",
+            "count": 6,
+            "share": 0.1714,
+            "share_best_seller": 0.1111,
+            "lift_best_seller": 0.648
+          },
+          {
+            "keyword": "áo",
+            "count": 5,
+            "share": 0.1429,
+            "share_best_seller": 0.1111,
+            "lift_best_seller": 0.778
+          },
+          {
+            "keyword": "sang trọng",
+            "count": 5,
+            "share": 0.1429,
+            "share_best_seller": 0.1111,
+            "lift_best_seller": 0.778
+          },
+          {
+            "keyword": "bộ đồ",
+            "count": 5,
+            "share": 0.1429,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "mẹ",
+            "count": 4,
+            "share": 0.1143,
+            "share_best_seller": 0.1111,
+            "lift_best_seller": 0.972
+          },
+          {
+            "keyword": "họa tiết",
+            "count": 4,
+            "share": 0.1143,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "nhăn không xù",
+            "count": 4,
+            "share": 0.1143,
+            "share_best_seller": 0.2222,
+            "lift_best_seller": 1.944
+          },
+          {
+            "keyword": "đầm trung niên",
+            "count": 4,
+            "share": 0.1143,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "lỡ",
+            "count": 4,
+            "share": 0.1143,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 2.917
+          }
+        ]
+      },
+      "Trang phục bơi nữ": {
+        "n_products": 116,
+        "n_best_seller": 29,
+        "top_keywords": [
+          {
+            "keyword": "đồ bơi",
+            "count": 49,
+            "share": 0.4224,
+            "share_best_seller": 0.6207,
+            "lift_best_seller": 1.469
+          },
+          {
+            "keyword": "bơi",
+            "count": 35,
+            "share": 0.3017,
+            "share_best_seller": 0.1379,
+            "lift_best_seller": 0.457
+          },
+          {
+            "keyword": "bộ đồ",
+            "count": 30,
+            "share": 0.2586,
+            "share_best_seller": 0.069,
+            "lift_best_seller": 0.267
+          },
+          {
+            "keyword": "váy",
+            "count": 22,
+            "share": 0.1897,
+            "share_best_seller": 0.2759,
+            "lift_best_seller": 1.455
+          },
+          {
+            "keyword": "kín đáo",
+            "count": 18,
+            "share": 0.1552,
+            "share_best_seller": 0.1724,
+            "lift_best_seller": 1.111
+          },
+          {
+            "keyword": "quần",
+            "count": 17,
+            "share": 0.1466,
+            "share_best_seller": 0.1379,
+            "lift_best_seller": 0.941
+          },
+          {
+            "keyword": "mảnh",
+            "count": 16,
+            "share": 0.1379,
+            "share_best_seller": 0.1724,
+            "lift_best_seller": 1.25
+          },
+          {
+            "keyword": "tôn dáng",
+            "count": 16,
+            "share": 0.1379,
+            "share_best_seller": 0.1724,
+            "lift_best_seller": 1.25
+          },
+          {
+            "keyword": "bụng",
+            "count": 16,
+            "share": 0.1379,
+            "share_best_seller": 0.0345,
+            "lift_best_seller": 0.25
+          },
+          {
+            "keyword": "áo tắm",
+            "count": 14,
+            "share": 0.1207,
+            "share_best_seller": 0.2414,
+            "lift_best_seller": 2.0
+          },
+          {
+            "keyword": "hai mảnh",
+            "count": 14,
+            "share": 0.1207,
+            "share_best_seller": 0.3103,
+            "lift_best_seller": 2.571
+          },
+          {
+            "keyword": "bikini",
+            "count": 13,
+            "share": 0.1121,
+            "share_best_seller": 0.1379,
+            "lift_best_seller": 1.231
+          },
+          {
+            "keyword": "liền",
+            "count": 13,
+            "share": 0.1121,
+            "share_best_seller": 0.0345,
+            "lift_best_seller": 0.308
+          },
+          {
+            "keyword": "thun",
+            "count": 12,
+            "share": 0.1034,
+            "share_best_seller": 0.2414,
+            "lift_best_seller": 2.333
+          },
+          {
+            "keyword": "lạnh",
+            "count": 11,
+            "share": 0.0948,
+            "share_best_seller": 0.069,
+            "lift_best_seller": 0.727
+          }
+        ]
+      },
+      "Áo kiểu nữ": {
+        "n_products": 38,
+        "n_best_seller": 10,
+        "top_keywords": [
+          {
+            "keyword": "áo",
+            "count": 12,
+            "share": 0.3158,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 1.583
+          },
+          {
+            "keyword": "tập gym",
+            "count": 5,
+            "share": 0.1316,
+            "share_best_seller": 0.2,
+            "lift_best_seller": 1.52
+          },
+          {
+            "keyword": "áo bra",
+            "count": 4,
+            "share": 0.1053,
+            "share_best_seller": 0.1,
+            "lift_best_seller": 0.95
+          },
+          {
+            "keyword": "thể thao",
+            "count": 4,
+            "share": 0.1053,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "áo ống carol",
+            "count": 4,
+            "share": 0.1053,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "rộng",
+            "count": 4,
+            "share": 0.1053,
+            "share_best_seller": 0.2,
+            "lift_best_seller": 1.9
+          },
+          {
+            "keyword": "ngắn",
+            "count": 4,
+            "share": 0.1053,
+            "share_best_seller": 0.1,
+            "lift_best_seller": 0.95
+          },
+          {
+            "keyword": "dây",
+            "count": 3,
+            "share": 0.0789,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "trắng",
+            "count": 3,
+            "share": 0.0789,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "yoga",
+            "count": 3,
+            "share": 0.0789,
+            "share_best_seller": 0.1,
+            "lift_best_seller": 1.267
+          },
+          {
+            "keyword": "mềm",
+            "count": 3,
+            "share": 0.0789,
+            "share_best_seller": 0.1,
+            "lift_best_seller": 1.267
+          },
+          {
+            "keyword": "nơ",
+            "count": 3,
+            "share": 0.0789,
+            "share_best_seller": 0.1,
+            "lift_best_seller": 1.267
+          },
+          {
+            "keyword": "áo tank top",
+            "count": 2,
+            "share": 0.0526,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "ngoài",
+            "count": 2,
+            "share": 0.0526,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "set",
+            "count": 2,
+            "share": 0.0526,
+            "share_best_seller": 0.1,
+            "lift_best_seller": 1.9
+          }
+        ]
+      },
+      "Áo liền quần - Bộ trang phục": {
+        "n_products": 127,
+        "n_best_seller": 17,
+        "top_keywords": [
+          {
+            "keyword": "áo dài",
+            "count": 30,
+            "share": 0.2362,
+            "share_best_seller": 0.0588,
+            "lift_best_seller": 0.249
+          },
+          {
+            "keyword": "hoa",
+            "count": 29,
+            "share": 0.2283,
+            "share_best_seller": 0.0588,
+            "lift_best_seller": 0.258
+          },
+          {
+            "keyword": "set",
+            "count": 27,
+            "share": 0.2126,
+            "share_best_seller": 0.2941,
+            "lift_best_seller": 1.383
+          },
+          {
+            "keyword": "quần",
+            "count": 19,
+            "share": 0.1496,
+            "share_best_seller": 0.1765,
+            "lift_best_seller": 1.18
+          },
+          {
+            "keyword": "lụa",
+            "count": 18,
+            "share": 0.1417,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "áo dài cách tân",
+            "count": 18,
+            "share": 0.1417,
+            "share_best_seller": 0.1176,
+            "lift_best_seller": 0.83
+          },
+          {
+            "keyword": "thiết kế",
+            "count": 14,
+            "share": 0.1102,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "bộ bà ba",
+            "count": 14,
+            "share": 0.1102,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "suông",
+            "count": 13,
+            "share": 0.1024,
+            "share_best_seller": 0.0588,
+            "lift_best_seller": 0.575
+          },
+          {
+            "keyword": "bà ba gấm",
+            "count": 13,
+            "share": 0.1024,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "linen",
+            "count": 12,
+            "share": 0.0945,
+            "share_best_seller": 0.2353,
+            "lift_best_seller": 2.49
+          },
+          {
+            "keyword": "xl",
+            "count": 11,
+            "share": 0.0866,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "truyền thống",
+            "count": 11,
+            "share": 0.0866,
+            "share_best_seller": 0.0588,
+            "lift_best_seller": 0.679
+          },
+          {
+            "keyword": "may sỉ bà ba",
+            "count": 9,
+            "share": 0.0709,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "bà ba bigsize",
+            "count": 9,
+            "share": 0.0709,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      },
+      "Áo sơ mi nữ": {
+        "n_products": 102,
+        "n_best_seller": 28,
+        "top_keywords": [
+          {
+            "keyword": "áo sơ mi",
+            "count": 79,
+            "share": 0.7745,
+            "share_best_seller": 0.9286,
+            "lift_best_seller": 1.199
+          },
+          {
+            "keyword": "ngắn",
+            "count": 20,
+            "share": 0.1961,
+            "share_best_seller": 0.2143,
+            "lift_best_seller": 1.093
+          },
+          {
+            "keyword": "rộng",
+            "count": 20,
+            "share": 0.1961,
+            "share_best_seller": 0.3929,
+            "lift_best_seller": 2.004
+          },
+          {
+            "keyword": "công sở",
+            "count": 16,
+            "share": 0.1569,
+            "share_best_seller": 0.2143,
+            "lift_best_seller": 1.366
+          },
+          {
+            "keyword": "lụa",
+            "count": 14,
+            "share": 0.1373,
+            "share_best_seller": 0.2857,
+            "lift_best_seller": 2.082
+          },
+          {
+            "keyword": "họa tiết",
+            "count": 13,
+            "share": 0.1275,
+            "share_best_seller": 0.0357,
+            "lift_best_seller": 0.28
+          },
+          {
+            "keyword": "thiết kế",
+            "count": 12,
+            "share": 0.1176,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 1.214
+          },
+          {
+            "keyword": "mềm mịn",
+            "count": 9,
+            "share": 0.0882,
+            "share_best_seller": 0.2143,
+            "lift_best_seller": 2.429
+          },
+          {
+            "keyword": "trắng",
+            "count": 9,
+            "share": 0.0882,
+            "share_best_seller": 0.0357,
+            "lift_best_seller": 0.405
+          },
+          {
+            "keyword": "sọc",
+            "count": 9,
+            "share": 0.0882,
+            "share_best_seller": 0.0357,
+            "lift_best_seller": 0.405
+          },
+          {
+            "keyword": "sơ mi",
+            "count": 9,
+            "share": 0.0882,
+            "share_best_seller": 0.0357,
+            "lift_best_seller": 0.405
+          },
+          {
+            "keyword": "túi",
+            "count": 8,
+            "share": 0.0784,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "mát",
+            "count": 7,
+            "share": 0.0686,
+            "share_best_seller": 0.1071,
+            "lift_best_seller": 1.561
+          },
+          {
+            "keyword": "linen",
+            "count": 7,
+            "share": 0.0686,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "áo",
+            "count": 7,
+            "share": 0.0686,
+            "share_best_seller": 0.0357,
+            "lift_best_seller": 0.52
+          }
+        ]
+      },
+      "Áo thun nữ": {
+        "n_products": 132,
+        "n_best_seller": 42,
+        "top_keywords": [
+          {
+            "keyword": "áo thun",
+            "count": 81,
+            "share": 0.6136,
+            "share_best_seller": 0.5952,
+            "lift_best_seller": 0.97
+          },
+          {
+            "keyword": "cotton",
+            "count": 26,
+            "share": 0.197,
+            "share_best_seller": 0.2143,
+            "lift_best_seller": 1.088
+          },
+          {
+            "keyword": "thun cá sấu",
+            "count": 13,
+            "share": 0.0985,
+            "share_best_seller": 0.2143,
+            "lift_best_seller": 2.176
+          },
+          {
+            "keyword": "áo",
+            "count": 13,
+            "share": 0.0985,
+            "share_best_seller": 0.119,
+            "lift_best_seller": 1.209
+          },
+          {
+            "keyword": "thun lạnh",
+            "count": 12,
+            "share": 0.0909,
+            "share_best_seller": 0.0476,
+            "lift_best_seller": 0.524
+          },
+          {
+            "keyword": "áo phông",
+            "count": 10,
+            "share": 0.0758,
+            "share_best_seller": 0.0238,
+            "lift_best_seller": 0.314
+          },
+          {
+            "keyword": "thể thao",
+            "count": 10,
+            "share": 0.0758,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 1.886
+          },
+          {
+            "keyword": "co giãn",
+            "count": 10,
+            "share": 0.0758,
+            "share_best_seller": 0.0476,
+            "lift_best_seller": 0.629
+          },
+          {
+            "keyword": "dây",
+            "count": 10,
+            "share": 0.0758,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 1.886
+          },
+          {
+            "keyword": "ngắn",
+            "count": 9,
+            "share": 0.0682,
+            "share_best_seller": 0.0476,
+            "lift_best_seller": 0.698
+          },
+          {
+            "keyword": "áo ba lỗ",
+            "count": 9,
+            "share": 0.0682,
+            "share_best_seller": 0.0476,
+            "lift_best_seller": 0.698
+          },
+          {
+            "keyword": "thấm hút mồ hôi",
+            "count": 8,
+            "share": 0.0606,
+            "share_best_seller": 0.0238,
+            "lift_best_seller": 0.393
+          },
+          {
+            "keyword": "chiều",
+            "count": 8,
+            "share": 0.0606,
+            "share_best_seller": 0.0238,
+            "lift_best_seller": 0.393
+          },
+          {
+            "keyword": "yoga",
+            "count": 8,
+            "share": 0.0606,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 2.357
+          },
+          {
+            "keyword": "tập gym",
+            "count": 7,
+            "share": 0.053,
+            "share_best_seller": 0.119,
+            "lift_best_seller": 2.245
+          }
+        ]
+      },
+      "Áo vest - Áo khoác nữ": {
+        "n_products": 330,
+        "n_best_seller": 87,
+        "top_keywords": [
+          {
+            "keyword": "áo khoác",
+            "count": 222,
+            "share": 0.6727,
+            "share_best_seller": 0.6552,
+            "lift_best_seller": 0.974
+          },
+          {
+            "keyword": "dù",
+            "count": 42,
+            "share": 0.1273,
+            "share_best_seller": 0.069,
+            "lift_best_seller": 0.542
+          },
+          {
+            "keyword": "rộng",
+            "count": 39,
+            "share": 0.1182,
+            "share_best_seller": 0.0575,
+            "lift_best_seller": 0.486
+          },
+          {
+            "keyword": "kaki",
+            "count": 29,
+            "share": 0.0879,
+            "share_best_seller": 0.1034,
+            "lift_best_seller": 1.177
+          },
+          {
+            "keyword": "chống nắng",
+            "count": 28,
+            "share": 0.0848,
+            "share_best_seller": 0.1609,
+            "lift_best_seller": 1.897
+          },
+          {
+            "keyword": "áo khoát",
+            "count": 26,
+            "share": 0.0788,
+            "share_best_seller": 0.1034,
+            "lift_best_seller": 1.313
+          },
+          {
+            "keyword": "túi",
+            "count": 26,
+            "share": 0.0788,
+            "share_best_seller": 0.092,
+            "lift_best_seller": 1.167
+          },
+          {
+            "keyword": "ảnh thật",
+            "count": 23,
+            "share": 0.0697,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "jean",
+            "count": 21,
+            "share": 0.0636,
+            "share_best_seller": 0.069,
+            "lift_best_seller": 1.084
+          },
+          {
+            "keyword": "lớp",
+            "count": 20,
+            "share": 0.0606,
+            "share_best_seller": 0.0805,
+            "lift_best_seller": 1.328
+          },
+          {
+            "keyword": "áo hoodie",
+            "count": 19,
+            "share": 0.0576,
+            "share_best_seller": 0.023,
+            "lift_best_seller": 0.399
+          },
+          {
+            "keyword": "dây",
+            "count": 16,
+            "share": 0.0485,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "nỉ",
+            "count": 16,
+            "share": 0.0485,
+            "share_best_seller": 0.023,
+            "lift_best_seller": 0.474
+          },
+          {
+            "keyword": "thêu",
+            "count": 14,
+            "share": 0.0424,
+            "share_best_seller": 0.023,
+            "lift_best_seller": 0.542
+          },
+          {
+            "keyword": "hoodie",
+            "count": 13,
+            "share": 0.0394,
+            "share_best_seller": 0.0115,
+            "lift_best_seller": 0.292
+          }
+        ]
+      },
+      "Đầm nữ": {
+        "n_products": 185,
+        "n_best_seller": 51,
+        "top_keywords": [
+          {
+            "keyword": "đầm",
+            "count": 63,
+            "share": 0.3405,
+            "share_best_seller": 0.4706,
+            "lift_best_seller": 1.382
+          },
+          {
+            "keyword": "thiết kế",
+            "count": 27,
+            "share": 0.1459,
+            "share_best_seller": 0.1765,
+            "lift_best_seller": 1.209
+          },
+          {
+            "keyword": "dây",
+            "count": 22,
+            "share": 0.1189,
+            "share_best_seller": 0.0784,
+            "lift_best_seller": 0.66
+          },
+          {
+            "keyword": "cotton",
+            "count": 20,
+            "share": 0.1081,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "xòe",
+            "count": 17,
+            "share": 0.0919,
+            "share_best_seller": 0.0784,
+            "lift_best_seller": 0.854
+          },
+          {
+            "keyword": "maxi",
+            "count": 15,
+            "share": 0.0811,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "ngắn",
+            "count": 14,
+            "share": 0.0757,
+            "share_best_seller": 0.1373,
+            "lift_best_seller": 1.814
+          },
+          {
+            "keyword": "suông",
+            "count": 14,
+            "share": 0.0757,
+            "share_best_seller": 0.0784,
+            "lift_best_seller": 1.036
+          },
+          {
+            "keyword": "váy",
+            "count": 12,
+            "share": 0.0649,
+            "share_best_seller": 0.1176,
+            "lift_best_seller": 1.814
+          },
+          {
+            "keyword": "la mộc",
+            "count": 11,
+            "share": 0.0595,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "linen",
+            "count": 10,
+            "share": 0.0541,
+            "share_best_seller": 0.0588,
+            "lift_best_seller": 1.088
+          },
+          {
+            "keyword": "xinh xắn",
+            "count": 10,
+            "share": 0.0541,
+            "share_best_seller": 0.0588,
+            "lift_best_seller": 1.088
+          },
+          {
+            "keyword": "dự tiệc",
+            "count": 10,
+            "share": 0.0541,
+            "share_best_seller": 0.0784,
+            "lift_best_seller": 1.451
+          },
+          {
+            "keyword": "đầm ôm",
+            "count": 10,
+            "share": 0.0541,
+            "share_best_seller": 0.0784,
+            "lift_best_seller": 1.451
+          },
+          {
+            "keyword": "sang trọng",
+            "count": 9,
+            "share": 0.0486,
+            "share_best_seller": 0.0784,
+            "lift_best_seller": 1.612
+          }
+        ]
+      },
+      "Đồ lót nữ": {
+        "n_products": 318,
+        "n_best_seller": 83,
+        "top_keywords": [
+          {
+            "keyword": "quần lót",
+            "count": 108,
+            "share": 0.3396,
+            "share_best_seller": 0.5422,
+            "lift_best_seller": 1.596
+          },
+          {
+            "keyword": "ren",
+            "count": 69,
+            "share": 0.217,
+            "share_best_seller": 0.2048,
+            "lift_best_seller": 0.944
+          },
+          {
+            "keyword": "combo",
+            "count": 69,
+            "share": 0.217,
+            "share_best_seller": 0.253,
+            "lift_best_seller": 1.166
+          },
+          {
+            "keyword": "gọng",
+            "count": 53,
+            "share": 0.1667,
+            "share_best_seller": 0.2048,
+            "lift_best_seller": 1.229
+          },
+          {
+            "keyword": "áo ngực",
+            "count": 50,
+            "share": 0.1572,
+            "share_best_seller": 0.1446,
+            "lift_best_seller": 0.92
+          },
+          {
+            "keyword": "áo lót",
+            "count": 48,
+            "share": 0.1509,
+            "share_best_seller": 0.1446,
+            "lift_best_seller": 0.958
+          },
+          {
+            "keyword": "mút",
+            "count": 46,
+            "share": 0.1447,
+            "share_best_seller": 0.0723,
+            "lift_best_seller": 0.5
+          },
+          {
+            "keyword": "cotton",
+            "count": 32,
+            "share": 0.1006,
+            "share_best_seller": 0.1928,
+            "lift_best_seller": 1.916
+          },
+          {
+            "keyword": "dây",
+            "count": 28,
+            "share": 0.0881,
+            "share_best_seller": 0.012,
+            "lift_best_seller": 0.137
+          },
+          {
+            "keyword": "sexy",
+            "count": 24,
+            "share": 0.0755,
+            "share_best_seller": 0.0843,
+            "lift_best_seller": 1.117
+          },
+          {
+            "keyword": "nâng ngực",
+            "count": 23,
+            "share": 0.0723,
+            "share_best_seller": 0.0361,
+            "lift_best_seller": 0.5
+          },
+          {
+            "keyword": "bộ đồ",
+            "count": 21,
+            "share": 0.066,
+            "share_best_seller": 0.0482,
+            "lift_best_seller": 0.73
+          },
+          {
+            "keyword": "mỏng",
+            "count": 21,
+            "share": 0.066,
+            "share_best_seller": 0.1205,
+            "lift_best_seller": 1.824
+          },
+          {
+            "keyword": "quần",
+            "count": 20,
+            "share": 0.0629,
+            "share_best_seller": 0.0482,
+            "lift_best_seller": 0.766
+          },
+          {
+            "keyword": "lọt khe",
+            "count": 19,
+            "share": 0.0597,
+            "share_best_seller": 0.0482,
+            "lift_best_seller": 0.807
+          }
+        ]
+      },
+      "Đồ ngủ - Đồ mặc nhà nữ": {
+        "n_products": 224,
+        "n_best_seller": 67,
+        "top_keywords": [
+          {
+            "keyword": "đồ bộ",
+            "count": 95,
+            "share": 0.4241,
+            "share_best_seller": 0.403,
+            "lift_best_seller": 0.95
+          },
+          {
+            "keyword": "lụa",
+            "count": 70,
+            "share": 0.3125,
+            "share_best_seller": 0.3134,
+            "lift_best_seller": 1.003
+          },
+          {
+            "keyword": "đồ ngủ",
+            "count": 65,
+            "share": 0.2902,
+            "share_best_seller": 0.3433,
+            "lift_best_seller": 1.183
+          },
+          {
+            "keyword": "dây",
+            "count": 49,
+            "share": 0.2188,
+            "share_best_seller": 0.2537,
+            "lift_best_seller": 1.16
+          },
+          {
+            "keyword": "váy ngủ",
+            "count": 48,
+            "share": 0.2143,
+            "share_best_seller": 0.2985,
+            "lift_best_seller": 1.393
+          },
+          {
+            "keyword": "đầm ngủ",
+            "count": 44,
+            "share": 0.1964,
+            "share_best_seller": 0.2537,
+            "lift_best_seller": 1.292
+          },
+          {
+            "keyword": "bộ mặc nhà",
+            "count": 37,
+            "share": 0.1652,
+            "share_best_seller": 0.2239,
+            "lift_best_seller": 1.355
+          },
+          {
+            "keyword": "gợi cảm",
+            "count": 31,
+            "share": 0.1384,
+            "share_best_seller": 0.209,
+            "lift_best_seller": 1.51
+          },
+          {
+            "keyword": "nhà",
+            "count": 28,
+            "share": 0.125,
+            "share_best_seller": 0.194,
+            "lift_best_seller": 1.552
+          },
+          {
+            "keyword": "ngủ",
+            "count": 27,
+            "share": 0.1205,
+            "share_best_seller": 0.1493,
+            "lift_best_seller": 1.238
+          },
+          {
+            "keyword": "bộ đồ",
+            "count": 26,
+            "share": 0.1161,
+            "share_best_seller": 0.0448,
+            "lift_best_seller": 0.386
+          },
+          {
+            "keyword": "quyến rũ",
+            "count": 24,
+            "share": 0.1071,
+            "share_best_seller": 0.1791,
+            "lift_best_seller": 1.672
+          },
+          {
+            "keyword": "họa tiết",
+            "count": 23,
+            "share": 0.1027,
+            "share_best_seller": 0.1194,
+            "lift_best_seller": 1.163
+          },
+          {
+            "keyword": "ngực",
+            "count": 20,
+            "share": 0.0893,
+            "share_best_seller": 0.1045,
+            "lift_best_seller": 1.17
+          },
+          {
+            "keyword": "ren",
+            "count": 20,
+            "share": 0.0893,
+            "share_best_seller": 0.1642,
+            "lift_best_seller": 1.839
+          }
+        ]
+      },
+      "Đồ đôi - Đồ gia đình": {
+        "n_products": 42,
+        "n_best_seller": 2,
+        "top_keywords": [
+          {
+            "keyword": "mr",
+            "count": 27,
+            "share": 0.6429,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "buffalo",
+            "count": 25,
+            "share": 0.5952,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "áo đôi",
+            "count": 18,
+            "share": 0.4286,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "lỡ",
+            "count": 15,
+            "share": 0.3571,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "cặp",
+            "count": 15,
+            "share": 0.3571,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "áo thun",
+            "count": 15,
+            "share": 0.3571,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "rộng",
+            "count": 13,
+            "share": 0.3095,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "dễ thương",
+            "count": 12,
+            "share": 0.2857,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "cotton",
+            "count": 12,
+            "share": 0.2857,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "cặp đôi",
+            "count": 10,
+            "share": 0.2381,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "áo sweater",
+            "count": 9,
+            "share": 0.2143,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "cute",
+            "count": 5,
+            "share": 0.119,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "đôi",
+            "count": 5,
+            "share": 0.119,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "áo cặp",
+            "count": 4,
+            "share": 0.0952,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "sweater",
+            "count": 4,
+            "share": 0.0952,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "amazon": {
+    "stats": {
+      "n_products": 674,
+      "keywords_per_product_mean": 4.903560830860534,
+      "keywords_per_product_min": 0,
+      "keywords_per_product_max": 6,
+      "min_df": 3,
+      "split_counts": {
+        "train": 539,
+        "test": 68,
+        "val": 67
+      }
+    },
+    "categories": {
+      "Active": {
+        "n_products": 85,
+        "n_best_seller": 22,
+        "top_keywords": [
+          {
+            "keyword": "workout",
+            "count": 18,
+            "share": 0.2118,
+            "share_best_seller": 0.3182,
+            "lift_best_seller": 1.503
+          },
+          {
+            "keyword": "waist",
+            "count": 13,
+            "share": 0.1529,
+            "share_best_seller": 0.2273,
+            "lift_best_seller": 1.486
+          },
+          {
+            "keyword": "pockets",
+            "count": 11,
+            "share": 0.1294,
+            "share_best_seller": 0.2727,
+            "lift_best_seller": 2.107
+          },
+          {
+            "keyword": "yoga",
+            "count": 11,
+            "share": 0.1294,
+            "share_best_seller": 0.0909,
+            "lift_best_seller": 0.702
+          },
+          {
+            "keyword": "athletic",
+            "count": 10,
+            "share": 0.1176,
+            "share_best_seller": 0.0909,
+            "lift_best_seller": 0.773
+          },
+          {
+            "keyword": "sleeve",
+            "count": 10,
+            "share": 0.1176,
+            "share_best_seller": 0.1364,
+            "lift_best_seller": 1.159
+          },
+          {
+            "keyword": "leggings",
+            "count": 8,
+            "share": 0.0941,
+            "share_best_seller": 0.0455,
+            "lift_best_seller": 0.483
+          },
+          {
+            "keyword": "shorts",
+            "count": 8,
+            "share": 0.0941,
+            "share_best_seller": 0.0455,
+            "lift_best_seller": 0.483
+          },
+          {
+            "keyword": "pants",
+            "count": 7,
+            "share": 0.0824,
+            "share_best_seller": 0.0909,
+            "lift_best_seller": 1.104
+          },
+          {
+            "keyword": "capri",
+            "count": 6,
+            "share": 0.0706,
+            "share_best_seller": 0.2273,
+            "lift_best_seller": 3.22
+          },
+          {
+            "keyword": "running",
+            "count": 6,
+            "share": 0.0706,
+            "share_best_seller": 0.0909,
+            "lift_best_seller": 1.288
+          },
+          {
+            "keyword": "tummy control",
+            "count": 5,
+            "share": 0.0588,
+            "share_best_seller": 0.0909,
+            "lift_best_seller": 1.545
+          },
+          {
+            "keyword": "waisted",
+            "count": 5,
+            "share": 0.0588,
+            "share_best_seller": 0.0909,
+            "lift_best_seller": 1.545
+          },
+          {
+            "keyword": "seamless",
+            "count": 5,
+            "share": 0.0588,
+            "share_best_seller": 0.0909,
+            "lift_best_seller": 1.545
+          },
+          {
+            "keyword": "lounge",
+            "count": 5,
+            "share": 0.0588,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      },
+      "Bodysuits": {
+        "n_products": 3,
+        "n_best_seller": 1,
+        "top_keywords": [
+          {
+            "keyword": "sleeve",
+            "count": 3,
+            "share": 1.0,
+            "share_best_seller": 1.0,
+            "lift_best_seller": 1.0
+          },
+          {
+            "keyword": "bodysuit",
+            "count": 2,
+            "share": 0.6667,
+            "share_best_seller": 1.0,
+            "lift_best_seller": 1.5
+          },
+          {
+            "keyword": "top",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "jumpsuit",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "collar",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "mesh",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "neck",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "loose",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "puff",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "mock",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "square",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "tank top",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 1.0,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "shoulder",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 1.0,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "off",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 1.0,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "jumpsuits",
+            "count": 1,
+            "share": 0.3333,
+            "share_best_seller": 1.0,
+            "lift_best_seller": 3.0
+          }
+        ]
+      },
+      "Coats, Jackets & Vests": {
+        "n_products": 27,
+        "n_best_seller": 7,
+        "top_keywords": [
+          {
+            "keyword": "jacket",
+            "count": 17,
+            "share": 0.6296,
+            "share_best_seller": 0.7143,
+            "lift_best_seller": 1.134
+          },
+          {
+            "keyword": "winter",
+            "count": 7,
+            "share": 0.2593,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "faux",
+            "count": 6,
+            "share": 0.2222,
+            "share_best_seller": 0.2857,
+            "lift_best_seller": 1.286
+          },
+          {
+            "keyword": "fleece",
+            "count": 6,
+            "share": 0.2222,
+            "share_best_seller": 0.4286,
+            "lift_best_seller": 1.929
+          },
+          {
+            "keyword": "levi's",
+            "count": 5,
+            "share": 0.1852,
+            "share_best_seller": 0.4286,
+            "lift_best_seller": 2.314
+          },
+          {
+            "keyword": "sleeve",
+            "count": 5,
+            "share": 0.1852,
+            "share_best_seller": 0.2857,
+            "lift_best_seller": 1.543
+          },
+          {
+            "keyword": "full",
+            "count": 5,
+            "share": 0.1852,
+            "share_best_seller": 0.4286,
+            "lift_best_seller": 2.314
+          },
+          {
+            "keyword": "zip",
+            "count": 5,
+            "share": 0.1852,
+            "share_best_seller": 0.4286,
+            "lift_best_seller": 2.314
+          },
+          {
+            "keyword": "hooded",
+            "count": 4,
+            "share": 0.1481,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 0.964
+          },
+          {
+            "keyword": "available",
+            "count": 4,
+            "share": 0.1481,
+            "share_best_seller": 0.5714,
+            "lift_best_seller": 3.857
+          },
+          {
+            "keyword": "hood",
+            "count": 4,
+            "share": 0.1481,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "standard plus sizes",
+            "count": 3,
+            "share": 0.1111,
+            "share_best_seller": 0.2857,
+            "lift_best_seller": 2.571
+          },
+          {
+            "keyword": "sherpa",
+            "count": 3,
+            "share": 0.1111,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "leather",
+            "count": 3,
+            "share": 0.1111,
+            "share_best_seller": 0.2857,
+            "lift_best_seller": 2.571
+          },
+          {
+            "keyword": "hooded jacket",
+            "count": 3,
+            "share": 0.1111,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 1.286
+          }
+        ]
+      },
+      "Dresses": {
+        "n_products": 91,
+        "n_best_seller": 23,
+        "top_keywords": [
+          {
+            "keyword": "dress",
+            "count": 32,
+            "share": 0.3516,
+            "share_best_seller": 0.3478,
+            "lift_best_seller": 0.989
+          },
+          {
+            "keyword": "sleeve",
+            "count": 30,
+            "share": 0.3297,
+            "share_best_seller": 0.2609,
+            "lift_best_seller": 0.791
+          },
+          {
+            "keyword": "dresses",
+            "count": 16,
+            "share": 0.1758,
+            "share_best_seller": 0.1739,
+            "lift_best_seller": 0.989
+          },
+          {
+            "keyword": "sleeveless",
+            "count": 16,
+            "share": 0.1758,
+            "share_best_seller": 0.2174,
+            "lift_best_seller": 1.236
+          },
+          {
+            "keyword": "neck",
+            "count": 14,
+            "share": 0.1538,
+            "share_best_seller": 0.2174,
+            "lift_best_seller": 1.413
+          },
+          {
+            "keyword": "v neck",
+            "count": 12,
+            "share": 0.1319,
+            "share_best_seller": 0.087,
+            "lift_best_seller": 0.659
+          },
+          {
+            "keyword": "formal",
+            "count": 12,
+            "share": 0.1319,
+            "share_best_seller": 0.0435,
+            "lift_best_seller": 0.33
+          },
+          {
+            "keyword": "loose",
+            "count": 11,
+            "share": 0.1209,
+            "share_best_seller": 0.0435,
+            "lift_best_seller": 0.36
+          },
+          {
+            "keyword": "line",
+            "count": 10,
+            "share": 0.1099,
+            "share_best_seller": 0.1739,
+            "lift_best_seller": 1.583
+          },
+          {
+            "keyword": "floral",
+            "count": 10,
+            "share": 0.1099,
+            "share_best_seller": 0.1304,
+            "lift_best_seller": 1.187
+          },
+          {
+            "keyword": "lace",
+            "count": 10,
+            "share": 0.1099,
+            "share_best_seller": 0.087,
+            "lift_best_seller": 0.791
+          },
+          {
+            "keyword": "maxi dress",
+            "count": 9,
+            "share": 0.0989,
+            "share_best_seller": 0.1304,
+            "lift_best_seller": 1.319
+          },
+          {
+            "keyword": "summer",
+            "count": 9,
+            "share": 0.0989,
+            "share_best_seller": 0.0435,
+            "lift_best_seller": 0.44
+          },
+          {
+            "keyword": "midi",
+            "count": 9,
+            "share": 0.0989,
+            "share_best_seller": 0.1304,
+            "lift_best_seller": 1.319
+          },
+          {
+            "keyword": "elegant",
+            "count": 8,
+            "share": 0.0879,
+            "share_best_seller": 0.2174,
+            "lift_best_seller": 2.473
+          }
+        ]
+      },
+      "Fashion Hoodies & Sweatshirts": {
+        "n_products": 25,
+        "n_best_seller": 7,
+        "top_keywords": [
+          {
+            "keyword": "sleeve",
+            "count": 12,
+            "share": 0.48,
+            "share_best_seller": 0.5714,
+            "lift_best_seller": 1.19
+          },
+          {
+            "keyword": "sweatshirt",
+            "count": 10,
+            "share": 0.4,
+            "share_best_seller": 0.2857,
+            "lift_best_seller": 0.714
+          },
+          {
+            "keyword": "hoodie",
+            "count": 7,
+            "share": 0.28,
+            "share_best_seller": 0.5714,
+            "lift_best_seller": 2.041
+          },
+          {
+            "keyword": "shirt",
+            "count": 5,
+            "share": 0.2,
+            "share_best_seller": 0.2857,
+            "lift_best_seller": 1.429
+          },
+          {
+            "keyword": "graphic",
+            "count": 5,
+            "share": 0.2,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "pullover",
+            "count": 5,
+            "share": 0.2,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 0.714
+          },
+          {
+            "keyword": "fleece",
+            "count": 5,
+            "share": 0.2,
+            "share_best_seller": 0.4286,
+            "lift_best_seller": 2.143
+          },
+          {
+            "keyword": "pullover tops",
+            "count": 5,
+            "share": 0.2,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 0.714
+          },
+          {
+            "keyword": "neck",
+            "count": 4,
+            "share": 0.16,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "shirts",
+            "count": 4,
+            "share": 0.16,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 0.893
+          },
+          {
+            "keyword": "available",
+            "count": 3,
+            "share": 0.12,
+            "share_best_seller": 0.2857,
+            "lift_best_seller": 2.381
+          },
+          {
+            "keyword": "zip",
+            "count": 3,
+            "share": 0.12,
+            "share_best_seller": 0.2857,
+            "lift_best_seller": 2.381
+          },
+          {
+            "keyword": "crewneck",
+            "count": 3,
+            "share": 0.12,
+            "share_best_seller": 0.1429,
+            "lift_best_seller": 1.19
+          },
+          {
+            "keyword": "cropped hoodie",
+            "count": 2,
+            "share": 0.08,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "print",
+            "count": 2,
+            "share": 0.08,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      },
+      "Jeans": {
+        "n_products": 34,
+        "n_best_seller": 9,
+        "top_keywords": [
+          {
+            "keyword": "rise",
+            "count": 13,
+            "share": 0.3824,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 0.872
+          },
+          {
+            "keyword": "jeans",
+            "count": 12,
+            "share": 0.3529,
+            "share_best_seller": 0.2222,
+            "lift_best_seller": 0.63
+          },
+          {
+            "keyword": "jean",
+            "count": 8,
+            "share": 0.2353,
+            "share_best_seller": 0.4444,
+            "lift_best_seller": 1.889
+          },
+          {
+            "keyword": "fit",
+            "count": 7,
+            "share": 0.2059,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 1.619
+          },
+          {
+            "keyword": "mid",
+            "count": 6,
+            "share": 0.1765,
+            "share_best_seller": 0.2222,
+            "lift_best_seller": 1.259
+          },
+          {
+            "keyword": "skinny jeans",
+            "count": 6,
+            "share": 0.1765,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "skinny",
+            "count": 6,
+            "share": 0.1765,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "slim",
+            "count": 5,
+            "share": 0.1471,
+            "share_best_seller": 0.1111,
+            "lift_best_seller": 0.756
+          },
+          {
+            "keyword": "stretch",
+            "count": 5,
+            "share": 0.1471,
+            "share_best_seller": 0.1111,
+            "lift_best_seller": 0.756
+          },
+          {
+            "keyword": "straight leg",
+            "count": 4,
+            "share": 0.1176,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 2.833
+          },
+          {
+            "keyword": "classic",
+            "count": 4,
+            "share": 0.1176,
+            "share_best_seller": 0.1111,
+            "lift_best_seller": 0.944
+          },
+          {
+            "keyword": "waist",
+            "count": 4,
+            "share": 0.1176,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "bootcut",
+            "count": 3,
+            "share": 0.0882,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 3.778
+          },
+          {
+            "keyword": "relaxed",
+            "count": 3,
+            "share": 0.0882,
+            "share_best_seller": 0.2222,
+            "lift_best_seller": 2.519
+          },
+          {
+            "keyword": "pants",
+            "count": 3,
+            "share": 0.0882,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      },
+      "Jumpsuits, Rompers & Overalls": {
+        "n_products": 20,
+        "n_best_seller": 5,
+        "top_keywords": [
+          {
+            "keyword": "jumpsuit",
+            "count": 11,
+            "share": 0.55,
+            "share_best_seller": 0.8,
+            "lift_best_seller": 1.455
+          },
+          {
+            "keyword": "sleeveless",
+            "count": 6,
+            "share": 0.3,
+            "share_best_seller": 0.6,
+            "lift_best_seller": 2.0
+          },
+          {
+            "keyword": "sleeve",
+            "count": 5,
+            "share": 0.25,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "romper",
+            "count": 5,
+            "share": 0.25,
+            "share_best_seller": 0.2,
+            "lift_best_seller": 0.8
+          },
+          {
+            "keyword": "pants",
+            "count": 4,
+            "share": 0.2,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "loose",
+            "count": 4,
+            "share": 0.2,
+            "share_best_seller": 0.2,
+            "lift_best_seller": 1.0
+          },
+          {
+            "keyword": "off shoulder",
+            "count": 4,
+            "share": 0.2,
+            "share_best_seller": 0.4,
+            "lift_best_seller": 2.0
+          },
+          {
+            "keyword": "waist",
+            "count": 4,
+            "share": 0.2,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "wide leg pants",
+            "count": 3,
+            "share": 0.15,
+            "share_best_seller": 0.4,
+            "lift_best_seller": 2.667
+          },
+          {
+            "keyword": "tie",
+            "count": 3,
+            "share": 0.15,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "spaghetti strap",
+            "count": 2,
+            "share": 0.1,
+            "share_best_seller": 0.2,
+            "lift_best_seller": 2.0
+          },
+          {
+            "keyword": "linen",
+            "count": 2,
+            "share": 0.1,
+            "share_best_seller": 0.2,
+            "lift_best_seller": 2.0
+          },
+          {
+            "keyword": "summer",
+            "count": 2,
+            "share": 0.1,
+            "share_best_seller": 0.2,
+            "lift_best_seller": 2.0
+          },
+          {
+            "keyword": "puff",
+            "count": 2,
+            "share": 0.1,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "belted",
+            "count": 2,
+            "share": 0.1,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      },
+      "Leggings": {
+        "n_products": 9,
+        "n_best_seller": 3,
+        "top_keywords": [
+          {
+            "keyword": "leggings",
+            "count": 4,
+            "share": 0.4444,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 0.75
+          },
+          {
+            "keyword": "soft",
+            "count": 3,
+            "share": 0.3333,
+            "share_best_seller": 0.6667,
+            "lift_best_seller": 2.0
+          },
+          {
+            "keyword": "waist",
+            "count": 2,
+            "share": 0.2222,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 1.5
+          },
+          {
+            "keyword": "solid",
+            "count": 2,
+            "share": 0.2222,
+            "share_best_seller": 0.6667,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "fit",
+            "count": 2,
+            "share": 0.2222,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 1.5
+          },
+          {
+            "keyword": "printed",
+            "count": 2,
+            "share": 0.2222,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "regular",
+            "count": 2,
+            "share": 0.2222,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 1.5
+          },
+          {
+            "keyword": "waisted",
+            "count": 2,
+            "share": 0.2222,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 1.5
+          },
+          {
+            "keyword": "legging",
+            "count": 2,
+            "share": 0.2222,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "buttery",
+            "count": 1,
+            "share": 0.1111,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "knit",
+            "count": 1,
+            "share": 0.1111,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "front",
+            "count": 1,
+            "share": 0.1111,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "skinny",
+            "count": 1,
+            "share": 0.1111,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "pant",
+            "count": 1,
+            "share": 0.1111,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "pocket",
+            "count": 1,
+            "share": 0.1111,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      },
+      "Lingerie, Sleep & Lounge": {
+        "n_products": 130,
+        "n_best_seller": 33,
+        "top_keywords": [
+          {
+            "keyword": "bra",
+            "count": 30,
+            "share": 0.2308,
+            "share_best_seller": 0.2121,
+            "lift_best_seller": 0.919
+          },
+          {
+            "keyword": "seamless",
+            "count": 17,
+            "share": 0.1308,
+            "share_best_seller": 0.1515,
+            "lift_best_seller": 1.159
+          },
+          {
+            "keyword": "sleepwear",
+            "count": 12,
+            "share": 0.0923,
+            "share_best_seller": 0.1212,
+            "lift_best_seller": 1.313
+          },
+          {
+            "keyword": "lace",
+            "count": 11,
+            "share": 0.0846,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "underwear",
+            "count": 11,
+            "share": 0.0846,
+            "share_best_seller": 0.0909,
+            "lift_best_seller": 1.074
+          },
+          {
+            "keyword": "comfort",
+            "count": 11,
+            "share": 0.0846,
+            "share_best_seller": 0.1212,
+            "lift_best_seller": 1.433
+          },
+          {
+            "keyword": "pajama",
+            "count": 11,
+            "share": 0.0846,
+            "share_best_seller": 0.1212,
+            "lift_best_seller": 1.433
+          },
+          {
+            "keyword": "lounge",
+            "count": 10,
+            "share": 0.0769,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "stretch",
+            "count": 10,
+            "share": 0.0769,
+            "share_best_seller": 0.0606,
+            "lift_best_seller": 0.788
+          },
+          {
+            "keyword": "full",
+            "count": 9,
+            "share": 0.0692,
+            "share_best_seller": 0.0606,
+            "lift_best_seller": 0.875
+          },
+          {
+            "keyword": "wireless",
+            "count": 9,
+            "share": 0.0692,
+            "share_best_seller": 0.1515,
+            "lift_best_seller": 2.189
+          },
+          {
+            "keyword": "support",
+            "count": 9,
+            "share": 0.0692,
+            "share_best_seller": 0.0606,
+            "lift_best_seller": 0.875
+          },
+          {
+            "keyword": "robe",
+            "count": 9,
+            "share": 0.0692,
+            "share_best_seller": 0.1212,
+            "lift_best_seller": 1.751
+          },
+          {
+            "keyword": "no",
+            "count": 8,
+            "share": 0.0615,
+            "share_best_seller": 0.1212,
+            "lift_best_seller": 1.97
+          },
+          {
+            "keyword": "sports bra",
+            "count": 8,
+            "share": 0.0615,
+            "share_best_seller": 0.0606,
+            "lift_best_seller": 0.985
+          }
+        ]
+      },
+      "Pants": {
+        "n_products": 22,
+        "n_best_seller": 6,
+        "top_keywords": [
+          {
+            "keyword": "pant",
+            "count": 12,
+            "share": 0.5455,
+            "share_best_seller": 1.0,
+            "lift_best_seller": 1.833
+          },
+          {
+            "keyword": "fit",
+            "count": 7,
+            "share": 0.3182,
+            "share_best_seller": 0.8333,
+            "lift_best_seller": 2.619
+          },
+          {
+            "keyword": "pants",
+            "count": 5,
+            "share": 0.2273,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "pull",
+            "count": 4,
+            "share": 0.1818,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "wide leg",
+            "count": 3,
+            "share": 0.1364,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "waist",
+            "count": 3,
+            "share": 0.1364,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "loose",
+            "count": 3,
+            "share": 0.1364,
+            "share_best_seller": 0.1667,
+            "lift_best_seller": 1.222
+          },
+          {
+            "keyword": "straight leg",
+            "count": 3,
+            "share": 0.1364,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 2.444
+          },
+          {
+            "keyword": "flex",
+            "count": 3,
+            "share": 0.1364,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 2.444
+          },
+          {
+            "keyword": "rise",
+            "count": 3,
+            "share": 0.1364,
+            "share_best_seller": 0.1667,
+            "lift_best_seller": 1.222
+          },
+          {
+            "keyword": "stretch",
+            "count": 3,
+            "share": 0.1364,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 2.444
+          },
+          {
+            "keyword": "skinny",
+            "count": 3,
+            "share": 0.1364,
+            "share_best_seller": 0.1667,
+            "lift_best_seller": 1.222
+          },
+          {
+            "keyword": "palazzo pants",
+            "count": 2,
+            "share": 0.0909,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "linen",
+            "count": 2,
+            "share": 0.0909,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "solid",
+            "count": 2,
+            "share": 0.0909,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      },
+      "Shorts": {
+        "n_products": 11,
+        "n_best_seller": 3,
+        "top_keywords": [
+          {
+            "keyword": "rise",
+            "count": 5,
+            "share": 0.4545,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 0.733
+          },
+          {
+            "keyword": "denim shorts",
+            "count": 3,
+            "share": 0.2727,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "standard",
+            "count": 3,
+            "share": 0.2727,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 1.222
+          },
+          {
+            "keyword": "chino",
+            "count": 3,
+            "share": 0.2727,
+            "share_best_seller": 0.6667,
+            "lift_best_seller": 2.444
+          },
+          {
+            "keyword": "pockets",
+            "count": 2,
+            "share": 0.1818,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "jeans",
+            "count": 2,
+            "share": 0.1818,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "bermuda shorts",
+            "count": 2,
+            "share": 0.1818,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 1.833
+          },
+          {
+            "keyword": "mid",
+            "count": 2,
+            "share": 0.1818,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 1.833
+          },
+          {
+            "keyword": "curvy",
+            "count": 2,
+            "share": 0.1818,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 1.833
+          },
+          {
+            "keyword": "shorts",
+            "count": 2,
+            "share": 0.1818,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "hem",
+            "count": 1,
+            "share": 0.0909,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "stretchy",
+            "count": 1,
+            "share": 0.0909,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "girlfriend",
+            "count": 1,
+            "share": 0.0909,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "available",
+            "count": 1,
+            "share": 0.0909,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 3.667
+          },
+          {
+            "keyword": "straight",
+            "count": 1,
+            "share": 0.0909,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 3.667
+          }
+        ]
+      },
+      "Skirts": {
+        "n_products": 6,
+        "n_best_seller": 2,
+        "top_keywords": [
+          {
+            "keyword": "skirt",
+            "count": 5,
+            "share": 0.8333,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 0.6
+          },
+          {
+            "keyword": "stretch",
+            "count": 2,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "print",
+            "count": 2,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "ruffle",
+            "count": 2,
+            "share": 0.3333,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 1.5
+          },
+          {
+            "keyword": "side",
+            "count": 2,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "dress",
+            "count": 2,
+            "share": 0.3333,
+            "share_best_seller": 1.0,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "regular",
+            "count": 2,
+            "share": 0.3333,
+            "share_best_seller": 1.0,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "petite",
+            "count": 2,
+            "share": 0.3333,
+            "share_best_seller": 1.0,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "midi",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "length",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "knee",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "office",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "denim",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "juniors",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "waist",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      },
+      "Socks & Hosiery": {
+        "n_products": 14,
+        "n_best_seller": 4,
+        "top_keywords": [
+          {
+            "keyword": "socks",
+            "count": 9,
+            "share": 0.6429,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 0.778
+          },
+          {
+            "keyword": "pairs",
+            "count": 4,
+            "share": 0.2857,
+            "share_best_seller": 0.25,
+            "lift_best_seller": 0.875
+          },
+          {
+            "keyword": "super",
+            "count": 3,
+            "share": 0.2143,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "funny",
+            "count": 2,
+            "share": 0.1429,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "crew",
+            "count": 2,
+            "share": 0.1429,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "knee",
+            "count": 2,
+            "share": 0.1429,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 3.5
+          },
+          {
+            "keyword": "tights",
+            "count": 2,
+            "share": 0.1429,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "winter",
+            "count": 2,
+            "share": 0.1429,
+            "share_best_seller": 0.25,
+            "lift_best_seller": 1.75
+          },
+          {
+            "keyword": "warm",
+            "count": 2,
+            "share": 0.1429,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "soft",
+            "count": 2,
+            "share": 0.1429,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "cotton",
+            "count": 1,
+            "share": 0.0714,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "athletic",
+            "count": 1,
+            "share": 0.0714,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "comfy",
+            "count": 1,
+            "share": 0.0714,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "printed",
+            "count": 1,
+            "share": 0.0714,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "western",
+            "count": 1,
+            "share": 0.0714,
+            "share_best_seller": 0.25,
+            "lift_best_seller": 3.5
+          }
+        ]
+      },
+      "Suiting & Blazers": {
+        "n_products": 6,
+        "n_best_seller": 2,
+        "top_keywords": [
+          {
+            "keyword": "sleeve",
+            "count": 4,
+            "share": 0.6667,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 0.75
+          },
+          {
+            "keyword": "jacket",
+            "count": 2,
+            "share": 0.3333,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "work",
+            "count": 2,
+            "share": 0.3333,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 1.5
+          },
+          {
+            "keyword": "solid",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "crop",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "front",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "open",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "pants jumpsuit",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "button",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "waisted",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "outfits",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 3.0
+          },
+          {
+            "keyword": "mini dress",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "dresses",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "down",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "puff",
+            "count": 1,
+            "share": 0.1667,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      },
+      "Sweaters": {
+        "n_products": 22,
+        "n_best_seller": 6,
+        "top_keywords": [
+          {
+            "keyword": "sleeve",
+            "count": 13,
+            "share": 0.5909,
+            "share_best_seller": 0.6667,
+            "lift_best_seller": 1.128
+          },
+          {
+            "keyword": "sweater",
+            "count": 8,
+            "share": 0.3636,
+            "share_best_seller": 0.6667,
+            "lift_best_seller": 1.833
+          },
+          {
+            "keyword": "lightweight",
+            "count": 7,
+            "share": 0.3182,
+            "share_best_seller": 0.8333,
+            "lift_best_seller": 2.619
+          },
+          {
+            "keyword": "knit",
+            "count": 7,
+            "share": 0.3182,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "neck",
+            "count": 6,
+            "share": 0.2727,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 1.222
+          },
+          {
+            "keyword": "cardigan sweater",
+            "count": 6,
+            "share": 0.2727,
+            "share_best_seller": 0.3333,
+            "lift_best_seller": 1.222
+          },
+          {
+            "keyword": "pullover",
+            "count": 6,
+            "share": 0.2727,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "available",
+            "count": 5,
+            "share": 0.2273,
+            "share_best_seller": 0.8333,
+            "lift_best_seller": 3.667
+          },
+          {
+            "keyword": "crewneck",
+            "count": 5,
+            "share": 0.2273,
+            "share_best_seller": 0.5,
+            "lift_best_seller": 2.2
+          },
+          {
+            "keyword": "loose",
+            "count": 4,
+            "share": 0.1818,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "oversized",
+            "count": 3,
+            "share": 0.1364,
+            "share_best_seller": 0.1667,
+            "lift_best_seller": 1.222
+          },
+          {
+            "keyword": "open",
+            "count": 3,
+            "share": 0.1364,
+            "share_best_seller": 0.1667,
+            "lift_best_seller": 1.222
+          },
+          {
+            "keyword": "front",
+            "count": 3,
+            "share": 0.1364,
+            "share_best_seller": 0.1667,
+            "lift_best_seller": 1.222
+          },
+          {
+            "keyword": "fit",
+            "count": 2,
+            "share": 0.0909,
+            "share_best_seller": 0.1667,
+            "lift_best_seller": 1.833
+          },
+          {
+            "keyword": "print",
+            "count": 2,
+            "share": 0.0909,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      },
+      "Swimsuits & Cover Ups": {
+        "n_products": 32,
+        "n_best_seller": 8,
+        "top_keywords": [
+          {
+            "keyword": "swimsuit",
+            "count": 15,
+            "share": 0.4688,
+            "share_best_seller": 0.625,
+            "lift_best_seller": 1.333
+          },
+          {
+            "keyword": "swimwear",
+            "count": 7,
+            "share": 0.2188,
+            "share_best_seller": 0.375,
+            "lift_best_seller": 1.714
+          },
+          {
+            "keyword": "beach",
+            "count": 6,
+            "share": 0.1875,
+            "share_best_seller": 0.25,
+            "lift_best_seller": 1.333
+          },
+          {
+            "keyword": "top",
+            "count": 6,
+            "share": 0.1875,
+            "share_best_seller": 0.125,
+            "lift_best_seller": 0.667
+          },
+          {
+            "keyword": "sleeve",
+            "count": 6,
+            "share": 0.1875,
+            "share_best_seller": 0.25,
+            "lift_best_seller": 1.333
+          },
+          {
+            "keyword": "bathing suit",
+            "count": 6,
+            "share": 0.1875,
+            "share_best_seller": 0.25,
+            "lift_best_seller": 1.333
+          },
+          {
+            "keyword": "print",
+            "count": 5,
+            "share": 0.1562,
+            "share_best_seller": 0.125,
+            "lift_best_seller": 0.8
+          },
+          {
+            "keyword": "cover",
+            "count": 5,
+            "share": 0.1562,
+            "share_best_seller": 0.25,
+            "lift_best_seller": 1.6
+          },
+          {
+            "keyword": "bikini",
+            "count": 5,
+            "share": 0.1562,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          },
+          {
+            "keyword": "tummy control",
+            "count": 5,
+            "share": 0.1562,
+            "share_best_seller": 0.125,
+            "lift_best_seller": 0.8
+          },
+          {
+            "keyword": "front",
+            "count": 4,
+            "share": 0.125,
+            "share_best_seller": 0.25,
+            "lift_best_seller": 2.0
+          },
+          {
+            "keyword": "rash guard",
+            "count": 4,
+            "share": 0.125,
+            "share_best_seller": 0.125,
+            "lift_best_seller": 1.0
+          },
+          {
+            "keyword": "cut",
+            "count": 3,
+            "share": 0.0938,
+            "share_best_seller": 0.125,
+            "lift_best_seller": 1.333
+          },
+          {
+            "keyword": "bikini cover",
+            "count": 3,
+            "share": 0.0938,
+            "share_best_seller": 0.125,
+            "lift_best_seller": 1.333
+          },
+          {
+            "keyword": "dress",
+            "count": 3,
+            "share": 0.0938,
+            "share_best_seller": 0.25,
+            "lift_best_seller": 2.667
+          }
+        ]
+      },
+      "Tops, Tees & Blouses": {
+        "n_products": 137,
+        "n_best_seller": 35,
+        "top_keywords": [
+          {
+            "keyword": "sleeve",
+            "count": 75,
+            "share": 0.5474,
+            "share_best_seller": 0.6286,
+            "lift_best_seller": 1.148
+          },
+          {
+            "keyword": "shirt",
+            "count": 49,
+            "share": 0.3577,
+            "share_best_seller": 0.4571,
+            "lift_best_seller": 1.278
+          },
+          {
+            "keyword": "shirts",
+            "count": 31,
+            "share": 0.2263,
+            "share_best_seller": 0.1714,
+            "lift_best_seller": 0.758
+          },
+          {
+            "keyword": "loose",
+            "count": 25,
+            "share": 0.1825,
+            "share_best_seller": 0.2857,
+            "lift_best_seller": 1.566
+          },
+          {
+            "keyword": "neck",
+            "count": 24,
+            "share": 0.1752,
+            "share_best_seller": 0.1714,
+            "lift_best_seller": 0.979
+          },
+          {
+            "keyword": "tops",
+            "count": 23,
+            "share": 0.1679,
+            "share_best_seller": 0.0857,
+            "lift_best_seller": 0.511
+          },
+          {
+            "keyword": "summer",
+            "count": 22,
+            "share": 0.1606,
+            "share_best_seller": 0.1714,
+            "lift_best_seller": 1.068
+          },
+          {
+            "keyword": "v neck",
+            "count": 18,
+            "share": 0.1314,
+            "share_best_seller": 0.0857,
+            "lift_best_seller": 0.652
+          },
+          {
+            "keyword": "tunic",
+            "count": 18,
+            "share": 0.1314,
+            "share_best_seller": 0.2,
+            "lift_best_seller": 1.522
+          },
+          {
+            "keyword": "sleeveless",
+            "count": 17,
+            "share": 0.1241,
+            "share_best_seller": 0.1143,
+            "lift_best_seller": 0.921
+          },
+          {
+            "keyword": "blouse",
+            "count": 16,
+            "share": 0.1168,
+            "share_best_seller": 0.0571,
+            "lift_best_seller": 0.489
+          },
+          {
+            "keyword": "graphic",
+            "count": 14,
+            "share": 0.1022,
+            "share_best_seller": 0.0286,
+            "lift_best_seller": 0.28
+          },
+          {
+            "keyword": "tunic tops",
+            "count": 14,
+            "share": 0.1022,
+            "share_best_seller": 0.2571,
+            "lift_best_seller": 2.516
+          },
+          {
+            "keyword": "tee",
+            "count": 13,
+            "share": 0.0949,
+            "share_best_seller": 0.0571,
+            "lift_best_seller": 0.602
+          },
+          {
+            "keyword": "top",
+            "count": 13,
+            "share": 0.0949,
+            "share_best_seller": 0.0,
+            "lift_best_seller": 0.0
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+ "n_tiki": 1983,
+ "n_amazon": 674,
+ "pct_under_200_words": 39.3,
+ "pct_no_size": 21.2,
+ "pct_no_material": 9.4,
+ "pct_no_care": 64.6,
+ "pct_cta": 19.3,
+ "median_desc_words": 241.0,
+ "mean_desc_words": 273.0,
+ "median_price": 226000.0,
+ "mean_price": 393597.0,
+ "pct_zero_sold": 62.1,
+ "median_sold": 0.0,
+ "max_sold": 3546.0,
+ "median_title_chars": 62.0,
+ "pct_title_15_50": 35.4,
+ "pct_title_50_60": 14.9,
+ "median_bullets": 2.0,
+ "median_images": 5.0,
+ "created_min": "2019-11-21",
+ "created_max": "2026-11-01",
+ "best_seller_rate": 26.2,
+ "median_by_label": {
+  "desc_len_words": {
+   "0": 238.0,
+   "1": 247.0
+  },
+  "n_bullets": {
+   "0": 1.0,
+   "1": 3.0
+  },
+  "title_len_chars": {
+   "0": 60.0,
+   "1": 66.0
+  },
+  "n_images": {
+   "0": 5.0,
+   "1": 4.0
+  },
+  "price": {
+   "0": 249000.0,
+   "1": 189250.0
+  }
+ },
+ "category_counts": {
+  "Áo vest - Áo khoác nữ": 330,
+  "Đồ lót nữ": 318,
+  "Đồ ngủ - Đồ mặc nhà nữ": 224,
+  "Quần nữ": 200,
+  "Đầm nữ": 185,
+  "Áo thun nữ": 132,
+  "Áo liền quần - Bộ trang phục": 127,
+  "Trang phục bơi nữ": 116,
+  "Áo sơ mi nữ": 102,
+  "Chân váy": 85,
+  "Khác": 49,
+  "Đồ đôi - Đồ gia đình": 42,
+  "Áo kiểu nữ": 38,
+  "Thời trang nữ trung niên": 35
+ },
+ "amazon_median_desc_words": 79.0,
+ "amazon_pct_under_200": 84.4,
+ "amazon_category_counts": {
+  "Tops, Tees & Blouses": 137,
+  "Lingerie, Sleep & Lounge": 130,
+  "Dresses": 91,
+  "Active": 85,
+  "Jeans": 34,
+  "Swimsuits & Cover Ups": 32,
+  "Coats, Jackets & Vests": 27,
+  "Fashion Hoodies & Sweatshirts": 25
+ }
+}

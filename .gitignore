@@ -1,0 +1,33 @@
+# Môi trường và bộ nhớ đệm
+.venv/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+.env
+
+# Dữ liệu thô và dữ liệu đã xử lý có chứa văn bản mô tả, đánh giá gốc của Tiki
+# (không phân phối lại; xem README, mục Dữ liệu và đạo đức). Chỉ công bố data/public/.
+data/raw/
+data/processed/
+
+# Mô hình tải về và adapter huấn luyện (dung lượng lớn)
+models/
+
+# Thư mục làm việc trung gian (chứa phản hồi thô của giám khảo, prompt đầy đủ có mô tả gốc)
+_workspace/
+logs/
+
+# Bản dựng tài liệu, slide và công cụ cục bộ
+paper/build/
+slides/node_modules/
+slides/qa/
+slides/*.png
+assets/
+tests/fixtures/
+
+# Bài báo và slide là sản phẩm nộp môn học, không đưa lên kho công khai
+paper/
+slides/
+
+# Cấu hình Jupyter cục bộ
+.jupyter_work/
