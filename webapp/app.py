@@ -14,12 +14,11 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from llm_api import generate_via_api
-from metrics_content import detect_lang, email_checks, factual_support, script_rule_checks, seo_checks
+from metrics_content import detect_lang, email_checks, factual_support, seo_checks
 from prompts import engineered, template_output, zero_shot
 
 DATA = ROOT / "webapp" / "data"
 MAX_RUNS = 20
-NOI_BO = "Quy tắc do nhóm nghiên cứu tự đặt"
 
 # Nguồn công bố của từng ngưỡng: (tên tổ chức, năm nếu trang có ghi, địa chỉ).
 REFS = {
@@ -55,8 +54,6 @@ EMAIL = {
     "punct_le3": ("≤3 dấu câu", "E02", "Không lạm dụng dấu câu"),
     "emoji_le1": ("≤1 emoji", "E03", "Nhiều nhất một emoji"),
     "no_fake_re_fwd": ("Không có Re:/Fwd:", "E16", "Không giả mạo thư trả lời"),
-    "keyword_relevance": ("Có từ khóa", None, "Tiêu đề email nhắc đến sản phẩm"),
-    "offer_supported": ("Chỉ ưu đãi bạn đã nhập", None, "Không hứa ưu đãi mà bạn chưa nhập"),
 }
 
 HUONG_DAN_KHOA = """
@@ -81,9 +78,10 @@ def load(name, fallback):
 
 
 def source_text(code):
-    """Ghi nguồn ngắn gọn: tổ chức, năm nếu trang có ghi, kèm địa chỉ."""
-    if not code:
-        return NOI_BO
+    """Ghi nguồn ngắn gọn: tổ chức, năm nếu trang có ghi, kèm địa chỉ.
+
+    Bảng kiểm tra chỉ hiển thị tiêu chí có nguồn công bố, nên mọi tiêu chí đều có mã nguồn.
+    """
     name, year, url = REFS[code]
     return f"{name} ({year}) · {url}" if year else f"{name} · {url}"
 
@@ -130,24 +128,13 @@ def collect_checks(content, brief, lang):
                   "omnisend_4_6w_or_21_40c": f"{email['words_space']} từ, {email['chars']} ký tự",
                   "punct_le3": email["punctuation"], "emoji_le1": email["emoji"]}
         for key, (threshold, ref, friendly) in EMAIL.items():
-            flag = None if (mixed and key == "keyword_relevance") else email["checks"][key]
+            flag = email["checks"][key]
             rows.append({"Tiêu chí": f"Email {index}: {friendly}",
                          "Đo được": str(values.get(key, flag)) if flag is not None else "—",
                          "Khuyến nghị": threshold, "Đạt?": "✅" if flag is True else "❌" if flag is False else "—",
                          "Nguồn khuyến nghị": source_text(ref)})
             if isinstance(flag, bool):
                 (email_pass if flag else email_fail).append(f"Email {index}: {friendly}")
-    script = script_rule_checks(content.get("sales_script", ""), brief, brief.get("objections", []))
-    cta = bool(script["cta_present"])
-    rows.append({"Tiêu chí": "Kịch bản có câu mời khách chốt đơn", "Đo được": "Có" if cta else "Không",
-                 "Khuyến nghị": "Có", "Đạt?": "✅" if cta else "❌", "Nguồn khuyến nghị": NOI_BO})
-    (passed if cta else failed).append("Kịch bản có câu mời khách chốt đơn")
-    coverage = script["objection_keyword_coverage"]
-    if coverage is not None:
-        ok = coverage == 1
-        rows.append({"Tiêu chí": "Kịch bản trả lời các lo ngại bạn đã chọn", "Đo được": f"{100 * coverage:.0f}%",
-                     "Khuyến nghị": "100%", "Đạt?": "✅" if ok else "❌", "Nguồn khuyến nghị": NOI_BO})
-        (passed if ok else failed).append("Kịch bản trả lời các lo ngại bạn đã chọn")
     all_text = " ".join([content.get("title", ""), content.get("meta_description", ""), content.get("description", ""),
                          content.get("sales_script", "")] + content.get("email_subjects", []))
     unsupported = [] if mixed else factual_support(all_text, brief)["unsupported_list"]
@@ -174,13 +161,13 @@ def show_review(content, brief, lang, detailed=False):
         st.warning("Các chi tiết sau có trong bài nhưng bạn chưa nhập, hãy kiểm tra lại cho đúng sản phẩm: "
                    + ", ".join(summary["unsupported"]))
     if summary.get("mixed"):
-        st.info("Từ khóa bạn nhập khác ngôn ngữ với nội dung được viết, nên phần kiểm tra từ khóa và kiểm tra "
-                "chi tiết sản phẩm được bỏ qua. Nhập từ khóa cùng ngôn ngữ với nội dung để chấm được đầy đủ.")
+        st.info("Từ khóa bạn nhập khác ngôn ngữ với nội dung được viết, nên các tiêu chí về từ khóa và phần "
+                "kiểm tra chi tiết sản phẩm được bỏ qua. Nhập từ khóa cùng ngôn ngữ với nội dung để chấm đầy đủ.")
     with st.expander("Xem từng tiêu chí và nguồn khuyến nghị", expanded=detailed):
         st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
-        st.caption("Các ngưỡng là khuyến nghị đã công bố của Ahrefs, Yoast, Tiki Academy, Mailchimp, Omnisend và "
-                   f"Google; những dòng ghi “{NOI_BO}” là quy tắc tác giả đặt ra cho nghiên cứu này, không phải "
-                   "khuyến nghị của bên ngoài. Đạt các ngưỡng này không bảo đảm bán được nhiều hơn.")
+        st.caption("Mọi ngưỡng trong bảng đều là khuyến nghị đã công bố của Ahrefs, Yoast, Tiki Academy, "
+                   "Mailchimp, Omnisend và Google, bấm địa chỉ để đọc nguồn gốc. Đạt các ngưỡng này không bảo "
+                   "đảm bán được nhiều hơn.")
     return seo
 
 
