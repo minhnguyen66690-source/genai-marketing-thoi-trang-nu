@@ -262,7 +262,7 @@ with results:
         st.image(str(image), caption=captions.get(image.name, image.stem.replace("_", " ")))
 
 with methodology:
-    st.write("Quy trình: chuẩn bị dữ liệu tổng hợp, xây dựng prompt, sinh nội dung và đánh giá bằng checklist cùng các chỉ số nghiên cứu.")
+    st.write("Quy trình: chuẩn bị dữ liệu tổng hợp, xây dựng prompt, sinh nội dung và đánh giá bằng danh sách kiểm tra có nguồn cùng các chỉ số nghiên cứu.")
     diagram = ASSETS / "diag_01_kien_truc_he_thong.png"
     if diagram.exists():
         st.image(str(diagram), caption="Kiến trúc hệ thống")

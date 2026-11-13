@@ -113,7 +113,7 @@ def table_related():
         ["Jobson và cộng sự (2025)", "Tiêu đề email marketing", "Gợi ý sản phẩm + mô hình ngôn ngữ lớn, A/B test", "Tỷ lệ mở +0,46% (không có ý nghĩa); nhấp sản phẩm +23,63%", "Một nền tảng, ngôn ngữ khác tiếng Việt"],
         ["Liu và cộng sự (2025)", "Quảng cáo theo từ khóa", "Truy hồi tăng cường + bộ đánh giá luật và giám khảo LLM", "Đồng thuận 89,57% với người duyệt", "Chưa đo doanh số"],
         ["Durmus và cộng sự (2024); Salvi và cộng sự (2025)", "Văn bản thuyết phục", "Đo thay đổi quan điểm, thử nghiệm ngẫu nhiên", "Ngang người viết; GPT-4 cá nhân hóa tăng 81,2% odds đồng thuận", "Đo thái độ, chưa đo đơn hàng"],
-        ["Nghiên cứu này", "Thời trang nữ Tiki + Amazon", "So sánh M0–M4 trên cùng tập; checklist có nguồn; dự báo bán chạy", "Xem mục 7", "Chưa thử nghiệm A/B thực tế"],
+        ["Nghiên cứu này", "Thời trang nữ Tiki + Amazon", "So sánh M0–M4 trên cùng tập; danh sách kiểm tra có nguồn; dự báo bán chạy", "Xem mục 7", "Chưa thử nghiệm A/B thực tế"],
     ]
     save("related_works", "Tóm tắt các nghiên cứu liên quan", "Nguồn: tác giả tổng hợp",
          ["Nghiên cứu", "Bài toán", "Phương pháp", "Kết quả chính", "Hạn chế"], rows, [3.3, 2.7, 3.8, 3.6, 2.8])
