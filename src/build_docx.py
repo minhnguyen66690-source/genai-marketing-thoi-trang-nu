@@ -344,8 +344,19 @@ def build(out, skip_com=False):
     pgnum = OxmlElement('w:pgNumType'); pgnum.set(qn('w:start'), '1'); section._sectPr.append(pgnum)
     def title(text):
         p = doc.add_paragraph(); centered(p); p.add_run(text).bold = True
+    # Mục lục và danh mục gọn: dòng đơn, không khoảng trống sau đoạn,
+    # để mục lục nằm trong một trang và hai danh mục chung một trang.
+    for name in ('toc 1', 'toc 2', 'table of figures'):
+        try:
+            st = doc.styles[name]
+        except KeyError:
+            st = doc.styles.add_style(name, WD_STYLE_TYPE.PARAGRAPH)
+        st.font.name = 'Times New Roman'; st.font.size = Pt(12)
+        pf = st.paragraph_format
+        pf.space_before = Pt(0); pf.space_after = Pt(0); pf.line_spacing = 1.0; pf.first_line_indent = Pt(0)
+        pf.left_indent = Pt(14) if name == 'toc 2' else Pt(0)
     title('MỤC LỤC')
-    field(doc.add_paragraph(), 'TOC \\o "1-3" \\h \\z \\u')
+    field(doc.add_paragraph(), 'TOC \\o "1-2" \\h \\z \\u')
     doc.add_page_break()
     title('DANH MỤC HÌNH'); field(doc.add_paragraph(), 'TOC \\h \\z \\c "Hình"')
     title('DANH MỤC BẢNG'); field(doc.add_paragraph(), 'TOC \\h \\z \\c "Bảng"')

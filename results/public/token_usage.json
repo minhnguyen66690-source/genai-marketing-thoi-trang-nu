@@ -1,0 +1,11 @@
+{
+ "method": "M2",
+ "n_products": 99,
+ "tokenizer": "o200k_base (tiktoken 0.14.0)",
+ "input_tokens_mean": 867,
+ "input_tokens_max": 969,
+ "output_tokens_mean": 644,
+ "output_tokens_max": 707,
+ "latency_s_mean": 14.18,
+ "note": "1 sản phẩm mỗi lần gọi, đúng như website demo"
+}

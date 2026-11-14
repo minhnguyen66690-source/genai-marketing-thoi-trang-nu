@@ -1,0 +1,84 @@
+[
+ {
+  "config": "M4b_giai_ma_cu",
+  "val_loss": 2.55,
+  "n_eval": 10,
+  "pct_repetitive": 100.0,
+  "mean_latency_s": 32.5,
+  "mean_words": 199.2,
+  "sample": "Áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ áo khoác nữ ",
+  "r": 16,
+  "lr": 0.0002,
+  "steps": 100,
+  "decode": {
+   "repetition_penalty": 1.1
+  }
+ },
+ {
+  "config": "M4b_chan_lap_3tu",
+  "val_loss": 2.55,
+  "n_eval": 10,
+  "pct_repetitive": 0.0,
+  "mean_latency_s": 27.4,
+  "mean_words": 152.7,
+  "sample": "Đặc điểm của áo khoác tún nữ:\n1. Chất liệu: Dây thun cao cấp, mềm mịn, thoáng mát.\n2. Màu sắc đa dạng, dễ phối đồ với nhiều kiểu dáng khác nhau.\n3. Tùy chiều mặc phù hợp với mọi độ tuổi và sở thích.\n4. Có thể kết hợp cùng quần jeans hoặc váy ôm người để tạo nên phong cách riêng biệt.\n5. Đảm bảo an t",
+  "r": 16,
+  "lr": 0.0002,
+  "steps": 100,
+  "decode": {
+   "repetition_penalty": 1.2,
+   "no_repeat_ngram_size": 3
+  }
+ },
+ {
+  "config": "r8_lr1e-4",
+  "val_loss": 2.802,
+  "n_eval": 10,
+  "pct_repetitive": 0.0,
+  "mean_latency_s": 26.4,
+  "mean_words": 154.4,
+  "sample": "Dưới đây là một số gợi ý về mẫu áo khoác và túi của bạn:\n\n1. Áo Vest - ÁO KHOACH NAM:\n- Màu sắc: L (55 - 64 kg) - M (45 -54 kg)\n- Khí chất: Dễ thương\n- Chống nắng: Yes\n- Số lượng: Tùy thuộc vào nhu cầu sử dụng\n- Chi phí: Trong nước khoảng 20k/ item\n\n2. Áp Sách - Áp Cụm:\n- Áp sách có thể được làm từ ",
+  "r": 8,
+  "lr": 0.0001,
+  "steps": 40,
+  "train_minutes": 43.5,
+  "decode": {
+   "repetition_penalty": 1.2,
+   "no_repeat_ngram_size": 3
+  }
+ },
+ {
+  "config": "r16_lr5e-5",
+  "val_loss": 2.815,
+  "n_eval": 10,
+  "pct_repetitive": 0.0,
+  "mean_latency_s": 55.0,
+  "mean_words": 159.0,
+  "sample": "Dưới đây là một gợi ý về mẫu áo khoác và túi xách của bạn:\n\nÁo khoac nữ 100% cotton, có lót mềm mát.\nĐặc điểm:\n- Chải nhẹ khi mặc\n- Dễ dàng thay đổi kiểu dáng\n- Tùy chỉnh size phù hợp với mọi chiều cao\n\nTúi xách nữ 200gcm, có khóa kéo\nĐặc biệt:\n- Có nhiều kích thước để phù hợp mọi người\n- Đảm bảo an",
+  "r": 16,
+  "lr": 5e-05,
+  "steps": 40,
+  "train_minutes": 40.4,
+  "decode": {
+   "repetition_penalty": 1.2,
+   "no_repeat_ngram_size": 3
+  }
+ },
+ {
+  "config": "r16_lr1e-4",
+  "val_loss": 2.762,
+  "n_eval": 10,
+  "pct_repetitive": 0.0,
+  "mean_latency_s": 21.1,
+  "mean_words": 137.3,
+  "sample": "Dưới đây là một số mẫu áo khoác đẹp cho bạn gái yêu thích:\n1. Áo hoa văn cổ điển\n2. Áp dụng các kiểu dáng khác nhau như áo khoát, áo thun, áo sơ mi, áo quần...\n3. Ác đồng hồ, túi xách, giày dép...",
+  "r": 16,
+  "lr": 0.0001,
+  "steps": 40,
+  "train_minutes": 286.7,
+  "decode": {
+   "repetition_penalty": 1.2,
+   "no_repeat_ngram_size": 3
+  }
+ }
+]

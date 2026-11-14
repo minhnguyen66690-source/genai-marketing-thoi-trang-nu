@@ -211,6 +211,13 @@ if loss_path.exists():
         sns.lineplot(data=loss, x='step', y='loss', hue='kind'); plt.title('Loss tinh chỉnh Tiki'); plt.show()
 else: print('chưa có kết quả: loss')
 show_generations(['M4a', 'M4b'])''')
+md('''### 10b. Thử cách sinh chữ và siêu tham số cho mô hình nhỏ
+Chạy trên CPU bằng src/ft_sweep.py, đánh giá trên 10 sản phẩm của tập kiểm định. Hai dòng đầu dùng cùng adapter M4b, chỉ khác cách sinh chữ; các dòng sau huấn luyện lại 40 bước với hạng LoRA (r) và tốc độ học (lr) khác.''')
+code('''sweep = read_json(PUBLIC / 'ft_sweep.json')
+if sweep:
+    display(pd.DataFrame(sweep).drop(columns=['sample', 'decode'], errors='ignore'))
+else:
+    print('chưa có kết quả: ft_sweep.json')''')
 md('''## 11. Đánh giá
 ROUGE-L, chrF++ và BERTScore so với tham chiếu; checklist và tỷ lệ thuộc tính không có căn cứ là thước đo theo luật, không thay thế kiểm duyệt. Các ngưỡng S../E.. ánh xạ trong `src/evaluate.py` và `_workspace/01_research/verified_refs.md`; proxy được ghi rõ trong mã. Wilcoxon đã hiệu chỉnh Holm lấy từ kết quả lưu.''')
 code('''if RUN_JUDGE:
@@ -253,6 +260,20 @@ code('''if not evaluation.empty:
     if 'latency_s' in comparison: display((comparison['latency_s'] * 100).rename('Giây cho 100 sản phẩm, tuần tự'))
 else: print('chưa có kết quả: chưa thể chọn cấu hình')
 print('Quy trình: kiểm tra brief → sinh → người duyệt dữ kiện, giọng điệu và chính sách → chỉnh sửa → đăng.')''')
+md('''### 12b. Chi phí và thời gian cho một shop
+Số token đếm thật trên 99 sản phẩm của M2 (src/token_usage.py, bộ tách token o200k_base, ước lượng). Giá công bố, truy cập 14/11/2026: Gemini 3.8 Flash 0,75/3,75 USD mỗi triệu token vào/ra (Google AI Studio, giá áp dụng đến 31/12/2026); gpt-6.1-terra 1/5 USD (OpenAI). Quy đổi làm tròn 26.000 đồng/USD là giả định để dễ hình dung, không phải tỷ giá chính thức.''')
+code('''tok = read_json(PUBLIC / 'token_usage.json')
+if tok:
+    price = {'Gemini 3.8 Flash': (0.75, 3.75), 'gpt-6.1-terra': (1.0, 5.0)}
+    rows = []
+    for model, (p_in, p_out) in price.items():
+        usd = (tok['input_tokens_mean'] * p_in + tok['output_tokens_mean'] * p_out) / 1e6
+        rows.append({'Mô hình': model, 'USD/sản phẩm': round(usd, 5), 'Đồng/sản phẩm (26.000 đ/USD)': round(usd * 26000),
+                     'Đồng cho 50 mẫu/tháng': round(usd * 26000 * 50)})
+    display(pd.DataFrame(rows))
+    print('Thời gian máy viết 50 mẫu:', round(50 * tok['latency_s_mean'] / 60, 1), 'phút')
+else:
+    print('chưa có kết quả: token_usage.json')''')
 md('''## 13. Công cụ AI được sử dụng
 | Công cụ | Vai trò được khai báo |
 |---|---|
