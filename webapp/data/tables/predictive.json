@@ -1,0 +1,60 @@
+{
+ "caption": "Kết quả phân lớp sản phẩm bán chạy (huấn luyện 1.552, kiểm tra 389 sản phẩm)",
+ "source": "Nguồn: tác giả chạy thực nghiệm; AUC CV là trung bình ± độ lệch chuẩn của 5 phần kiểm định chéo trên tập huấn luyện",
+ "columns": [
+  "Mô hình",
+  "ROC-AUC CV",
+  "ROC-AUC kiểm tra",
+  "PR-AUC",
+  "F1",
+  "Precision",
+  "Recall"
+ ],
+ "rows": [
+  [
+   "Logistic Regression",
+   "0,803 ± 0,017",
+   "0,766",
+   "0,504",
+   "0,525",
+   "0,412",
+   "0,723"
+  ],
+  [
+   "Random Forest",
+   "0,830 ± 0,020",
+   "0,821",
+   "0,570",
+   "0,584",
+   "0,481",
+   "0,743"
+  ],
+  [
+   "XGBoost",
+   "0,836 ± 0,022",
+   "0,826",
+   "0,591",
+   "0,580",
+   "0,504",
+   "0,683"
+  ],
+  [
+   "XGBoost, chỉ biến kiểm soát",
+   "0,831 ± 0,017",
+   "0,803",
+   "–",
+   "–",
+   "–",
+   "–"
+  ]
+ ],
+ "col_widths_cm": [
+  4.4,
+  2.6,
+  2.0,
+  1.7,
+  1.6,
+  1.9,
+  1.6
+ ]
+}

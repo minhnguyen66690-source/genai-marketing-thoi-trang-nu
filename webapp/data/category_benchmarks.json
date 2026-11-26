@@ -1,0 +1,122 @@
+{
+  "Chân váy": {
+    "all": {
+      "desc_len_words": 126.0,
+      "n_bullets": 0.0,
+      "title_len_chars": 45.0,
+      "n": 98
+    }
+  },
+  "Quần nữ": {
+    "all": {
+      "desc_len_words": 229,
+      "n_bullets": 3,
+      "title_len_chars": 64,
+      "n": 237
+    }
+  },
+  "Thời trang bầu và sau sinh": {
+    "all": {
+      "desc_len_words": 187.5,
+      "n_bullets": 1.0,
+      "title_len_chars": 56.5,
+      "n": 20
+    }
+  },
+  "Thời trang nữ trung niên": {
+    "all": {
+      "desc_len_words": 276,
+      "n_bullets": 7,
+      "title_len_chars": 96,
+      "n": 35
+    }
+  },
+  "Trang phục bơi nữ": {
+    "all": {
+      "desc_len_words": 232,
+      "n_bullets": 4,
+      "title_len_chars": 82,
+      "n": 155
+    }
+  },
+  "Áo crop-top": {
+    "all": {
+      "desc_len_words": 152.0,
+      "n_bullets": 0.0,
+      "title_len_chars": 51.5,
+      "n": 28
+    }
+  },
+  "Áo kiểu nữ": {
+    "all": {
+      "desc_len_words": 163,
+      "n_bullets": 1,
+      "title_len_chars": 53,
+      "n": 59
+    }
+  },
+  "Áo liền quần - Bộ trang phục": {
+    "all": {
+      "desc_len_words": 128.0,
+      "n_bullets": 0.0,
+      "title_len_chars": 58.5,
+      "n": 142
+    }
+  },
+  "Áo sơ mi nữ": {
+    "all": {
+      "desc_len_words": 221.0,
+      "n_bullets": 7.0,
+      "title_len_chars": 62.5,
+      "n": 126
+    }
+  },
+  "Áo thun nữ": {
+    "all": {
+      "desc_len_words": 138.5,
+      "n_bullets": 0.0,
+      "title_len_chars": 59.0,
+      "n": 162
+    }
+  },
+  "Áo vest - Áo khoác nữ": {
+    "all": {
+      "desc_len_words": 192,
+      "n_bullets": 2,
+      "title_len_chars": 60,
+      "n": 383
+    }
+  },
+  "Đầm nữ": {
+    "all": {
+      "desc_len_words": 163.0,
+      "n_bullets": 3.0,
+      "title_len_chars": 56.0,
+      "n": 252
+    }
+  },
+  "Đồ lót nữ": {
+    "all": {
+      "desc_len_words": 235,
+      "n_bullets": 3,
+      "title_len_chars": 67,
+      "n": 485
+    }
+  },
+  "Đồ ngủ - Đồ mặc nhà nữ": {
+    "all": {
+      "desc_len_words": 155.5,
+      "n_bullets": 3.0,
+      "title_len_chars": 70.0,
+      "n": 380
+    }
+  },
+  "Đồ đôi - Đồ gia đình": {
+    "all": {
+      "desc_len_words": 423,
+      "n_bullets": 10,
+      "title_len_chars": 62,
+      "n": 57
+    }
+  }
+}

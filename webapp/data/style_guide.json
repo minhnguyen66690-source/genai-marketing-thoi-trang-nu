@@ -1,0 +1,491 @@
+{
+ "Đầm nữ": {
+  "dip": [
+   "đi làm văn phòng",
+   "đi chơi, dạo phố",
+   "đi du lịch",
+   "dự tiệc gia đình với mẫu vải và kiểu dáng phù hợp",
+   "Đi làm văn phòng với mẫu kín đáo, dài qua gối",
+   "Đi cà phê, dạo phố",
+   "Dự tiệc nhẹ, gặp mặt gia đình",
+   "Đi du lịch với mẫu vải nhẹ"
+  ],
+  "phoi_voi": [
+   "giày búp bê màu be",
+   "sandal quai mảnh màu trắng",
+   "giày sneaker trắng",
+   "túi đeo chéo nhỏ màu nâu",
+   "thắt lưng bản nhỏ nếu đầm có kiểu dáng phù hợp",
+   "Giày cao gót mũi nhọn màu be",
+   "Giày búp bê màu kem",
+   "Sandal quai mảnh màu trắng"
+  ],
+  "khong_goi_y": [
+   "mặc mọi mẫu đầm suông đi biển hoặc đi tiệc mà không xét chất liệu, kiểu dáng",
+   "phối đầm dài với quần jean như quy tắc chung",
+   "dùng đầm vải thường thay đồ bơi",
+   "Mặc đầm xòe dự tiệc có chi tiết cứng, cộm để đi ngủ",
+   "Mặc đầm xòe quá ngắn hoặc hở nhiều đến công sở",
+   "Chọn giày cao gót nhọn khi đi trên cát biển",
+   "Mặc đầm ôm khoét sâu hoặc quá ngắn đến công sở",
+   "Chọn đồ lót có đường viền dày dưới đầm mỏng, ôm sát"
+  ],
+  "luu_y_size": "Chọn theo vòng ngực, vai và bắp tay, đồng thời kiểm tra chiều dài đầm và độ rộng phần hông theo bảng size của mẫu. Đo vòng ngực, eo và đối chiếu bảng size của mẫu; nếu eo cố định, chọn size vừa eo và kiểm tra thêm chiều dài váy.",
+  "ghi_chu": "Gộp từ các loại: Đầm suông, Đầm Dáng Xòe, Đầm dáng ôm, Đầm dự tiệc, Đầm maxi, Đầm công sở, Đầm Jumpsuit, Đầm chữ A, Đầm yếm, Đầm Baby Doll. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Chân váy": {
+  "dip": [
+   "Đi cà phê, dạo phố",
+   "Gặp bạn bè",
+   "Chơi tennis hoặc pickleball với váy thể thao có quần trong",
+   "Đi làm nếu chiều dài phù hợp quy định nơi làm việc",
+   "Đi làm với váy dài kín đáo",
+   "Hẹn hò hoặc gặp bạn bè",
+   "Đi lễ với váy không xuyên thấu, xẻ vừa phải",
+   "Đi làm với váy dài vừa phải"
+  ],
+  "phoi_voi": [
+   "Áo thun trắng sơ vin với váy chữ A",
+   "Áo sơ mi xanh nhạt với váy đen dài trên gối vừa phải",
+   "Áo polo thể thao với váy tennis có quần trong",
+   "Sneaker trắng và tất cổ ngắn",
+   "Áo sơ mi trắng sơ vin",
+   "Áo thun trơn màu be",
+   "Áo blouse tay ngắn màu kem",
+   "Sandal quai mảnh hoặc giày búp bê"
+  ],
+  "khong_goi_y": [
+   "Mặc váy quá ngắn tại nơi làm việc yêu cầu trang phục nghiêm túc",
+   "Dùng váy thời trang không có quần trong để chơi tennis nếu dễ bị lộ khi vận động",
+   "Mặc váy vải thường xuống hồ bơi",
+   "Mặc váy quá dài quét đất khi di chuyển bằng xe máy",
+   "Mặc váy xuyên thấu hoặc xẻ cao đi lễ",
+   "Mặc chân váy dài bó sát để chạy bộ",
+   "Mặc váy quá ngắn đến nơi làm việc yêu cầu trang phục nghiêm túc",
+   "Chọn áo quá dài phủ hết phần eo nếu muốn thấy dáng chữ A"
+  ],
+  "luu_y_size": "Chọn theo vòng eo và hông, thử ngồi và cúi người để kiểm tra độ dài và độ ôm. Đo eo và hông, đồng thời kiểm tra chiều dài váy theo chiều cao để gấu không vướng khi đi lại.",
+  "ghi_chu": "Gộp từ các loại: Chân váy ngắn, Chân váy dài, Chân váy chữ A, Chân váy xếp li, Chân váy bút chì. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Quần nữ": {
+  "dip": [
+   "Đi dạo phố hoặc cà phê",
+   "Đi biển, du lịch",
+   "Tập gym hoặc chạy bộ với shorts thể thao",
+   "Mặc ở nhà với shorts chất liệu phù hợp",
+   "Đi làm văn phòng",
+   "Đi chơi, dạo phố",
+   "Đi cà phê, gặp bạn bè",
+   "Đi biển với quần vải mỏng phù hợp"
+  ],
+  "phoi_voi": [
+   "Áo thun trắng và sneaker với shorts jean xanh",
+   "Áo sơ mi linen rộng và sandal với shorts kaki màu be khi đi biển",
+   "Áo thể thao thấm hút mồ hôi và giày chạy bộ với shorts tập",
+   "Áo thun cotton và dép đi trong nhà với shorts mặc nhà",
+   "Áo sơ mi trắng sơ vin",
+   "Áo thun trơn màu kem",
+   "Áo hai dây đen cùng sơ mi mỏng khoác ngoài",
+   "Áo gile cùng màu quần và blazer"
+  ],
+  "khong_goi_y": [
+   "Mặc shorts quá ngắn đến công sở yêu cầu trang phục lịch sự",
+   "Dùng shorts jean dày để tập yoga hoặc chạy bộ",
+   "Coi shorts mặc nhà mỏng là trang phục phù hợp cho mọi nơi công cộng",
+   "Mặc quần vải dài quét đất khi đi biển",
+   "Dùng quần ống rộng vải tây để tập gym hoặc chạy bộ",
+   "Mặc quần vải mỏng xuyên thấu đi làm mà không có lớp lót phù hợp",
+   "Dùng legging thông thường làm quần bơi",
+   "Mặc legging mỏng, xuyên thấu đến công sở"
+  ],
+  "luu_y_size": "Đo vòng eo và vòng mông theo bảng size, kiểm tra đùi và đáy quần có đủ chỗ khi ngồi hoặc vận động. Đo vòng eo, mông và chiều dài từ cạp đến gấu, chọn theo bảng size và chiều cao thực tế để ống quần không quét đất.",
+  "ghi_chu": "Gộp từ các loại: Quần shorts nữ, Quần ống rộng nữ, Quần legging - tregging nữ, Quần tây nữ, Quần jean nữ, Quần baggy nữ, Quần yếm. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Áo vest - Áo khoác nữ": {
+  "dip": [
+   "đi làm văn phòng",
+   "họp hoặc gặp khách hàng",
+   "đi chơi, gặp bạn bè",
+   "dự tiệc hoặc sự kiện nếu kiểu áo phù hợp",
+   "Di chuyển bằng xe máy ban ngày",
+   "Đi chợ hoặc đi làm dưới trời nắng",
+   "Đi bộ ngoài trời",
+   "Đi du lịch, tham quan ngoài trời"
+  ],
+  "phoi_voi": [
+   "áo sơ mi trắng và quần tây ống đứng màu đen",
+   "áo thun trơn trắng và quần jean xanh đậm",
+   "áo hai dây kín đáo và chân váy midi màu be",
+   "đầm suông trơn màu đen",
+   "giày loafer hoặc giày cao gót mũi kín",
+   "Áo thun cotton mỏng mặc bên trong",
+   "Quần dài ống suông màu tối",
+   "Váy chống nắng che chân khi đi xe máy"
+  ],
+  "khong_goi_y": [
+   "mặc blazer thông thường để tập gym hoặc yoga",
+   "coi blazer là áo khoác chống nắng chuyên dụng",
+   "mặc blazer dày khi vận động lâu ngoài trời nắng nóng",
+   "Khẳng định mọi áo chống nắng đều chặn hoàn toàn tia UV",
+   "Bỏ qua kem chống nắng ở vùng da hở chỉ vì đã mặc áo",
+   "Để vạt áo hoặc váy chống nắng quá dài, dễ vướng bánh xe",
+   "Mặc áo dày, bí khi tập cường độ cao dưới trời nóng",
+   "Mặc áo len hoặc nỉ dày giữa trưa nóng"
+  ],
+  "luu_y_size": "Đo ngang vai, vòng ngực và dài tay; thử cùng lớp áo định mặc bên trong để vai không bị kéo căng khi cử động. Chọn áo đủ rộng để mặc ngoài trang phục thường ngày, tay đủ dài che cổ tay và vẫn cử động, điều khiển xe dễ dàng.",
+  "ghi_chu": "Gộp từ các loại: Áo vest, blazer nữ, Áo khoác chống nắng nữ, Áo len - Áo khoác nỉ nữ, Áo khoác bomber jackets, Áo khoác gió nữ, Áo cardigan nữ, Áo khoác jeans nữ, Áo hoodies nữ, Áo khoác dạ nữ, Áo khoác phao nữ, Áo khoác da nữ. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Áo liền quần - Bộ trang phục": {
+  "dip": [
+   "Đi cà phê hoặc dạo phố",
+   "Đi du lịch với jumpsuit dáng thoải mái",
+   "Dự tiệc nhẹ với jumpsuit có chất liệu và kiểu dáng phù hợp",
+   "Đi làm với jumpsuit dài, kín đáo",
+   "Đi làm văn phòng với bộ áo và quần hoặc chân váy kín đáo",
+   "Đi cà phê, dạo phố với set áo quần",
+   "Đi lễ hoặc chụp ảnh với bộ áo dài cách tân phù hợp",
+   "Đi chúc Tết, du xuân"
+  ],
+  "phoi_voi": [
+   "Áo blazer màu be khoác ngoài jumpsuit đen",
+   "Sandal quai mảnh màu nude",
+   "Giày búp bê mũi nhọn màu đen",
+   "Giày sneaker trắng với jumpsuit dáng ngắn",
+   "Túi đeo vai nhỏ màu nâu",
+   "Giày búp bê màu be với bộ áo và chân váy công sở",
+   "Giày sneaker trắng với set áo quần đi chơi",
+   "Sandal quai mảnh màu trung tính với bộ áo dài cách tân"
+  ],
+  "khong_goi_y": [
+   "Mặc jumpsuit đùi hoặc cổ yếm hở nhiều ở văn phòng yêu cầu kín đáo",
+   "Coi áo liền quần và bộ áo quần mặc nhà là cùng một kiểu đồ",
+   "Chọn jumpsuit quá chật ở đũng và hông khiến khó ngồi hoặc cúi",
+   "Mặc đồ hóa trang đến công sở thông thường",
+   "Mặc bộ áo dài mỏng xuyên thấu đi lễ",
+   "Mặc set công sở dày, dài để xuống hồ bơi",
+   "Mặc áo dài truyền thống xẻ tà mà không mặc quần bên trong",
+   "Mặc nội y màu đậm lộ rõ dưới áo dài trắng mỏng"
+  ],
+  "luu_y_size": "Đo vòng ngực, eo, mông và đối chiếu thêm chiều dài thân áo liền quần để tránh bị kéo căng ở đũng. Đo ngực, eo và hông rồi đối chiếu số đo từng phần của bộ, ưu tiên phần khó chỉnh nhất khi chọn size.",
+  "ghi_chu": "Gộp từ các loại: Áo liền quần, Bộ trang phục, Áo dài. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Thời trang bầu và sau sinh": {
+  "dip": [
+   "Đi làm văn phòng với mẫu kín đáo",
+   "Đi khám thai",
+   "Đi cà phê, dạo phố",
+   "Dự họp mặt gia đình với mẫu lịch sự",
+   "Đi làm văn phòng",
+   "Đi chơi, gặp bạn bè",
+   "Mặc ở nhà",
+   "mặc hằng ngày trong thai kỳ"
+  ],
+  "phoi_voi": [
+   "Giày búp bê đế thấp màu be",
+   "Sandal đế bằng quai điều chỉnh được",
+   "Giày sneaker trắng nhẹ",
+   "Áo khoác cardigan mỏng màu kem",
+   "Túi đeo chéo nhỏ, dây điều chỉnh được",
+   "Quần bầu ống suông màu đen có đai nâng bụng",
+   "Quần jean bầu xanh đậm với phần cạp co giãn",
+   "Chân váy bầu chữ A màu be"
+  ],
+  "khong_goi_y": [
+   "Thắt dây lưng chặt ngang bụng bầu",
+   "Chọn đầm bó sát bụng chỉ theo cân nặng trước thai kỳ",
+   "Gợi ý giày gót quá cao, khó giữ thăng bằng",
+   "Phối với quần cạp cứng siết chặt bụng",
+   "Chọn áo vừa khít bụng hiện tại mà không chừa chỗ cho bụng lớn lên",
+   "Gợi ý giày gót nhọn cao khi phải đi lại nhiều",
+   "mặc đồ lót bầu như trang phục bên ngoài",
+   "chọn cạp quần bó chặt hoặc hằn sâu vào bụng"
+  ],
+  "luu_y_size": "Đo vòng ngực và vòng bụng ở thời điểm mặc, chọn theo bảng size có phần bụng đủ rộng và tính thêm chỗ cho bụng phát triển. Đo vòng ngực, vòng bụng hiện tại và xem bảng size áo bầu, chọn dáng có độ rộng hoặc co giãn cho bụng phát triển.",
+  "ghi_chu": "Gộp từ các loại: Đầm bầu, Áo bầu, Đồ lót bầu. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Thời trang nữ trung niên": {
+  "dip": [
+   "Mặc ở nhà với bộ đồ mặc nhà",
+   "Đi chợ, gặp gỡ gần nhà",
+   "Đi chơi, thăm người thân với bộ kiểu lịch sự",
+   "Đi chợ hoặc gặp bạn bè",
+   "Đi thăm người thân",
+   "Dự buổi họp mặt gia đình",
+   "đi làm văn phòng",
+   "đi thăm người thân"
+  ],
+  "phoi_voi": [
+   "Áo lụa trung niên cùng quần đũi ống suông màu đen",
+   "Áo đũi thêu hoa cùng quần suông màu kem",
+   "Bộ áo quần đồng màu cùng sandal quai ngang",
+   "Bộ đồ kiểu đi chơi cùng giày búp bê và túi đeo vai nhỏ",
+   "Quần đũi ống suông màu đen với áo đũi thêu hoa",
+   "Quần tây ống đứng màu be",
+   "Chân váy midi dáng chữ A màu xanh đậm",
+   "Giày búp bê đế thấp màu đen"
+  ],
+  "khong_goi_y": [
+   "Xem mũ che nắng là bộ quần áo trung niên",
+   "Mặc bộ đồ ngủ đi dự tiệc trang trọng",
+   "Khẳng định mọi loại vải lụa nhân tạo đều thấm hút mồ hôi tốt",
+   "Mặc áo xuyên thấu mà không có lớp lót phù hợp",
+   "Chọn áo quá chật ở ngực và bắp tay",
+   "Mặc áo nhàu hoặc quá xuề xòa đến buổi lễ trang trọng",
+   "mặc đầm ren dự tiệc để bơi",
+   "chọn đầm quá ngắn hoặc xuyên thấu khi đi lễ"
+  ],
+  "luu_y_size": "Đo vòng ngực, eo, mông và đối chiếu bảng size từng bộ, chừa độ rộng vừa đủ để ngồi và cử động. Đo vòng ngực, vai và bắp tay, đối chiếu bảng size và chọn độ rộng vừa phải để cử động tay thuận tiện.",
+  "ghi_chu": "Gộp từ các loại: Thời trang nữ trung niên khác, Áo nữ trung niên, Đầm nữ trung niên, Quần nữ trung niên. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Đồ lót nữ": {
+  "dip": [
+   "Mặc lót hằng ngày khi đi làm hoặc ở nhà",
+   "Mặc lót dưới trang phục đi chơi",
+   "Mặc lót dưới váy ôm khi dự tiệc",
+   "Mang theo khi đi du lịch hoặc công tác",
+   "Mặc hằng ngày dưới áo đi làm hoặc đi chơi",
+   "Mặc dưới váy dự tiệc",
+   "Mặc dưới trang phục hở vai với áo ngực không dây phù hợp",
+   "Mặc bên trong trang phục đi làm"
+  ],
+  "phoi_voi": [
+   "Mặc quần lót không viền màu gần màu da dưới váy body sáng màu",
+   "Mặc quần lót cotton dưới quần tây đi làm",
+   "Mặc quần lót cạp vừa dưới quần jean cạp cao",
+   "Mặc quần lót không viền dưới chân váy ôm bằng vải đủ dày",
+   "Mặc áo ngực trơn màu gần màu da dưới áo sơ mi trắng",
+   "Mặc áo ngực không dây vừa vặn dưới váy quây",
+   "Mặc áo ngực cổ thấp dưới đầm cổ V",
+   "Mặc áo ngực lưng thấp dưới váy khoét lưng nếu đường áo được che kín"
+  ],
+  "khong_goi_y": [
+   "Phối quần lót với chân váy như trang phục mặc ngoài",
+   "Coi quần lót thông thường là quần bơi",
+   "Khẳng định mọi mẫu không đường may đều chắc chắn không lộ viền",
+   "Chọn quần quá chật để nâng hoặc định hình vòng ba",
+   "Phối áo ngực thông thường với quần hoặc chân váy như áo mặc ngoài",
+   "Mặc áo ngực dây vai thông thường dưới váy quây nếu không muốn lộ dây",
+   "Dùng miếng dán ngực như áo ngực nâng đỡ khi cần vận động mạnh",
+   "Phối bộ đồ lót với quần jean như trang phục mặc ngoài"
+  ],
+  "luu_y_size": "Đo vòng mông và đối chiếu bảng size của hãng, chọn cạp và viền đùi ôm vừa, không hằn siết. Đo vòng chân ngực và vòng ngực đầy nhất, đối chiếu bảng size của hãng rồi thử để cúp ôm ngực và đai lưng nằm ngang, không siết đau.",
+  "ghi_chu": "Gộp từ các loại: Quần lót nữ, Áo ngực, Bộ đồ lót nữ, Nịt bụng. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Trang phục bơi nữ": {
+  "dip": [
+   "bơi ở hồ bơi",
+   "tắm biển",
+   "vui chơi tại công viên nước",
+   "Đi bơi ở hồ bơi",
+   "Tắm biển",
+   "Nghỉ dưỡng ở khu vực hồ bơi hoặc bãi biển"
+  ],
+  "phoi_voi": [
+   "áo choàng đi biển mỏng mặc ngoài khi lên bờ",
+   "khăn sarong quấn hông khi lên bờ",
+   "dép sandal chống trượt đi quanh hồ bơi",
+   "mũ rộng vành khi ngồi trên bãi biển",
+   "kính bơi khi xuống nước",
+   "Áo choàng lưới cùng tông khi đi lại ở bãi biển",
+   "Khăn sarong quấn ngang hông",
+   "Dép sandal chống nước"
+  ],
+  "khong_goi_y": [
+   "mặc đồ bơi hai mảnh đi làm hoặc đi ăn như trang phục thông thường",
+   "coi đồ bơi là đồ tập gym hoặc yoga mặc định",
+   "mặc áo choàng dài xuống nước khi bơi",
+   "mặc bikini len thông thường xuống nước nếu chất liệu không dành cho bơi",
+   "mặc đồ bơi một mảnh đi làm như trang phục thông thường",
+   "coi đồ bơi là đồ leo núi hoặc đạp xe",
+   "Mặc bikini như trang phục đi làm",
+   "Mặc bikini đi picnic hoặc dã ngoại xa khu vực bơi"
+  ],
+  "luu_y_size": "Đo vòng ngực, dưới ngực và vòng mông theo bảng size của hãng; chọn áo và quần ôm chắc, không xô lệch khi vận động. Đo vòng ngực, eo, mông và chiều dài thân theo bảng size; chọn bộ ôm chắc mà không kéo căng vai hoặc khoét hằn phần bẹn.",
+  "ghi_chu": "Gộp từ các loại: Đồ bơi hai mảnh, Đồ bơi một mảnh, Bikini. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Áo kiểu nữ": {
+  "dip": [
+   "Đi làm với áo kiểu kín đáo",
+   "Đi cà phê hoặc dạo phố",
+   "Đi tập gym hoặc yoga với áo bra thể thao",
+   "đi chơi, dạo phố",
+   "đi biển cùng áo khoác ngoài",
+   "đi cà phê hoặc gặp bạn bè",
+   "mặc trong áo sơ mi hoặc blazer"
+  ],
+  "phoi_voi": [
+   "Quần tây ống suông màu đen với áo kiểu công sở",
+   "Chân váy chữ A màu be với áo voan",
+   "Quần jean ống suông xanh nhạt với áo hai dây",
+   "Áo khoác sơ mi mỏng bên ngoài áo hai dây",
+   "Quần legging cạp cao màu đen với áo bra thể thao",
+   "quần jean ống suông xanh nhạt",
+   "chân váy midi chữ A màu trắng",
+   "quần short kaki màu be"
+  ],
+  "khong_goi_y": [
+   "Mặc áo bra tập thay áo kiểu công sở",
+   "Mặc áo hai dây quá hở ở nơi làm việc yêu cầu trang phục kín đáo",
+   "Mặc áo voan mỏng lộ nội y mà không có lớp lót phù hợp",
+   "mặc đơn lẻ đến nơi làm việc yêu cầu trang phục kín đáo",
+   "dùng áo ống thông thường thay áo bơi khi xuống nước",
+   "coi mọi áo ống đều có độ nâng đỡ như áo ngực thể thao"
+  ],
+  "luu_y_size": "Đo vòng ngực và vai theo bảng size của từng mẫu; riêng áo bra tập cần ôm chắc vòng chân ngực mà không siết đau. Đo vòng ngực và vòng dưới ngực, chọn áo ôm chắc không tuột nhưng không siết khó thở.",
+  "ghi_chu": "Gộp từ các loại: Áo kiểu nữ khác, Áo ống. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Áo crop-top": {
+  "dip": [
+   "Đi chơi, dạo phố",
+   "Đi cà phê, gặp bạn bè",
+   "Đi du lịch",
+   "Tập gym hoặc yoga nếu áo làm từ vải thể thao phù hợp",
+   "Đi cà phê, hẹn hò",
+   "Đi du lịch ở nơi thời tiết mát"
+  ],
+  "phoi_voi": [
+   "Quần jean ống suông cạp cao xanh nhạt",
+   "Quần short kaki cạp cao màu be",
+   "Chân váy chữ A cạp cao màu đen",
+   "Quần tây ống suông cạp cao và blazer",
+   "Giày sneaker trắng",
+   "Quần tây cạp cao màu đen",
+   "Chân váy chữ A cạp cao",
+   "Áo blazer dáng rộng khoác ngoài"
+  ],
+  "khong_goi_y": [
+   "Dùng áo crop-top vải thường thay đồ bơi",
+   "Mặc áo hở eo đến nơi làm việc có quy định trang phục kín đáo",
+   "Gợi ý mọi áo crop-top đều phù hợp tập gym hoặc yoga",
+   "Dùng áo crop-top vải thường để bơi",
+   "Mặc áo tay dài chất dày khi hoạt động lâu ngoài trời nắng nóng"
+  ],
+  "luu_y_size": "Đo vòng ngực, vai và đối chiếu chiều dài áo cùng độ co giãn trong bảng size của shop. Đo vòng ngực, vai và chiều dài tay, đồng thời kiểm tra độ co giãn và chiều dài áo theo bảng size.",
+  "ghi_chu": "Gộp từ các loại: Áo crop-top tay ngắn, Áo crop-top tay dài. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Áo thun nữ": {
+  "dip": [
+   "đi học",
+   "đi chơi, dạo phố",
+   "đi làm ở nơi cho phép mặc áo thun",
+   "đi tập nếu áo có chất liệu và kiểu dáng phù hợp",
+   "đi làm văn phòng có quy định trang phục thoải mái",
+   "chơi golf hoặc tennis nếu áo là loại thể thao",
+   "Đi chơi, dạo phố",
+   "Gặp bạn bè ở quán cà phê"
+  ],
+  "phoi_voi": [
+   "quần jean ống suông xanh nhạt",
+   "quần short kaki màu be",
+   "chân váy chữ A màu đen",
+   "áo khoác sơ mi trắng mặc ngoài",
+   "giày sneaker trắng",
+   "quần jean ống đứng xanh đậm",
+   "quần kaki ống suông màu be",
+   "quần short kaki trắng"
+  ],
+  "khong_goi_y": [
+   "mặc đi dự tiệc trang trọng",
+   "khẳng định mọi áo đều có khả năng thấm hút tốt khi tập luyện",
+   "nhầm áo thun không cổ với áo polo có cổ",
+   "mặc đi tiệc cưới hoặc sự kiện trang trọng",
+   "nhầm áo cổ tròn với áo có cổ",
+   "khẳng định mọi áo đều phù hợp chơi thể thao cường độ cao",
+   "Mặc áo hai dây mỏng, xuyên thấu như áo ngoài mà không có lớp lót phù hợp",
+   "Mặc áo hai dây đơn lẻ đến nơi làm việc yêu cầu trang phục kín đáo"
+  ],
+  "luu_y_size": "Đo vòng ngực và ngang vai, đối chiếu bảng size và chọn theo dáng ôm hoặc dáng rộng của áo. Đo vòng ngực và ngang vai rồi đối chiếu bảng size, chừa độ rộng vừa đủ để cử động tay.",
+  "ghi_chu": "Gộp từ các loại: Áo thun nữ ngắn tay không cổ, Áo thun nữ ngắn tay có cổ, Áo hai dây - Áo ba lỗ nữ, Áo thun nữ dài tay có cổ, Áo thun nữ dài tay không cổ. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Đồ đôi - Đồ gia đình": {
+  "dip": [
+   "đi chơi cùng người yêu hoặc bạn bè",
+   "đi du lịch cùng nhau",
+   "chụp ảnh kỷ niệm",
+   "tham gia buổi gặp mặt nhóm thân mật",
+   "chụp ảnh gia đình",
+   "đi chơi cùng gia đình",
+   "đi du lịch gia đình",
+   "sinh hoạt tại nhà với bộ được thiết kế để mặc nhà"
+  ],
+  "phoi_voi": [
+   "quần jean xanh cho cả hai người",
+   "quần kaki màu be và quần kaki màu đen",
+   "quần short denim xanh cho chuyến đi chơi",
+   "giày sneaker trắng cùng kiểu",
+   "giày sneaker trắng cho bộ áo thun và quần đồng phục",
+   "sandal đế thấp cho buổi đi chơi gia đình",
+   "mũ lưỡi trai màu trung tính cho chuyến dã ngoại",
+   "áo khoác mỏng màu trơn khi trời mát"
+  ],
+  "khong_goi_y": [
+   "mặc áo đôi in hình quá nổi trong cuộc họp trang trọng",
+   "mặc cùng một size cho cả hai người mà không xem số đo",
+   "mặc áo đôi chất dày để tập thể thao cường độ cao",
+   "coi dụng cụ massage tay là đồ gia đình mặc được",
+   "mặc đồ bộ ngủ đồng phục đi dự tiệc trang trọng",
+   "chọn đồ bơi gia đình để mặc đi làm hoặc đi học"
+  ],
+  "luu_y_size": "Mỗi người đo vòng ngực và ngang vai riêng rồi đối chiếu bảng size của mẫu áo, không mặc định áo đôi phải cùng size. Đo số đo của từng người và chọn riêng theo bảng size người lớn, trẻ em của bộ đồ, không suy size của cả nhà từ một người.",
+  "ghi_chu": "Gộp từ các loại: Áo đôi, Đồ gia đình. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Đồ ngủ - Đồ mặc nhà nữ": {
+  "dip": [
+   "sinh hoạt ở nhà",
+   "nghỉ ngơi tại nhà",
+   "đi ngủ với bộ có chất liệu và kiểu dáng phù hợp",
+   "Mặc đi ngủ vào ban đêm",
+   "Mặc ở nhà khi nghỉ ngơi",
+   "Mặc trong phòng nghỉ khi đi du lịch"
+  ],
+  "phoi_voi": [
+   "áo thun cotton rộng vừa với quần lửng mặc nhà",
+   "áo ba lỗ mềm với quần short mặc nhà",
+   "áo pyjama tay dài với quần pyjama dài cùng bộ",
+   "áo cardigan mỏng khoác ngoài khi ở phòng máy lạnh",
+   "Áo choàng ngủ mỏng cùng màu mặc ngoài bộ ngủ hai dây",
+   "Áo choàng kimono vải mềm mặc ngoài váy ngủ",
+   "Dép đi trong nhà đế mềm",
+   "Bịt mắt ngủ bằng vải mềm khi ngủ trong phòng có ánh sáng"
+  ],
+  "khong_goi_y": [
+   "mặc bộ ngủ hai dây đi dự tiệc",
+   "mặc pyjama như đồng phục công sở",
+   "dùng đồ mặc nhà vải thông thường để bơi",
+   "Mặc váy ngủ ren hoặc bộ ngủ hai dây đi làm văn phòng",
+   "Phối đồ ngủ với giày cao gót để đi dạo phố",
+   "Mặc bộ ngủ làm đồ bơi ở hồ bơi hoặc bãi biển",
+   "Mặc jumpsuit ngủ bên ngoài quần jean"
+  ],
+  "luu_y_size": "Đo vòng ngực, eo, mông và chọn theo bảng size của bộ, ưu tiên cạp quần không siết và đủ rộng khi ngồi hoặc nằm. Đo vòng ngực, eo và mông, đối chiếu bảng size của từng mẫu; với vải ít co giãn, chọn số đo rộng hơn cơ thể để dễ xoay trở khi ngủ.",
+  "ghi_chu": "Gộp từ các loại: Đồ mặc nhà, Đồ ngủ nữ. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ },
+ "Áo sơ mi nữ": {
+  "dip": [
+   "Đi làm văn phòng",
+   "Đi học",
+   "Đi cà phê hoặc dạo phố",
+   "Đi biển với sơ mi mỏng khoác ngoài",
+   "Đi họp mặt gia đình"
+  ],
+  "phoi_voi": [
+   "Quần tây ống suông màu đen",
+   "Chân váy bút chì màu be",
+   "Quần jean ống đứng xanh nhạt",
+   "Quần short kaki màu kem khi đi chơi",
+   "Giày loafer màu đen",
+   "Chân váy chữ A màu be",
+   "Giày búp bê mũi nhọn màu đen"
+  ],
+  "khong_goi_y": [
+   "Mặc sơ mi vải không chuyên dụng thay áo tập gym",
+   "Mặc áo xuyên thấu đến văn phòng mà không có áo lót phù hợp",
+   "Mặc sơ mi quá bó làm bung hàng cúc ở ngực",
+   "Mặc áo quá mỏng lộ nội y ở nơi làm việc",
+   "Mặc sơ mi bó làm bung cúc ngực",
+   "Mặc quần short quá ngắn cùng sơ mi đến văn phòng có quy định trang phục"
+  ],
+  "luu_y_size": "Đo vòng ngực, vai và chiều dài tay, chọn áo cài cúc không bị kéo căng khi ngồi hoặc cử động. Đo vòng ngực, vai và bắp tay, chọn áo vừa vai, cài cúc không căng và tay áo không bó.",
+  "ghi_chu": "Gộp từ các loại: Áo sơ mi nữ tay dài, Áo sơ mi nữ tay ngắn. Chỉ áp gợi ý hợp với đúng sản phẩm."
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "caption": "Mức tương đồng giữa mô tả sinh ra và mô tả thật của người bán (RQ2)",
+ "source": "Nguồn: tác giả tính bằng sacreBLEU (BLEU cấp kho, tokenizer 13a; chrF++), rouge-score (tách từ Unicode) và BERTScore (bert-base-multilingual-cased, lớp 9)",
+ "columns": [
+  "Dữ liệu",
+  "Cấu hình",
+  "n",
+  "BLEU",
+  "ROUGE-L",
+  "chrF++",
+  "BERTScore F1"
+ ],
+ "rows": [
+  [
+   "Tiki",
+   "M0 Mẫu cố định",
+   "99",
+   "1,28",
+   "0,126",
+   "13,4",
+   "0,661"
+  ],
+  [
+   "Tiki",
+   "M1 Zero-shot",
+   "99",
+   "1,33",
+   "0,126",
+   "14,1",
+   "0,652"
+  ],
+  [
+   "Tiki",
+   "M2 Thiết kế câu lệnh",
+   "99",
+   "1,80",
+   "0,104",
+   "19,2",
+   "0,636"
+  ],
+  [
+   "Tiki",
+   "M3 Few-shot có truy hồi",
+   "99",
+   "2,36",
+   "0,106",
+   "19,7",
+   "0,637"
+  ],
+  [
+   "Tiki",
+   "M4a Qwen gốc",
+   "59",
+   "1,40",
+   "0,108",
+   "15,9",
+   "0,642"
+  ],
+  [
+   "Tiki",
+   "M4b Qwen + LoRA",
+   "59",
+   "1,08",
+   "0,072",
+   "11,2",
+   "0,567"
+  ],
+  [
+   "Amazon",
+   "M0 Mẫu cố định",
+   "50",
+   "0,06",
+   "0,067",
+   "11,5",
+   "0,622"
+  ],
+  [
+   "Amazon",
+   "M1 Zero-shot",
+   "50",
+   "0,01",
+   "0,083",
+   "10,6",
+   "0,605"
+  ],
+  [
+   "Amazon",
+   "M2 Thiết kế câu lệnh",
+   "50",
+   "0,39",
+   "0,078",
+   "19,6",
+   "0,593"
+  ],
+  [
+   "Amazon",
+   "M3 Few-shot có truy hồi",
+   "50",
+   "0,22",
+   "0,080",
+   "19,8",
+   "0,595"
+  ]
+ ],
+ "col_widths_cm": [
+  1.8,
+  4.4,
+  1.0,
+  1.7,
+  2.1,
+  1.9,
+  2.5
+ ]
+}
